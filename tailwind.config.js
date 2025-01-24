@@ -32,7 +32,6 @@ export default {
       fontSize: {
         100: "100px",
       },
-      
     },
   },
   darkMode: "class",

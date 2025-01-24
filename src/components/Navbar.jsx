@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { useState } from "react";
 import {
   Navbar,
@@ -24,7 +23,7 @@ const MyNavbar = ({ switchDarkMode, isDarkMode }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
   return (
-    <div className="sticky top-0 left-0 ">
+    <div className="sticky top-0 left-0 overflow-hidden z-50">
       <Navbar
         className={`bg-black/80 ${
           isDarkMode === "dark" && "border-b border-b-slate-500"
@@ -37,7 +36,7 @@ const MyNavbar = ({ switchDarkMode, isDarkMode }) => {
             className="sm:hidden"
           />
           <NavbarBrand>
-            <Link href="#" className="hover:cursor-pointer">
+            <Link to="#" className="hover:cursor-pointer">
               <img src="/logo.png" className="rounded-full size-12" alt="" />
             </Link>
           </NavbarBrand>
