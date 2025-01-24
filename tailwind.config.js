@@ -29,6 +29,10 @@ export default {
       boxShadow: {
         btn: "0 0 25px #17DFF5, 0 0 850px #17DFF5",
       },
+      fontSize: {
+        100: "100px",
+      },
+      
     },
   },
   darkMode: "class",
