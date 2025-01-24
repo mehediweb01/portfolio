@@ -26,6 +26,9 @@ export default {
         inter: '"Inter", serif',
         itim: ' "Itim", serif',
       },
+      boxShadow: {
+        btn: "0 0 25px #17DFF5, 0 0 850px #17DFF5",
+      },
     },
   },
   darkMode: "class",
