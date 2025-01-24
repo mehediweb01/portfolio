@@ -2,6 +2,7 @@ import Navbar from "./components/Navbar";
 import About from "./components/About";
 import { BrowserRouter } from "react-router-dom";
 import { useEffect, useState } from "react";
+import WhatIDo from "./components/WhatIDo";
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -20,7 +21,10 @@ function App() {
       <div className="bg-white dark:bg-black">
         <BrowserRouter>
           <Navbar switchDarkMode={darkMode} isDarkMode={theme} />
-          <About />
+          <div>
+            <About />
+            <WhatIDo />
+          </div>
         </BrowserRouter>
       </div>
     </>
