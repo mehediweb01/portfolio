@@ -1,11 +1,14 @@
+import Navbar from "./components/Navbar";
+import About from "./components/About";
+import { BrowserRouter } from "react-router-dom";
+
 function App() {
   return (
     <>
-      <div>
-        <h1 className="text-center text-4xl font-bold font-itim ">
-          welcome to my portfolio
-        </h1>
-      </div>
+      <BrowserRouter>
+        <Navbar />
+        <About />
+      </BrowserRouter>
     </>
   );
 }
