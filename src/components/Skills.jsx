@@ -1,5 +1,5 @@
 import ProgressBar from "./common/Progress";
-
+import { progressInfo } from "../db";
 const Skills = () => {
   return (
     <div id="Skills" className="pt-16">
@@ -9,18 +9,22 @@ const Skills = () => {
           Skills
         </h1>
         {/* details */}
-        <div className="flex flex-col sm:flex-row justify-around items-center sm:items-start sm:gap-2 gap-5 mx-4 my-12">
+        <div className="flex flex-col sm:flex-row justify-around items-center sm:items-start sm:gap-2 gap-5 mx-4 py-12">
           {/* left section */}
           <div>
-            <img
-              src="./skills.png"
-              alt="skills image"
-              className="w-full h-72 sm:h-80 md:h-96"
-            />
+            <div className="px-2 py-3 rounded-md shadow-inner shadow-sky-400">
+              <img
+                src="./skills.png"
+                alt="skills image"
+                className="w-full h-72 sm:h-80 md:h-96 shadow-inner shadow-sky-400 jump-animate p-2 rounded-md hover:shadow-md hover:shadow-sky-400 "
+              />
+            </div>
           </div>
           {/* right section */}
           <div className="space-y-4">
-            <ProgressBar value={95} label={"HTML & CSS"} />
+            {progressInfo.map(({ value, label }, index) => (
+              <ProgressBar key={index} value={value} label={label} />
+            ))}
           </div>
         </div>
       </div>
