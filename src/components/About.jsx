@@ -1,7 +1,16 @@
-// import { Skeleton } from "@heroui/react";
+import { Skeleton } from "@heroui/react";
 import { Buttons } from "./common/Button";
+import { useEffect, useState } from "react";
 
 const About = () => {
+  const [isLoading, setIsLoading] = useState(false);
+  useEffect(() => {
+    setIsLoading(true);
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+  }, []);
+
   return (
     <div
       id="About"
@@ -38,14 +47,17 @@ const About = () => {
           </div>
         </div>
         <div className="mx-4">
-          {/* <div className="w-full flex flex-col gap-2">
-            <Skeleton className="h-3 w-4/5 rounded-lg bg-black" />
-          </div> */}
-          <img
-            src="./mehedi.png"
-            alt="mehedi image"
-            className="sm:rounded-none rounded-full sm:h-full sm:w-full h-80 w-80 shadow-md shadow-sky-400 hover:shadow-inner hover:shadow-sky-600 hover:-translate-y-3 image-animate"
-          />
+          {isLoading ? (
+            <div className="w-full">
+              <Skeleton className="sm:rounded-lg rounded-full h-80 w-80 sm:h-[473px] sm:w-[378px] bg-black" />
+            </div>
+          ) : (
+            <img
+              src="./mehedi.png"
+              alt="mehedi image"
+              className="sm:rounded-none rounded-full sm:h-full sm:w-full h-80 w-80 shadow-md shadow-sky-400 hover:shadow-inner hover:shadow-sky-600 hover:-translate-y-3 image-animate"
+            />
+          )}
         </div>
       </div>
     </div>
