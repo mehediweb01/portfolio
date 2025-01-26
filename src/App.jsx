@@ -3,6 +3,7 @@ import About from "./components/About";
 import { BrowserRouter } from "react-router-dom";
 import { useEffect, useState } from "react";
 import WhatIDo from "./components/WhatIDo";
+import Skills from "./components/Skills";
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -24,6 +25,7 @@ function App() {
           <div>
             <About />
             <WhatIDo />
+            <Skills />
           </div>
         </BrowserRouter>
       </div>
