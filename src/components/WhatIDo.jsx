@@ -15,7 +15,7 @@ const WhatIDo = () => {
           </span>{" "}
           do
         </h1>
-        <p className="text-center font-itim text-4xl text-black dark:text-white/85 w-full ">
+        <p className="text-center font-itim text-4xl text-black dark:text-white/85 w-full jump-animate">
           my services
         </p>
       </div>

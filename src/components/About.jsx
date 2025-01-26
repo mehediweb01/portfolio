@@ -55,7 +55,7 @@ const About = () => {
             <img
               src="./mehedi.png"
               alt="mehedi image"
-              className="sm:rounded-none rounded-full sm:h-full sm:w-full h-80 w-80 shadow-md shadow-sky-400 hover:shadow-inner hover:shadow-sky-600 hover:-translate-y-3 image-animate"
+              className="sm:rounded-none rounded-full sm:h-full sm:w-full h-80 w-80 shadow-md shadow-sky-400 hover:shadow-inner hover:shadow-sky-600 hover:-translate-y-3 jump-animate"
             />
           )}
         </div>
