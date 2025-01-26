@@ -9,7 +9,7 @@ const Skills = () => {
           Skills
         </h1>
         {/* details */}
-        <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mx-4 my-8">
+        <div className="flex flex-col sm:flex-row justify-around items-center sm:items-start sm:gap-2 gap-5 mx-4 my-12">
           {/* left section */}
           <div>
             <img
@@ -21,7 +21,6 @@ const Skills = () => {
           {/* right section */}
           <div className="space-y-4">
             <ProgressBar value={95} label={"HTML & CSS"} />
-            <ProgressBar value={90} label={"JavaScript"} />
           </div>
         </div>
       </div>
