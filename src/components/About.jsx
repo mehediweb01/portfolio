@@ -1,3 +1,4 @@
+// import { Skeleton } from "@heroui/react";
 import { Buttons } from "./common/Button";
 
 const About = () => {
@@ -37,10 +38,13 @@ const About = () => {
           </div>
         </div>
         <div className="mx-4">
+          {/* <div className="w-full flex flex-col gap-2">
+            <Skeleton className="h-3 w-4/5 rounded-lg bg-black" />
+          </div> */}
           <img
             src="./mehedi.png"
             alt="mehedi image"
-            className="sm:rounded-none rounded-full sm:h-full sm:w-full h-80 w-80"
+            className="sm:rounded-none rounded-full sm:h-full sm:w-full h-80 w-80 shadow-md shadow-sky-400 hover:shadow-inner hover:shadow-sky-600 hover:-translate-y-3 image-animate"
           />
         </div>
       </div>

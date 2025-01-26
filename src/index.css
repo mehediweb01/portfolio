@@ -9,4 +9,15 @@
 .textShadow {
   @apply [text-shadow:_4px_3px_1px_rgb(0_0_0_/_90%)];
 }
-
+/* image animate */
+.image-animate {
+  animation: image-animate 1s infinite alternate-reverse;
+}
+@keyframes image-animate {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-6px);
+  }
+}
