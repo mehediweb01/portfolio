@@ -1,13 +1,12 @@
 import ProgressBar from "./common/Progress";
 import { progressInfo } from "../db";
+import { Header } from "./common/Header";
 const Skills = () => {
   return (
     <div id="Skills" className="pt-16">
       <div>
         {/* Title */}
-        <h1 className="font-itim text-7xl sm:text-100 text-header text-center textShadow dark:[text-shadow:_3px_2px_1px_rgb(255_255_255_/_50%)]">
-          Skills
-        </h1>
+        <Header>Skills</Header>
         {/* details */}
         <div className="flex flex-col sm:flex-row justify-around items-center sm:items-start sm:gap-2 gap-5 mx-4 py-12">
           {/* left section */}

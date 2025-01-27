@@ -3,18 +3,19 @@ import { FaShapes } from "react-icons/fa6";
 import { FaLaptopCode } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
 import { Buttons } from "./common/Button";
+import { Header } from "./common/Header";
 const WhatIDo = () => {
   return (
     <div className="relative py-8">
       {/* header */}
       <div className="py-8">
-        <h1 className="font-itim text-7xl sm:text-100 text-header text-center textShadow dark:[text-shadow:_3px_2px_1px_rgb(255_255_255_/_50%)]">
+        <Header >
           What{" "}
           <span className="relative after:absolute after:content-['........'] after:text-center after:text-2xl after:animate-ping after:transition-all after:duration-300 after:bottom-[50%] after:-left-[10px]">
             I
           </span>{" "}
           do
-        </h1>
+        </Header>
         <p className="text-center font-itim text-4xl text-black dark:text-white/85 w-full jump-animate">
           my services
         </p>
