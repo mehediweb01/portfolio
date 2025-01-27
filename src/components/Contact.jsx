@@ -67,23 +67,30 @@ const Contact = () => {
         {/* right section */}
         <div className="flex-1 w-full md:w-1/2">
           <div className="px-8 py-4">
-            <h1 className="font-itim text-4xl sm:text-5xl text-center text-black">
+            <h1 className="font-itim text-4xl sm:text-5xl text-center text-black dark:text-header ">
               Md. Mehedi Hasan
             </h1>
-            <p className="font-itim text-xl sm:text-2xl text-center text-black">
+            <p className="font-itim text-xl sm:text-2xl text-center text-black dark:text-whites">
               Front-end web developer
             </p>
           </div>
 
           <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 justify-items-center gap-3 justify-self-center gap-y-8 px-4">
             {contactInfo.map((item, index) => (
-              <div key={index} className="grid place-items-center">
-                <img src={item.icon} alt="" className="size-16" />
+              <div
+                key={index}
+                className="flex justify-center items-center gap-2 flex-col"
+              >
+                <img
+                  src={item.icon}
+                  alt={`${"icons" + index}`}
+                  className="size-16"
+                />
 
-                <h2 className="font-inter font-bold text-3xl lg:text-4xl text-blueMagenta">
+                <h2 className="font-inter font-bold text-3xl lg:text-4xl text-blueMagenta dark:text-whites">
                   {item.title}
                 </h2>
-                <p className="font-inter text-black font-bold text-sm lg:text-base leading-6 ">
+                <p className="font-inter text-black font-bold text-sm lg:text-base leading-6 dark:text-sky-400 ">
                   {item.content}
                 </p>
               </div>
