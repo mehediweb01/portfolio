@@ -1,7 +1,7 @@
 import { Button } from "@heroui/button";
 import { cn } from "@heroui/react";
 
-export const Buttons = ({ children, variant, className, onClick }) => {
+export const Buttons = ({ children, variant, className, onClick, type }) => {
   return (
     <Button
       variant={variant}
@@ -10,6 +10,7 @@ export const Buttons = ({ children, variant, className, onClick }) => {
         className
       )}
       onPress={onClick}
+      type={type}
     >
       {children}
     </Button>
