@@ -14,6 +14,7 @@ export default {
         whites: "#FFFDFD",
         activeColor: "#17DFF5",
         darkBlack: "#1E1E1E",
+        blueMagenta: "#151030",
       },
       backgroundColor: {
         cardBg: "#17DFF55C",

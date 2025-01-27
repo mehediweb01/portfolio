@@ -1,3 +1,7 @@
+import Map from "/map.svg";
+import Email from "/email.svg";
+import Users from "/user.svg";
+
 // skill section progressBar information
 export const progressInfo = [
   {
@@ -28,5 +32,24 @@ export const progressInfo = [
   {
     value: 80,
     label: "REACT-REDUX",
+  },
+];
+
+// contact section information
+export const contactInfo = [
+  {
+    icon: Map,
+    title: "Address",
+    content: "Tangail, Dhaka",
+  },
+  {
+    icon: Users,
+    title: "Freelance",
+    content: "available right now",
+  },
+  {
+    icon: Email,
+    title: "Email",
+    content: "mehedihasan87456@gmail.com",
   },
 ];

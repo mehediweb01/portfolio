@@ -1,13 +1,13 @@
 import { Buttons } from "./common/Button";
 import { Header } from "./common/Header";
-
+import { contactInfo } from "../db";
 const Contact = () => {
   return (
-    <div id="Contact" className="py-16">
+    <div id="Contact" className="py-1">
       <Header>Contact</Header>
-      <div className="w-full flex sm:flex-row flex-col justify-around items-center gap-6">
+      <div className="w-full flex md:flex-row flex-col justify-center items-center gap-8 ">
         {/* left section */}
-        <div className="w-1/2 my-12 p-2 shadow-inner shadow-sky-300 rounded-md">
+        <div className="flex-1 w-full sm:mx-2 mx-4 md:w-1/2 my-12 p-2 shadow-inner shadow-sky-300 rounded-md">
           <div className="bg-blueTints p-8 rounded-lg w-full">
             <form
               action=""
@@ -65,7 +65,31 @@ const Contact = () => {
           </div>
         </div>
         {/* right section */}
-        <div></div>
+        <div className="flex-1 w-full md:w-1/2">
+          <div className="px-8 py-4">
+            <h1 className="font-itim text-4xl sm:text-5xl text-center text-black">
+              Md. Mehedi Hasan
+            </h1>
+            <p className="font-itim text-xl sm:text-2xl text-center text-black">
+              Front-end web developer
+            </p>
+          </div>
+
+          <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 justify-items-center gap-3 justify-self-center gap-y-8 px-4">
+            {contactInfo.map((item, index) => (
+              <div key={index} className="grid place-items-center">
+                <img src={item.icon} alt="" className="size-16" />
+
+                <h2 className="font-inter font-bold text-3xl lg:text-4xl text-blueMagenta">
+                  {item.title}
+                </h2>
+                <p className="font-inter text-black font-bold text-sm lg:text-base leading-6 ">
+                  {item.content}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );
