@@ -1,6 +1,10 @@
 import Map from "/map.svg";
 import Email from "/email.svg";
 import Users from "/user.svg";
+// my info icons
+import meUser from "/me-user.svg";
+import userTime from "/userTime.svg";
+import yellowEmail from "/yellow-email.svg";
 
 // skill section progressBar information
 export const progressInfo = [
@@ -49,6 +53,24 @@ export const contactInfo = [
   },
   {
     icon: Email,
+    title: "Email",
+    content: "mehedihasan87456@gmail.com",
+  },
+];
+
+export const myInfo = [
+  {
+    icon: meUser,
+    title: "Md.Mehedi Hasan",
+    content: "front-end web developer",
+  },
+  {
+    icon: userTime,
+    title: "Freelance",
+    content: "Freelance",
+  },
+  {
+    icon: yellowEmail,
     title: "Email",
     content: "mehedihasan87456@gmail.com",
   },

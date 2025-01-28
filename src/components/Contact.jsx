@@ -1,6 +1,7 @@
 import { Buttons } from "./common/Button";
 import { Header } from "./common/Header";
-import { contactInfo } from "../db";
+import { contactInfo, myInfo } from "../db";
+import BoxComponent from "./common/Box";
 const Contact = () => {
   return (
     <div id="Contact" className="py-16">
@@ -99,8 +100,16 @@ const Contact = () => {
         </div>
       </div>
       {/* my details */}
-      <div className="mt-4 flex justify-center">
-        
+      <div className="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-items-center mx-4 lg:mx-0">
+        {myInfo.map((item, index) => (
+          <div key={index}>
+            <BoxComponent
+              icon={item.icon}
+              title={item.title}
+              content={item.content}
+            />
+          </div>
+        ))}
       </div>
     </div>
   );
