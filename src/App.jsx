@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import WhatIDo from "./components/WhatIDo";
 import Skills from "./components/Skills";
 import Contact from "./components/Contact";
+import FAQs from "./components/FAQs";
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -28,6 +29,7 @@ function App() {
             <WhatIDo />
             <Skills />
             <Contact />
+            <FAQs />
           </div>
         </BrowserRouter>
       </div>

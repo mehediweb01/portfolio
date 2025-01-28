@@ -49,7 +49,7 @@ export const contactInfo = [
     icon: phone,
     title: "Phone",
     content: "+8801576-794817",
-  }
+  },
 ];
 
 export const myInfo = [
@@ -67,5 +67,38 @@ export const myInfo = [
     icon: yellowEmail,
     title: "Email",
     content: "mehedihasan87456@gmail.com",
+  },
+];
+
+// FAQs section
+export const FAQsInfo = [
+  {
+    question: " What skills do I have?",
+    answer:
+      "HTML, CSS, JavaScript, Responsive design (Bootstrap/Tailwind CSS), JavaScript frameworks (React), Version control (Git/GitHub), Basic understanding of APIs",
+  },
+  {
+    question: "Can I work with frameworks or libraries?",
+    answer: "React.js, Tailwind Css, Bootstrap",
+  },
+  {
+    question: "Are there live demos of my projects?",
+    answer:
+      "Yes, live demo links for all my projects are included in the portfolio, along with their GitHub repositories.",
+  },
+  {
+    question: "Can I work with CMS or hosting platforms?",
+    answer:
+      "CMS like WordPress (basic level) and Hosting platforms such as Netlify, Vercel, and GitHub Pages",
+  },
+  {
+    question: "Do I have any real-world experience?",
+    answer:
+      "I've worked on personal projects to practice and enhance my skills, focusing on user-friendly and responsive designs.",
+  },
+  {
+    question: "What kind of roles or projects am I suitable for?",
+    answer:
+      "Junior front-end developer positions, Small to medium-sized projects and Responsive website development ",
   },
 ];
