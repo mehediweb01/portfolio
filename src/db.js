@@ -1,6 +1,5 @@
 import Map from "/map.svg";
-import Email from "/email.svg";
-import Users from "/user.svg";
+import phone from "/phone.svg";
 // my info icons
 import meUser from "/me-user.svg";
 import userTime from "/userTime.svg";
@@ -47,15 +46,10 @@ export const contactInfo = [
     content: "Tangail, Dhaka",
   },
   {
-    icon: Users,
-    title: "Freelance",
-    content: "available right now",
-  },
-  {
-    icon: Email,
-    title: "Email",
-    content: "mehedihasan87456@gmail.com",
-  },
+    icon: phone,
+    title: "Phone",
+    content: "+8801576-794817",
+  }
 ];
 
 export const myInfo = [

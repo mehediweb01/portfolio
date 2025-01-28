@@ -3,7 +3,7 @@ const BoxComponent = ({ icon, title, content }) => {
     <div className="p-2 rounded-md shadow-inner shadow-black">
       <div className="p-1 rounded-md shadow-inner shadow-sky-400">
         <div className="bg-black/80 flex flex-col justify-center items-center gap-3 px-4 py-6 rounded-md">
-          <img src={icon} alt="" className="size-16" />
+          <img src={icon} alt="icons" className="size-16" />
           <h2 className="font-inter font-bold text-2xl sm:text-4xl leading-6 sm:leading-10 text-header">
             {title}
           </h2>

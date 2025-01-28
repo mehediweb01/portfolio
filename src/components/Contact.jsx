@@ -6,9 +6,9 @@ const Contact = () => {
   return (
     <div id="Contact" className="py-16">
       <Header>Contact</Header>
-      <div className="w-[95%] mx-auto flex md:flex-row flex-col justify-center items-center gap-8">
+      <div className="w-[95%] mx-auto flex md:flex-row flex-col justify-center items-start gap-8">
         {/* left section */}
-        <div className="flex-1 w-full sm:mx-2 mx-4 md:w-1/2 my-12 p-2 shadow-inner shadow-sky-300 rounded-md">
+        <div className="flex-1 w-full sm:mx-2 mx-0 md:w-1/2 my-12 p-2 shadow-inner shadow-sky-300 rounded-md">
           <div className="bg-blueTints p-8 rounded-lg w-full">
             <form
               action=""
@@ -66,7 +66,7 @@ const Contact = () => {
           </div>
         </div>
         {/* right section */}
-        <div className="flex-1 w-full md:w-1/2">
+        <div className="flex-1 w-full md:w-1/2 mt-0 sm:mt-6">
           <div className="px-8 py-4">
             <h1 className="font-itim text-4xl sm:text-5xl text-center text-black dark:text-header ">
               Md. Mehedi Hasan
@@ -76,7 +76,7 @@ const Contact = () => {
             </p>
           </div>
 
-          <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 justify-items-center gap-3 justify-self-center gap-y-8 px-4">
+          <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 justify-items-center gap-3 justify-self-stretch gap-y-8 px-4">
             {contactInfo.map((item, index) => (
               <div
                 key={index}
@@ -96,6 +96,13 @@ const Contact = () => {
                 </p>
               </div>
             ))}
+          </div>
+          <div className="sm:block hidden mt-4 px-4 py-2 rounded-md shadow-inner shadow-black ">
+            <img
+              src="/contact.jpg"
+              alt="contact image"
+              className="h-[300px] w-full rounded-lg shadow-md shadow-sky-200 dark:shadow-none animate-pulse duration-500 transition-all"
+            />
           </div>
         </div>
       </div>
