@@ -67,7 +67,7 @@ export const myInfo = [
   {
     icon: userTime,
     title: "Freelance",
-    content: "Freelance",
+    content: "Available right now",
   },
   {
     icon: yellowEmail,
