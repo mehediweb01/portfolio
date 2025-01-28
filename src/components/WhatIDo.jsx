@@ -9,7 +9,7 @@ const WhatIDo = () => {
     <div className="relative py-8">
       {/* header */}
       <div className="py-8">
-        <Header >
+        <Header>
           What{" "}
           <span className="relative after:absolute after:content-['........'] after:text-center after:text-2xl after:animate-ping after:transition-all after:duration-300 after:bottom-[50%] after:-left-[10px]">
             I
@@ -22,7 +22,7 @@ const WhatIDo = () => {
       </div>
       {/* card */}
       <div className="grid grid-cols-1 sm:grid-cols-2 justify-items-center gap-5 mx-4 my-4">
-        <div className="px-6 py-8 rounded-lg shadow-md hover:shadow-black dark:hover:shadow-sky-400 hover:shadow-inner shadow-black dark:shadow-sky-300 space-y-4 border border-slate-100">
+        <div className="px-6 py-8 rounded-lg shadow-md hover:shadow-black hover:shadow-inner shadow-black dark:shadow-inner dark:shadow-black space-y-4 border dark:border-none border-slate-100 dark:hover:shadow-black dark:hover:shadow-md">
           <FaLaptopCode className="size-12 text-header" />
           <h1 className="font-itim text-2xl sm:text-4xl leading-8 sm:leading-[48px] text-darkBlack dark:text-white">
             Front-end web developer

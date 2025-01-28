@@ -6,7 +6,7 @@ const Contact = () => {
   return (
     <div id="Contact" className="py-16">
       <Header>Contact</Header>
-      <div className="w-full flex md:flex-row flex-col justify-center items-center gap-8 ">
+      <div className="w-[95%] mx-auto flex md:flex-row flex-col justify-center items-center gap-8">
         {/* left section */}
         <div className="flex-1 w-full sm:mx-2 mx-4 md:w-1/2 my-12 p-2 shadow-inner shadow-sky-300 rounded-md">
           <div className="bg-blueTints p-8 rounded-lg w-full">
