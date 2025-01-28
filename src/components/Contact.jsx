@@ -98,7 +98,10 @@ const Contact = () => {
           </div>
         </div>
       </div>
-      {/*  */}
+      {/* my details */}
+      <div className="mt-4 flex justify-center">
+        
+      </div>
     </div>
   );
 };
