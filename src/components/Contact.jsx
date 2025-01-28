@@ -3,7 +3,7 @@ import { Header } from "./common/Header";
 import { contactInfo } from "../db";
 const Contact = () => {
   return (
-    <div id="Contact" className="py-1">
+    <div id="Contact" className="py-16">
       <Header>Contact</Header>
       <div className="w-full flex md:flex-row flex-col justify-center items-center gap-8 ">
         {/* left section */}
@@ -98,6 +98,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
+      {/*  */}
     </div>
   );
 };
