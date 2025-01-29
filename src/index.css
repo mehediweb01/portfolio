@@ -21,3 +21,7 @@
     transform: translateY(-6px);
   }
 }
+/* faqs */
+span.text-foreground.text-medium {
+  @apply font-itim font-bold tracking-widest text-darkBlack text-base sm:text-xl;
+}

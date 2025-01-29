@@ -73,30 +73,36 @@ export const myInfo = [
 // FAQs section
 export const FAQsInfo = [
   {
+    id: "1",
     question: " What skills do I have?",
     answer:
       "HTML, CSS, JavaScript, Responsive design (Bootstrap/Tailwind CSS), JavaScript frameworks (React), Version control (Git/GitHub), Basic understanding of APIs",
   },
   {
+    id: "2",
     question: "Can I work with frameworks or libraries?",
     answer: "React.js, Tailwind Css, Bootstrap",
   },
   {
+    id: "3",
     question: "Are there live demos of my projects?",
     answer:
       "Yes, live demo links for all my projects are included in the portfolio, along with their GitHub repositories.",
   },
   {
+    id: "4",
     question: "Can I work with CMS or hosting platforms?",
     answer:
       "CMS like WordPress (basic level) and Hosting platforms such as Netlify, Vercel, and GitHub Pages",
   },
   {
+    id: "5",
     question: "Do I have any real-world experience?",
     answer:
       "I've worked on personal projects to practice and enhance my skills, focusing on user-friendly and responsive designs.",
   },
   {
+    id: "6",
     question: "What kind of roles or projects am I suitable for?",
     answer:
       "Junior front-end developer positions, Small to medium-sized projects and Responsive website development ",
