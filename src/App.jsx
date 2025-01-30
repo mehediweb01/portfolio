@@ -6,6 +6,7 @@ import WhatIDo from "./components/WhatIDo";
 import Skills from "./components/Skills";
 import Contact from "./components/Contact";
 import FAQs from "./components/FAQs";
+import Footer from "./components/Footer";
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -31,6 +32,7 @@ function App() {
             <Contact />
             <FAQs />
           </div>
+          <Footer />
         </BrowserRouter>
       </div>
     </>
