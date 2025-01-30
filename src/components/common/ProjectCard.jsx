@@ -16,7 +16,7 @@ const ProjectCard = ({ img, name, previewLink, codeLink, useCase }) => {
           <p className="font-itim text-xl sm:text-2xl text-black dark:text-white">
             Front-end project
           </p>
-          <div className="hidden group-hover:flex gap-4">
+          <div className="sm:hidden flex group-hover:flex gap-4">
             <a
               href={previewLink}
               className="flex items-center gap-1 font-inter font-semibold text-sm text-black/95 sm:text-base shadow-sm shadow-black px-2 py-0 rounded-md group-hover:bg-sky-300 group-hover:transition-all group-hover:duration-300 group-hover:text-red-500 hover:shadow-inner hover:shadow-black/50"
