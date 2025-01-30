@@ -7,6 +7,7 @@ import Skills from "./components/Skills";
 import Contact from "./components/Contact";
 import FAQs from "./components/FAQs";
 import Footer from "./components/Footer";
+import Projects from "./components/Projects";
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -29,6 +30,7 @@ function App() {
             <About />
             <WhatIDo />
             <Skills />
+            <Projects />
             <Contact />
             <FAQs />
           </div>
