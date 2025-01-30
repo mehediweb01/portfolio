@@ -38,6 +38,59 @@ export const progressInfo = [
   },
 ];
 
+// project information
+export const projectsInfo = [
+  {
+    id: 1,
+    img: "/my-feedback.png",
+    name: "My Feedback",
+    previewLink: "https://myfeedback-omega.vercel.app/",
+    codeLink: "https://github.com/mehediweb01/MyFeedback",
+    useCase: ["#React", "#TailwindCss", "#Radix-ui", "#React-slick"],
+  },
+  {
+    id: 2,
+    img: "/image-gallery.png",
+    name: "Image Gallery",
+    previewLink: "https://image-gallery-alpha-nine.vercel.app/",
+    codeLink: "https://github.com/mehediweb01/image-gallery",
+    useCase: ["#Next.js", "#TypeScript", "#TailwindCss"],
+  },
+  {
+    id: 3,
+    img: "/wizia.png",
+    name: "Wizia",
+    previewLink: "https://wizia-theta.vercel.app/",
+    codeLink: "https://github.com/mehediweb01/wizia",
+    useCase: ["#React", "#TypeScript", "", ""],
+  },
+  {
+    id: 4,
+    img: "/finance-website.png",
+    name: "Finance-website",
+    previewLink: "https://finance-website-five.vercel.app/",
+    codeLink: "https://github.com/mehediweb01/Finance-Website",
+    useCase: ["#React", "#TailwindCss", "#NextUi", "#FramerMotion"],
+  },
+  {
+    id: 5,
+    img: "/Governing Docs.png",
+    name: "Governing-Docs",
+    previewLink: "https://github.com/mehediweb01/GoveriningDocs",
+    codeLink: "https://goverining-docs.vercel.app/",
+    useCase: ["#React", "#TailwindCss"],
+  },
+
+  {
+    id: 6,
+    img: "/disasters.png",
+    name: "Disasters-I/O",
+    previewLink: "https://disasters-i-o.vercel.app/",
+    codeLink: "https://github.com/mehediweb01/disasters-I-O",
+    useCase: ["#React", "#TailwindCss"],
+  },
+];
+
 // contact section information
 export const contactInfo = [
   {
