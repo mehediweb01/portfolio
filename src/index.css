@@ -21,6 +21,23 @@
     transform: translateY(-6px);
   }
 }
+.animate-text::before{
+  animation: animateText 6s infinite alternate-reverse;
+}
+@keyframes animateText {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(50%);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 0;
+  }
+}
 /* faqs */
 span.text-foreground.text-medium {
   @apply font-itim font-bold tracking-widest text-darkBlack text-base sm:text-xl;

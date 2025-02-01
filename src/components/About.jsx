@@ -2,6 +2,7 @@ import { Skeleton } from "@heroui/react";
 import { Buttons } from "./common/Button";
 import { useEffect, useState } from "react";
 import { motion } from "motion/react";
+import { Typewriter } from "react-simple-typewriter";
 const About = () => {
   const [isLoading, setIsLoading] = useState(false);
   useEffect(() => {
@@ -28,13 +29,21 @@ const About = () => {
               Hi, I&apos;m
             </span>
             <br />
-            <span className="text-4xl md:text-[56px] sm:text-5xl leading-10 sm:leading-[60px] md:leading-[85px] ">
+            <span className="text-4xl md:text-[56px] sm:text-5xl leading-10 sm:leading-[60px] md:leading-[85px]  before:content-[''] lg:before:content-['🪼'] lg:before:absolute lg:relative lg:before:w-full lg:before:h-full lg:before:text-red-500 lg:before:-bottom-5 lg:before:left-0 lg:before:text-2xl animate-text">
               Md. Mehedi Hasan
             </span>
           </h1>
           <p className="first-letter:text-5xl first-letter:sm:text-7xl first-letter:text-activeColor first-letter:leading-10 text-white font-inter font-semibold leading-8 tracking-[2%] max-w-lg sm:text-start text-2xl sm:text-3xl  sm:leading-10 text-center sm:mx-4 md:text-4xl">
-            I&apos;m a Professional Front-end web developer and Digital Content
-            Management Specialist & Content Creator.
+            I&apos;m a
+            <span className="ms-3">
+              <Typewriter
+                words={[
+                  "Professional Front-end web developer and Digital Content Management Specialist & Content Creator",
+                ]}
+                loop={1}
+                cursor={false}
+              />
+            </span>
           </p>
           <div className="flex justify-center items-center sm:justify-start space-x-4 mx-4">
             <a href="#Contact">
@@ -64,7 +73,7 @@ const About = () => {
             <img
               src="./mehedi.png"
               alt="mehedi image"
-              className="sm:rounded-md rounded-full sm:h-full sm:w-full h-80 w-80 shadow-inner shadow-black hover:shadow-md hover:shadow-sky-400 hover:-translate-y-3 jump-animate p-2"
+              className="sm:rounded-md rounded-full sm:h-full sm:w-full h-80 w-80 shadow-inner shadow-red-400 hover:shadow-md hover:shadow-sky-400 hover:-translate-y-3 jump-animate p-2 hover:backdrop-blur-sm"
             />
           )}
         </div>
