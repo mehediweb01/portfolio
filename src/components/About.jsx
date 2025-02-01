@@ -1,7 +1,7 @@
 import { Skeleton } from "@heroui/react";
 import { Buttons } from "./common/Button";
 import { useEffect, useState } from "react";
-
+import { motion } from "motion/react";
 const About = () => {
   const [isLoading, setIsLoading] = useState(false);
   useEffect(() => {
@@ -12,7 +12,9 @@ const About = () => {
   }, []);
 
   return (
-    <div
+    <motion.div
+      initial={{ backgroundColor: "black", opacity: 0 }}
+      animate={{ backgroundColor: "black", mixBlendMode: "darken", opacity: 1 }}
       id="About"
       className="pt-16 bg-[url('./bg-image.png')] bg-cover bg-center bg-no-repeat"
     >
@@ -64,7 +66,7 @@ const About = () => {
           )}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 export default About;

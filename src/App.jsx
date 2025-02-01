@@ -23,20 +23,20 @@ function App() {
   };
   return (
     <>
-      <div className="bg-white dark:bg-[#2B2C2F]">
-        <BrowserRouter>
-          <Navbar switchDarkMode={darkMode} isDarkMode={theme} />
-          <div>
-            <About />
-            <WhatIDo />
-            <Skills />
-            <Projects />
-            <Contact />
-            <FAQs />
-          </div>
-          <Footer />
-        </BrowserRouter>
-      </div>
+        <div className="bg-white dark:bg-[#2B2C2F]">
+          <BrowserRouter>
+            <Navbar switchDarkMode={darkMode} isDarkMode={theme} />
+            <div>
+              <About />
+              <WhatIDo />
+              <Skills />
+              <Projects />
+              <Contact />
+              <FAQs />
+            </div>
+            <Footer />
+          </BrowserRouter>
+        </div>
     </>
   );
 }
