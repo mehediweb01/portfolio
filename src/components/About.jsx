@@ -8,13 +8,16 @@ const About = () => {
     setIsLoading(true);
     setTimeout(() => {
       setIsLoading(false);
-    }, 2000);
+    }, 1000);
   }, []);
 
   return (
     <motion.div
       initial={{ backgroundColor: "black", opacity: 0 }}
-      animate={{ backgroundColor: "black", mixBlendMode: "darken", opacity: 1 }}
+      animate={{
+        backgroundColor: "black",
+        opacity: 1,
+      }}
       id="About"
       className="pt-16 bg-[url('./bg-image.png')] bg-cover bg-center bg-no-repeat"
     >
