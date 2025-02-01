@@ -2,11 +2,17 @@ import { Buttons } from "./common/Button";
 import { Header } from "./common/Header";
 import { contactInfo, myInfo } from "../db";
 import BoxComponent from "./common/Box";
+import { motion } from "motion/react";
 const Contact = () => {
   return (
     <div id="Contact" className="py-16">
       <Header>Contact</Header>
-      <div className="w-[95%] mx-auto flex md:flex-row flex-col justify-center items-start gap-8">
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1, ease: [0.43, 0.13, 0.28, 0.96] }}
+        className="w-[95%] mx-auto flex md:flex-row flex-col justify-center items-start gap-8"
+      >
         {/* left section */}
         <div className="flex-1 w-full sm:mx-2 mx-0 md:w-1/2 my-12 p-2 shadow-inner shadow-sky-300 rounded-md">
           <div className="bg-blueTints p-8 rounded-lg w-full">
@@ -98,24 +104,32 @@ const Contact = () => {
             ))}
           </div>
           <div className="sm:block hidden mt-4 px-4 py-2 rounded-md shadow-inner shadow-black ">
-            <img
+            <motion.img
+              initial={{ opacity: 1, scale: 1 }}
+              whileHover={{ opacity: 1, scale: 0.9 }}
+              transition={{ duration: 0.2, ease: "backInOut" }}
               src="/contact.jpg"
               alt="contact image"
               className="h-[300px] w-full rounded-lg shadow-md shadow-sky-200 dark:shadow-none animate-pulse duration-500 transition-all"
             />
           </div>
         </div>
-      </div>
+      </motion.div>
       {/* my details */}
       <div className="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-items-center mx-4 lg:mx-0">
         {myInfo.map((item, index) => (
-          <div key={index}>
+          <motion.div
+            initial={{ opacity: 0, translateY: "150px" }}
+            whileInView={{ opacity: 1, translateY: 0 }}
+            transition={{ duration: 1, ease: [0.43, 0.13, 0.28, 0.96] }}
+            key={index}
+          >
             <BoxComponent
               icon={item.icon}
               title={item.title}
               content={item.content}
             />
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>
