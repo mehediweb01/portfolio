@@ -20,7 +20,7 @@ const About = () => {
         opacity: 1,
       }}
       id="About"
-      className="pt-16 bg-[url('./bg-image.png')] bg-cover bg-center bg-no-repeat"
+      className="pt-16 bg-[url('/bg-image.png')] bg-cover bg-center bg-no-repeat"
     >
       <div className=" flex items-center justify-center flex-col-reverse sm:flex-row gap-16 pb-8">
         <div className="space-y-6">
