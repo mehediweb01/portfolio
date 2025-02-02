@@ -1,6 +1,7 @@
 import ProgressBar from "./common/Progress";
 import { progressInfo } from "../db";
 import { Header } from "./common/Header";
+import { motion } from "motion/react";
 const Skills = () => {
   return (
     <div id="Skills" className="pt-16">
@@ -8,7 +9,12 @@ const Skills = () => {
         {/* Title */}
         <Header>Skills</Header>
         {/* details */}
-        <div className="flex flex-col sm:flex-row justify-around items-center sm:items-start sm:gap-2 gap-5 mx-4 py-12">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, ease: [0.43, 0.13, 0.28, 0.96] }}
+          className="flex flex-col sm:flex-row justify-around items-center sm:items-start sm:gap-2 gap-5 mx-4 py-12"
+        >
           {/* left section */}
           <div>
             <div className="px-2 py-3 rounded-md shadow-inner shadow-sky-400">
@@ -25,7 +31,7 @@ const Skills = () => {
               <ProgressBar key={index} value={value} label={label} />
             ))}
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
