@@ -7,12 +7,12 @@ import {
   NavbarMenuToggle,
   NavbarMenu,
   NavbarMenuItem,
+  Switch,
 } from "@heroui/react";
 import { BsGithub, BsLinkedin, BsTwitter } from "react-icons/bs";
-import { MdDarkMode } from "react-icons/md";
-import { MdOutlineDarkMode } from "react-icons/md";
 import { HashLink as Link } from "react-router-hash-link";
 import { useLocation } from "react-router-dom";
+import { MoonIcon, SunIcon } from "./icons/icons";
 const Items = [
   { name: "About", href: "#About" },
   { name: "Skills", href: "#Skills" },
@@ -22,6 +22,7 @@ const Items = [
 const MyNavbar = ({ switchDarkMode, isDarkMode }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
+
   return (
     <div className="sticky top-0 left-0 overflow-hidden z-50">
       <Navbar
@@ -61,14 +62,21 @@ const MyNavbar = ({ switchDarkMode, isDarkMode }) => {
         </NavbarContent>
         {/* right section/social icon */}
         <NavbarContent justify="end">
-          <button onClick={switchDarkMode} type="button" className="text-white">
-            {isDarkMode === "light" ? (
-              <MdOutlineDarkMode className="size-8" />
-            ) : (
-              <MdDarkMode className="size-8" />
-            )}
-          </button>
-
+          {/* switch to dark/light mode */}
+          <Switch
+            color="secondary"
+            thumbIcon={({ isSelected, className }) =>
+              isSelected ? (
+                <MoonIcon className={className} />
+              ) : (
+                <SunIcon className={className} />
+              )
+            }
+            checked={isDarkMode === "dark"}
+            onChange={switchDarkMode}
+            size="lg"
+          />
+          {/* end */}
           <a
             className="text-white text-2xl hover:text-activeColor"
             href="https://github.com/mehediweb01"
