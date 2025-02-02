@@ -1,65 +1,94 @@
 import { FaGithub } from "react-icons/fa";
 import { VscOpenPreview } from "react-icons/vsc";
 import { motion } from "motion/react";
-const ProjectCard = ({ img, name, previewLink, codeLink, useCase }) => {
+import ProjectCardShow from "../Modal";
+import { Tooltip } from "@heroui/react";
+
+const ProjectCard = ({
+  img,
+  name,
+  previewLink,
+  codeLink,
+  useCase,
+  onOpenChange,
+  isOpen,
+  onOpen,
+  selectedItem,
+}) => {
   return (
-    <motion.div
-      initial={{ opacity: 0, scale: 0.5 }}
-      whileInView={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.5, ease: [0.43, 0.13, 0.28, 0.96] }}
-      className=" bg-gradient-to-t from-activeColor/80 to-yellow-400/80 px-4 py-6 rounded-lg hover:scale-105 transition-all duration-300 ease-in-out shadow-md shadow-sky-300 hover:shadow-inner hover:shadow-black dark:hover:shadow-white dark:shadow-black group"
-    >
-      <motion.img
-        initial={{ opacity: 0, rotate: "180deg" }}
-        whileInView={{ opacity: 1, rotate: 0 }}
-        transition={{ duration: 0.5, ease: "easeInOut" }}
-        src={img}
-        alt={name}
-        className="rounded-md shadow-md shadow-sky-400 h-[180px] w-[320px] transition-all mx-auto"
-      />
-      <div className="mt-3">
-        <h3 className="font-inter font-semibold text-2xl sm:text-3xl text-center text-slate-700 dark:text-sky-300 jump-animate">
-          {name}
-        </h3>
-        <div className="mt-4 space-y-3">
-          <p className="font-itim text-xl sm:text-2xl text-black dark:text-white">
-            Front-end project
-          </p>
-          <motion.div
-            initial={{ opacity: 0, scale: 0.5 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+    <>
+      <motion.div
+        initial={{ opacity: 0, scale: 0.5 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.5, ease: [0.43, 0.13, 0.28, 0.96] }}
+        className=" bg-gradient-to-t from-activeColor/80 to-yellow-400/80 px-4 py-6 rounded-lg hover:scale-105 transition-all duration-300 ease-in-out shadow-md shadow-sky-300 hover:shadow-inner hover:shadow-black dark:hover:shadow-white dark:shadow-black group"
+      >
+        <Tooltip content="click here" showArrow={true}>
+          <motion.img
+            initial={{ opacity: 0, rotate: "180deg" }}
+            whileInView={{ opacity: 1, rotate: 0 }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
-            className="sm:hidden flex group-hover:flex gap-4"
-          >
-            <a
-              href={previewLink}
-              className="flex items-center gap-1 font-inter font-semibold text-sm text-black/95 sm:text-base shadow-sm shadow-black px-2 py-0 rounded-md group-hover:bg-sky-300 group-hover:transition-all group-hover:duration-300 group-hover:text-red-500 hover:shadow-inner hover:shadow-black/50"
-            >
-              <span>Preview</span>
-              <span>
-                <VscOpenPreview />
-              </span>
-            </a>
-            <a
-              href={codeLink}
-              className="flex items-center gap-1 font-inter font-semibold text-sm text-black/95 sm:text-base shadow-sm shadow-black px-2 py-0 rounded-md group-hover:bg-sky-300 group-hover:transition-all group-hover:duration-300 group-hover:text-red-500 hover:shadow-inner hover:shadow-black/50 "
-            >
-              <span>Code</span>
-              <span>
-                <FaGithub />
-              </span>
-            </a>
-          </motion.div>
-          <div className="text-slate-900 dark:text-whites">
-            <p className="flex gap-3 flex-wrap">
-              {useCase.map((item, i) => (
-                <span key={i}>{item}</span>
-              ))}
+            src={img}
+            alt={name}
+            onClick={onOpen}
+            className="rounded-md shadow-md shadow-sky-400 h-[180px] w-[320px] transition-all mx-auto hover:cursor-pointer"
+          />
+        </Tooltip>
+
+        <div className="mt-3">
+          <h3 className="font-inter font-semibold text-2xl sm:text-3xl text-center text-slate-700 dark:text-sky-300 jump-animate">
+            {name}
+          </h3>
+          <div className="mt-4 space-y-3">
+            <p className="font-itim text-xl sm:text-2xl text-black dark:text-white">
+              Front-end project
             </p>
+            {/* preview & code link start*/}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.5 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, ease: "easeInOut" }}
+              className="sm:hidden flex group-hover:flex gap-4"
+            >
+              <a
+                href={previewLink}
+                target="_blank"
+                className="flex items-center gap-1 font-inter font-semibold text-sm text-black/95 sm:text-base shadow-sm shadow-black px-2 py-0 rounded-md group-hover:bg-sky-300 group-hover:transition-all group-hover:duration-300 group-hover:text-red-500 hover:shadow-inner hover:shadow-black/50"
+              >
+                <span>Preview</span>
+                <span>
+                  <VscOpenPreview />
+                </span>
+              </a>
+              <a
+                href={codeLink}
+                target="_blank"
+                className="flex items-center gap-1 font-inter font-semibold text-sm text-black/95 sm:text-base shadow-sm shadow-black px-2 py-0 rounded-md group-hover:bg-sky-300 group-hover:transition-all group-hover:duration-300 group-hover:text-red-500 hover:shadow-inner hover:shadow-black/50 "
+              >
+                <span>Code</span>
+                <span>
+                  <FaGithub />
+                </span>
+              </a>
+            </motion.div>
+            {/* preview & code link end */}
+            <div className="text-slate-900 dark:text-whites">
+              <p className="flex gap-3 flex-wrap">
+                {useCase.map((item, i) => (
+                  <span key={i}>{item}</span>
+                ))}
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-    </motion.div>
+      </motion.div>
+
+      <ProjectCardShow
+        isOpen={isOpen}
+        selectedItem={selectedItem}
+        onOpenChange={onOpenChange}
+      />
+    </>
   );
 };
 

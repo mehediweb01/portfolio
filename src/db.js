@@ -76,8 +76,8 @@ export const projectsInfo = [
     id: 5,
     img: "/Governing Docs.png",
     name: "Governing-Docs",
-    previewLink: "https://github.com/mehediweb01/GoveriningDocs",
-    codeLink: "https://goverining-docs.vercel.app/",
+    previewLink: "https://goverining-docs.vercel.app/",
+    codeLink: "https://github.com/mehediweb01/GoveriningDocs",
     useCase: ["#React", "#TailwindCss"],
   },
 

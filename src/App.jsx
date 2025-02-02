@@ -24,7 +24,7 @@ function App() {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 2000); // simulate loading time of 2 seconds
+    }, 2000);
   }, []);
   const darkMode = () => {
     setTheme(theme === "light" ? "dark" : "light");
