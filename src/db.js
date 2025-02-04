@@ -62,7 +62,7 @@ export const projectsInfo = [
     name: "Wizia",
     previewLink: "https://wizia-theta.vercel.app/",
     codeLink: "https://github.com/mehediweb01/wizia",
-    useCase: ["#React", "#TypeScript", "", ""],
+    useCase: ["#React", "#TypeScript", "#TailwindCss", "#framer-motion"],
   },
   {
     id: 4,
@@ -70,7 +70,7 @@ export const projectsInfo = [
     name: "Finance-website",
     previewLink: "https://finance-website-five.vercel.app/",
     codeLink: "https://github.com/mehediweb01/Finance-Website",
-    useCase: ["#React", "#TailwindCss", "#NextUi", "#FramerMotion"],
+    useCase: ["#React", "#TailwindCss", "#NextUi"],
   },
   {
     id: 5,

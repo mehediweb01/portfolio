@@ -5,36 +5,60 @@ import BoxComponent from "./common/Box";
 import { motion } from "motion/react";
 import emailjs from "@emailjs/browser";
 import { useState } from "react";
+import { toast } from "react-toastify";
 const Contact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+  const nameCheck = !name.trim();
+  const emailCheck = !email.trim();
+  const messageCheck = !message.trim();
   const sendEmail = (e) => {
-    //  emailjs
-    //   .sendForm("service_y24b0y5", "template_7e7jyog", form.current, {
-    //     publicKey: "Uxt8EF3_4CCtYmOUA",
-    //   })
     e.preventDefault();
-    emailjs
-      .send(
-        "service_y24b0y5",
-        "template_7e7jyog",
-        {
-          user_name: name,
-          user_email: email,
-          reply_to: email,
-          message: message,
-        },
-        "Uxt8EF3_4CCtYmOUA"
-      )
-      .then(
-        () => {
-          console.log("SUCCESS!");
-        },
-        (error) => {
-          console.log("FAILED...", error.text);
-        }
-      );
+    // form validation && send email
+    const errors = [];
+
+    if (nameCheck) errors.push("Please enter a valid name");
+    if (emailCheck || !email.match(pattern))
+      errors.push("Please enter a valid email");
+    if (messageCheck) errors.push("Please enter a valid message");
+
+    if (errors.length > 0) {
+      toast.error(errors.join("\n"), {
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        style: { whiteSpace: "pre-line" },
+      });
+    } else {
+      emailjs
+        .send(
+          "service_y24b0y5",
+          "template_7e7jyog",
+          {
+            user_name: name,
+            user_email: email,
+            reply_to: email,
+            message: message,
+          },
+          "Uxt8EF3_4CCtYmOUA"
+        )
+        .then(
+          () => {
+            setName("");
+            setEmail("");
+            setMessage("");
+            toast.success("SUCCESS!");
+          },
+          (error) => {
+            toast.error("FAILED...", error.text);
+          }
+        );
+    }
   };
   return (
     <div id="Contact" className="py-16">
