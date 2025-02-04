@@ -3,7 +3,39 @@ import { Header } from "./common/Header";
 import { contactInfo, myInfo } from "../db";
 import BoxComponent from "./common/Box";
 import { motion } from "motion/react";
+import emailjs from "@emailjs/browser";
+import { useState } from "react";
 const Contact = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const sendEmail = (e) => {
+    //  emailjs
+    //   .sendForm("service_y24b0y5", "template_7e7jyog", form.current, {
+    //     publicKey: "Uxt8EF3_4CCtYmOUA",
+    //   })
+    e.preventDefault();
+    emailjs
+      .send(
+        "service_y24b0y5",
+        "template_7e7jyog",
+        {
+          user_name: name,
+          user_email: email,
+          reply_to: email,
+          message: message,
+        },
+        "Uxt8EF3_4CCtYmOUA"
+      )
+      .then(
+        () => {
+          console.log("SUCCESS!");
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
+  };
   return (
     <div id="Contact" className="py-16">
       <Header>Contact</Header>
@@ -17,7 +49,7 @@ const Contact = () => {
         <div className="flex-1 w-full sm:mx-2 mx-0 md:w-1/2 my-12 p-2 shadow-inner shadow-sky-300 rounded-md">
           <div className="bg-blueTints p-8 rounded-lg w-full">
             <form
-              action=""
+              onSubmit={sendEmail}
               className="flex flex-col items-start justify-center gap-6"
             >
               <div className="flex flex-col w-full">
@@ -30,6 +62,9 @@ const Contact = () => {
                 <input
                   type="text"
                   id="Name"
+                  onChange={(e) => setName(e.target.value)}
+                  value={name}
+                  name="user_name"
                   placeholder="enter your good name"
                   className="w-full bg-blueMagenta shadow-inner shadow-sky-700 border border-slate-200 rounded-md px-4 py-2 focus:shadow-md focus:shadow-white text-white font-itim text-xl tracking-wider transition-all duration-700"
                 />
@@ -44,6 +79,9 @@ const Contact = () => {
                 <input
                   type="email"
                   id="Email"
+                  onChange={(e) => setEmail(e.target.value)}
+                  value={email}
+                  name="user_email"
                   placeholder="enter your email"
                   className="w-full bg-blueMagenta shadow-inner shadow-sky-700 border border-slate-200 rounded-md px-4 py-2 focus:shadow-md focus:shadow-white text-white font-itim text-xl tracking-wider transition-all duration-700"
                 />
@@ -58,12 +96,15 @@ const Contact = () => {
                 <textarea
                   placeholder="what you want to say?"
                   id="Message"
+                  onChange={(e) => setMessage(e.target.value)}
+                  value={message}
+                  name="message"
                   rows="5"
                   className="w-full bg-blueMagenta shadow-inner shadow-sky-700 border border-slate-200 rounded-md px-4 py-2 focus:shadow-md focus:shadow-white text-white font-itim text-xl tracking-wider transition-all duration-700"
                 />
               </div>
               <Buttons
-                type={"button"}
+                type={"submit"}
                 className="bg-transparent !text-sky-300 font-serif font-thin tracking-[5px] w-3/4 mx-auto jump-animate hover:shadow-btn transition-all duration-300 relative z-20 group after:content-[''] after:h-[3px] after:hover:h-[5%] after:w-full after:transition-all after:duration-400 after:hover:animate-spin after:bg-sky-300 after:-z-50 after:absolute after:bottom-0 after:left-0 after:hover:rounded-lg after:animate-indeterminate-bar"
                 variant="bordered"
               >
