@@ -1,5 +1,4 @@
 import { Skeleton } from "@heroui/react";
-import { Buttons } from "./common/Button";
 import { useEffect, useState } from "react";
 import { motion } from "motion/react";
 import { Typewriter } from "react-simple-typewriter";
@@ -33,6 +32,7 @@ const About = () => {
               Md. Mehedi Hasan
             </span>
           </h1>
+
           <p className="first-letter:text-5xl first-letter:sm:text-7xl first-letter:text-activeColor first-letter:leading-10 text-white font-inter font-semibold leading-8 tracking-[2%] max-w-lg sm:text-start text-2xl sm:text-3xl  sm:leading-10 text-center sm:mx-4 md:text-4xl">
             I&apos;m a
             <span className="ms-3">
@@ -45,22 +45,19 @@ const About = () => {
               />
             </span>
           </p>
-          <div className="flex justify-center items-center sm:justify-start space-x-4 mx-4">
-            <a href="#Contact">
-              <Buttons
-                className="hover:shadow-btn transition-all duration-300 shadow-activeColor relative z-20 group after:content-[''] after:h-px after:hover:h-[35%] after:w-full after:transition-all after:duration-700 after:hover:animate-ping after:bg-slate-600 after:-z-50 after:absolute after:bottom-0 after:left-0 after:hover:rounded-lg after:animate-indeterminate-bar"
-                variant="solid"
-              >
-                Contact me
-              </Buttons>
+          <div className="flex justify-center items-center sm:justify-start space-x-4 sm:mx-4">
+            <a
+              href="#Contact"
+              className="text-center bg-activeColor !text-darkBlack font-inter font-semibold text-xl sm:text-2xl leading-5 sm:leading-8 tracking-[1%] rounded-2xl px-4 py-3 hover:shadow-btn transition-all duration-300 shadow-activeColor relative z-20 group after:content-[''] after:h-px after:hover:h-[1%] after:w-1/2 after:transition-all after:duration-700 after:bg-slate-600 after:-z-50 after:absolute after:bottom-0 after:left-0 after:hover:rounded-lg after:animate-indeterminate-bar"
+            >
+              Contact me
             </a>
-            <a href="#faqs">
-              <Buttons
-                className="px-6 bg-transparent !text-white relative group after:content-[''] z-20 after:absolute after:bg-activeColor after:h-px after:w-full after:hover:h-[2px] transition-all after:transition-all after:duration-400 after:left-0 after:bottom-0 after:-z-20 duration-300 hover:shadow-btn shadow-activeColor after:hover:animate-spin after:animate-indeterminate-bar"
-                variant="bordered"
-              >
-                FAQs
-              </Buttons>
+
+            <a
+              href="#faqs"
+              className="text-center bg-transparent !text-white font-inter font-semibold text-xl sm:text-2xl leading-5 sm:leading-8 tracking-[1%] rounded-2xl px-6 py-3 border border-slate-300 relative group after:content-[''] z-20 after:absolute after:bg-activeColor after:h-px after:w-1/2 after:hover:h-[2px] transition-all after:transition-all after:duration-400 after:left-0 after:bottom-0 after:right-0 after:-z-20 duration-300 hover:shadow-btn shadow-activeColor  after:animate-indeterminate-bar"
+            >
+              FAQs
             </a>
           </div>
         </div>
