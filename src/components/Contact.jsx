@@ -64,7 +64,8 @@ const Contact = () => {
               </div>
               <Buttons
                 type={"button"}
-                className="bg-buttonBg w-3/4 mx-auto jump-animate"
+                className="bg-transparent !text-sky-300 font-serif font-thin tracking-[5px] w-3/4 mx-auto jump-animate hover:shadow-btn transition-all duration-300 relative z-20 group after:content-[''] after:h-[3px] after:hover:h-[5%] after:w-full after:transition-all after:duration-400 after:hover:animate-spin after:bg-sky-300 after:-z-50 after:absolute after:bottom-0 after:left-0 after:hover:rounded-lg after:animate-indeterminate-bar"
+                variant="bordered"
               >
                 Send
               </Buttons>
