@@ -16,13 +16,13 @@ function ProjectCardShow({ isOpen, onOpenChange, selectedItem }) {
       <Modal
         isOpen={isOpen}
         onOpenChange={onOpenChange}
-        className="dark:bg-gradient-to-t dark:from-sky-300/20 dark:to-header/20"
+        className="dark:bg-gradient-to-t dark:from-activeColor/40 dark:to-yellow-400/30"
       >
         <ModalContent>
           {(onClose) => (
             <>
               <ModalHeader className="w-full flex justify-center items-center">
-                <h1 className="text-2xl sm:text-4xl text-darkBlack dark:text-whites font-inter font-semibold uppercase border-b border-header rounded-full pb-1">
+                <h1 className="text-2xl sm:text-4xl text-darkBlack dark:text-white font-inter font-semibold uppercase border-b border-header rounded-full pb-1 px-4">
                   {selectedItem.name}
                 </h1>
               </ModalHeader>

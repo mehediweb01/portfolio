@@ -21,9 +21,13 @@ const ProjectCard = ({
         initial={{ opacity: 0, scale: 0.5 }}
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5, ease: [0.43, 0.13, 0.28, 0.96] }}
-        className=" bg-gradient-to-t from-activeColor/80 to-yellow-400/80 px-4 py-6 rounded-lg hover:scale-105 transition-all duration-300 ease-in-out shadow-md shadow-sky-300 hover:shadow-inner hover:shadow-black dark:hover:shadow-white dark:shadow-black group"
+        className="bg-gradient-to-t from-activeColor/70 to-yellow-400/60 px-4 py-6 rounded-lg hover:scale-105 transition-all duration-300 ease-in-out shadow-md shadow-sky-300 hover:shadow-inner hover:shadow-black dark:hover:shadow-white dark:shadow-black group"
       >
-        <Tooltip content="click here" showArrow={true}>
+        <Tooltip
+          content="click here"
+          showArrow={true}
+          className="tracking-[3px] bg-black font-serif text-sky-400 leading-5 font-medium text-sm"
+        >
           <motion.img
             initial={{ opacity: 0, rotate: "180deg" }}
             whileInView={{ opacity: 1, rotate: 0 }}
@@ -36,7 +40,7 @@ const ProjectCard = ({
         </Tooltip>
 
         <div className="mt-3">
-          <h3 className="font-inter font-semibold text-2xl sm:text-3xl text-center text-slate-700 dark:text-sky-300 jump-animate">
+          <h3 className="font-inter font-semibold text-2xl sm:text-3xl text-center text-slate-700 dark:text-darkBlack jump-animate">
             {name}
           </h3>
           <div className="mt-4 space-y-3">
@@ -53,7 +57,7 @@ const ProjectCard = ({
               <a
                 href={previewLink}
                 target="_blank"
-                className="flex items-center gap-1 font-inter font-semibold text-sm text-black/95 sm:text-base shadow-sm shadow-black px-2 py-0 rounded-md group-hover:bg-sky-300 group-hover:transition-all group-hover:duration-300 group-hover:text-red-500 hover:shadow-inner hover:shadow-black/50"
+                className="flex items-center gap-1 font-inter font-semibold text-sm text-black/95 sm:text-base shadow-sm shadow-black px-2 py-0 rounded-md group-hover:bg-sky-300 group-hover:transition-all group-hover:duration-300 group-hover:text-darkBlack hover:shadow-inner hover:shadow-black/50"
               >
                 <span>Preview</span>
                 <span>
@@ -63,7 +67,7 @@ const ProjectCard = ({
               <a
                 href={codeLink}
                 target="_blank"
-                className="flex items-center gap-1 font-inter font-semibold text-sm text-black/95 sm:text-base shadow-sm shadow-black px-2 py-0 rounded-md group-hover:bg-sky-300 group-hover:transition-all group-hover:duration-300 group-hover:text-red-500 hover:shadow-inner hover:shadow-black/50 "
+                className="flex items-center gap-1 font-inter font-semibold text-sm text-black/95 sm:text-base shadow-sm shadow-black px-2 py-0 rounded-md group-hover:bg-sky-300 group-hover:transition-all group-hover:duration-300 group-hover:text-darkBlack hover:shadow-inner hover:shadow-black/50 "
               >
                 <span>Code</span>
                 <span>

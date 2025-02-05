@@ -18,7 +18,6 @@ export default {
       },
       backgroundColor: {
         cardBg: "#17DFF55C",
-        buttonBg: "#17F4C0",
         faqBg: "#E9E149B8",
         blueTints: "#100D25",
         blueMagenta: "#151030",
