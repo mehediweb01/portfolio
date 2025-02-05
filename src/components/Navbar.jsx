@@ -22,7 +22,7 @@ const Items = [
 const MyNavbar = ({ switchDarkMode, isDarkMode }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
-
+  const closeMenu = () => setIsMenuOpen(false);
   return (
     <div className="sticky top-0 left-0 overflow-hidden z-50">
       <Navbar
@@ -30,6 +30,7 @@ const MyNavbar = ({ switchDarkMode, isDarkMode }) => {
           isDarkMode === "dark" && "border-b border-b-slate-500"
         }`}
         onMenuOpenChange={setIsMenuOpen}
+        isMenuOpen={isMenuOpen}
       >
         <NavbarContent>
           <NavbarMenuToggle
@@ -111,6 +112,7 @@ const MyNavbar = ({ switchDarkMode, isDarkMode }) => {
                 }`}
                 to={item.href}
                 size="lg"
+                onClick={closeMenu}
               >
                 {item.name}
               </Link>
