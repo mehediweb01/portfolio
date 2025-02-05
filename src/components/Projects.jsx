@@ -21,7 +21,7 @@ const Projects = () => {
   return (
     <div id="Project" className="py-16 w-[90%] mx-auto">
       <Header>Projects</Header>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-items-start gap-5 mt-14">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-items-start gap-5 gap-y-6 mt-14">
         {projectsInfo.map((item) => (
           <div key={item.id}>
             <ProjectCard
