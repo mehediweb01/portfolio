@@ -2,6 +2,7 @@ import { useState } from "react";
 import { projectsInfo } from "../db";
 import { Header } from "./common/Header";
 import ProjectCard from "./common/ProjectCard";
+import { motion } from "motion/react";
 
 const Projects = () => {
   const [selectedData, setSelectedData] = useState(null);
@@ -21,7 +22,12 @@ const Projects = () => {
   return (
     <div id="Project" className="py-16 w-[90%] mx-auto">
       <Header>Projects</Header>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-items-start gap-5 gap-y-6 mt-14">
+      <motion.div
+        initial={{ opacity: 0, marginTop: 0 }}
+        whileInView={{ opacity: 1, marginTop: "60px" }}
+        transition={{ duration: 0.5, ease: [0.43, 0.13, 0.28, 0.96] }}
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-items-start gap-5 gap-y-6 mt-14"
+      >
         {projectsInfo.map((item) => (
           <div key={item.id}>
             <ProjectCard
@@ -33,7 +39,7 @@ const Projects = () => {
             />
           </div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 };

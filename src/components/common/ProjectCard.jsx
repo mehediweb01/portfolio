@@ -19,7 +19,7 @@ const ProjectCard = ({
     <>
       <motion.div
         initial={{ opacity: 0, scale: 0.5 }}
-        whileInView={{ opacity: 1, scale: 1 }}
+        animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5, ease: [0.43, 0.13, 0.28, 0.96] }}
         className="bg-gradient-to-t from-activeColor/70 to-yellow-400/60 px-4 py-6 rounded-lg hover:scale-105 transition-all duration-300 ease-in-out shadow-md shadow-sky-300 hover:shadow-inner hover:shadow-black dark:hover:shadow-white dark:shadow-black group"
       >
@@ -29,8 +29,8 @@ const ProjectCard = ({
           className="tracking-[3px] bg-black font-serif text-sky-400 leading-5 font-medium text-sm"
         >
           <motion.img
-            initial={{ opacity: 0, rotate: "180deg" }}
-            whileInView={{ opacity: 1, rotate: 0 }}
+            initial={{ opacity: 0, scale: 0.6 }}
+            whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
             src={img}
             alt={name}
