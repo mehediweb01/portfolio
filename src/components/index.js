@@ -1,0 +1,9 @@
+export { default as MyNavbar } from "./Navbar";
+export { default as About } from "./About";
+export { default as WhatIDo } from "./WhatIDo";
+export { default as Skills } from "./Skills";
+export { default as Projects } from "./Projects";
+export { default as Contact } from "./Contact";
+export { default as FAQs } from "./FAQs";
+export { default as ProjectCard } from "./common/ProjectCard";
+export { default as Footer } from "./Footer";
