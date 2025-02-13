@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { BrowserRouter } from "react-router-dom";
 import { RingLoader } from "react-spinners";
+import ScrollSpy from "react-ui-scrollspy";
 import {
   MyNavbar,
   About,
@@ -42,14 +43,14 @@ function App() {
         <div className="bg-white dark:bg-[#2B2C2F]">
           <BrowserRouter>
             <MyNavbar switchDarkMode={darkMode} isDarkMode={theme} />
-            <div>
+            <ScrollSpy offsetTop={-50} scrollThrottle={10}>
               <About />
               <WhatIDo />
               <Skills />
               <Projects />
               <Contact />
               <FAQs />
-            </div>
+            </ScrollSpy>
             <Footer />
           </BrowserRouter>
         </div>

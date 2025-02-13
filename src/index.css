@@ -3,6 +3,13 @@
 @tailwind components;
 @tailwind utilities;
 
+/* active color on scroll */
+.active-scroll-spy {
+  @apply text-activeColor;
+}
+html {
+  scroll-padding-top: 20px;
+}
 /* mobile menu icons */
 .group {
   @apply text-white;

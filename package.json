@@ -22,7 +22,8 @@
     "react-router-hash-link": "^2.4.3",
     "react-simple-typewriter": "^5.0.1",
     "react-spinners": "^0.15.0",
-    "react-toastify": "^11.0.3"
+    "react-toastify": "^11.0.3",
+    "react-ui-scrollspy": "^2.3.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",

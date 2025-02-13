@@ -11,7 +11,6 @@ import {
 } from "@heroui/react";
 import { BsGithub, BsLinkedin, BsTwitter } from "react-icons/bs";
 import { HashLink as Link } from "react-router-hash-link";
-import { useLocation } from "react-router-dom";
 import { MoonIcon, SunIcon } from "./icons/icons";
 const Items = [
   { name: "About", href: "#About" },
@@ -21,7 +20,6 @@ const Items = [
 ];
 const MyNavbar = ({ switchDarkMode, isDarkMode }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const location = useLocation();
   const closeMenu = () => setIsMenuOpen(false);
   return (
     <div className="sticky top-0 left-0 overflow-hidden z-50">
@@ -50,11 +48,8 @@ const MyNavbar = ({ switchDarkMode, isDarkMode }) => {
               <Link
                 key={index}
                 to={item.href}
-                className={`font-itim text-xl hover:text-activeColor tracking-wide ${
-                  location.hash === item.href
-                    ? "text-activeColor"
-                    : "text-white"
-                }`}
+                data-to-scrollspy-id={item.name}
+                className={`font-itim text-xl hover:text-activeColor tracking-wide text-white`}
               >
                 {item.name}
               </Link>
@@ -105,14 +100,11 @@ const MyNavbar = ({ switchDarkMode, isDarkMode }) => {
           {Items.map((item, index) => (
             <NavbarMenuItem key={`${item}-${index}`}>
               <Link
-                className={`w-full font-itim text-xl ${
-                  location.hash === item.href
-                    ? "text-activeColor"
-                    : "text-white"
-                }`}
                 to={item.href}
+                data-to-scrollspy-id={item.name}
                 size="lg"
                 onClick={closeMenu}
+                className={`w-full font-itim text-xl text-white`}
               >
                 {item.name}
               </Link>
