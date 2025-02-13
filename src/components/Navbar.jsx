@@ -12,6 +12,7 @@ import {
 import { BsGithub, BsLinkedin, BsTwitter } from "react-icons/bs";
 import { HashLink as Link } from "react-router-hash-link";
 import { MoonIcon, SunIcon } from "./icons/icons";
+import { useLocation } from "react-router-dom";
 const Items = [
   { name: "About", href: "#About" },
   { name: "Skills", href: "#Skills" },
@@ -21,6 +22,7 @@ const Items = [
 const MyNavbar = ({ switchDarkMode, isDarkMode }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const closeMenu = () => setIsMenuOpen(false);
+  const location = useLocation();
   return (
     <div className="sticky top-0 left-0 overflow-hidden z-50">
       <Navbar
@@ -104,7 +106,11 @@ const MyNavbar = ({ switchDarkMode, isDarkMode }) => {
                 data-to-scrollspy-id={item.name}
                 size="lg"
                 onClick={closeMenu}
-                className={`w-full font-itim text-xl text-white`}
+                className={`w-full font-itim text-xl ${
+                  location.hash === item.href
+                    ? "text-activeColor"
+                    : "text-white"
+                }`}
               >
                 {item.name}
               </Link>
