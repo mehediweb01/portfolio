@@ -13,24 +13,29 @@ import {
 } from "./components";
 
 function App() {
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState(
+    typeof window !== "undefined" && localStorage.getItem("theme") === "dark"
+  );
 
   useEffect(() => {
-    if (theme === "dark") {
+    if (theme) {
       document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
     } else {
       document.documentElement.classList.remove("dark");
+      localStorage.setItem("theme", "light");
     }
-  });
-  const darkMode = () => {
-    setTheme(theme === "light" ? "dark" : "light");
-  };
+  }, [theme]);
 
   return (
     <>
       <div className="bg-white dark:bg-[#2B2C2F]">
         <BrowserRouter>
-          <MyNavbar switchDarkMode={darkMode} isDarkMode={theme} />
+          <MyNavbar
+            toggleTheme={setTheme}
+            isDarkMode={theme}
+            isChecked={theme}
+          />
           <ScrollSpy offsetTop={-50} scrollThrottle={10}>
             <About />
             <WhatIDo />

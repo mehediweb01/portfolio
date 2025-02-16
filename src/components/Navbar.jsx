@@ -19,7 +19,7 @@ const Items = [
   { name: "Project", href: "#Project" },
   { name: "Contact", href: "#Contact" },
 ];
-const MyNavbar = ({ switchDarkMode, isDarkMode }) => {
+const MyNavbar = ({ toggleTheme, isDarkMode, isChecked }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const closeMenu = () => setIsMenuOpen(false);
   const location = useLocation();
@@ -63,6 +63,8 @@ const MyNavbar = ({ switchDarkMode, isDarkMode }) => {
           {/* switch to dark/light mode */}
           <Switch
             color="secondary"
+            isSelected={isChecked}
+            onValueChange={toggleTheme}
             thumbIcon={({ isSelected, className }) =>
               isSelected ? (
                 <MoonIcon className={className} />
@@ -70,8 +72,6 @@ const MyNavbar = ({ switchDarkMode, isDarkMode }) => {
                 <SunIcon className={className} />
               )
             }
-            checked={isDarkMode === "dark"}
-            onChange={switchDarkMode}
             size="lg"
           />
           {/* end */}
