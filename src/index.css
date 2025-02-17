@@ -5,7 +5,7 @@
 
 /* active color on scroll */
 .active-scroll-spy {
-  @apply text-activeColor;
+  @apply text-activeColor border-b border-activeColor transition-all duration-300 animate-bounce first-letter:text-[1.5rem];
 }
 html {
   scroll-padding-top: 20px;

@@ -4,7 +4,7 @@ import { Header } from "./common/Header";
 import { motion } from "motion/react";
 const FAQs = () => {
   return (
-    <div id="faqs" className="py-16">
+    <div id="FAQs" className="py-16">
       <div>
         <Header>FAQs</Header>
       </div>

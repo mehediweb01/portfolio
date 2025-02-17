@@ -18,6 +18,7 @@ const Items = [
   { name: "Skills", href: "#Skills" },
   { name: "Project", href: "#Project" },
   { name: "Contact", href: "#Contact" },
+  { name: "FAQs", href: "#FAQs" },
 ];
 const MyNavbar = ({ toggleTheme, isDarkMode, isChecked }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -45,7 +46,7 @@ const MyNavbar = ({ toggleTheme, isDarkMode, isChecked }) => {
         </NavbarContent>
 
         <NavbarContent className="hidden sm:flex gap-4 " justify="center">
-          <NavbarItem className={`flex gap-x-6`}>
+          <NavbarItem className={`flex gap-x-4 md:gap-x-6`}>
             {Items.map((item, index) => (
               <Link
                 key={index}
