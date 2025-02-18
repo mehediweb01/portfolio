@@ -2,7 +2,7 @@ const HomePage = () => {
   return (
     <div
       id="home"
-      className="min-h-screen bg-[url('./bg-image.webp')] opacity-100 bg-center bg-cover bg-no-repeat"
+      className="min-h-screen bg-[url('./bg-image.png')] opacity-100 bg-center bg-cover bg-no-repeat"
     >
       <div className="bg-black min-h-screen bg-opacity-50 text-white flex items-center justify-center gap-16 pb-8 px-2 sm:py-0 py-16">
         <div className="flex sm:flex-row flex-col gap-4 sm:gap-8 items-start sm:items-center sm:ms-0 ms-4">
