@@ -20,27 +20,21 @@ const MyNavbar = ({ toggleTheme, isDarkMode, isChecked }) => {
   const closeMenu = () => setIsMenuOpen(false);
   const location = useLocation();
   return (
-    <div className="sticky top-0 left-0 overflow-hidden z-50">
+    <div className="nav sticky top-0 left-0 overflow-hidden z-50">
       <Navbar
-        className={`bg-black/80 ${
+        className={`bg-black/80 mainNav ${
           isDarkMode === "dark" && "border-b border-b-slate-500"
         }`}
         onMenuOpenChange={setIsMenuOpen}
         isMenuOpen={isMenuOpen}
       >
-        <NavbarContent>
+        <NavbarContent className="content">
           <NavbarMenuToggle
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
             className="sm:hidden"
           />
-          <NavbarBrand>
-            <Link
-              to="#home"
-              className={
-                location.hash === "#home" ? "active-scroll-spy-del" : undefined
-              }
-              data-to-scrollspy-id={"home"}
-            >
+          <NavbarBrand className="brand">
+            <Link to="#" data-to-scrollspy-id={"home"}>
               <img src="/logo.png" className="rounded-full size-12" alt="" />
             </Link>
           </NavbarBrand>
