@@ -7,6 +7,11 @@
 .active-scroll-spy {
   @apply text-activeColor border-b border-activeColor transition-all duration-300 animate-bounce first-letter:text-[1.5rem];
 }
+
+.active-scroll-spy-del {
+  @apply text-activeColor border-none animate-none;
+}
+
 html {
   scroll-padding-top: 20px;
 }

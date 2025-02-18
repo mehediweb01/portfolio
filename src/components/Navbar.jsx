@@ -13,13 +13,8 @@ import { BsGithub, BsLinkedin, BsTwitter } from "react-icons/bs";
 import { HashLink as Link } from "react-router-hash-link";
 import { MoonIcon, SunIcon } from "./icons/icons";
 import { useLocation } from "react-router-dom";
-const Items = [
-  { name: "About", href: "#About" },
-  { name: "Skills", href: "#Skills" },
-  { name: "Project", href: "#Project" },
-  { name: "Contact", href: "#Contact" },
-  { name: "FAQs", href: "#FAQs" },
-];
+import { Items } from "../db";
+
 const MyNavbar = ({ toggleTheme, isDarkMode, isChecked }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const closeMenu = () => setIsMenuOpen(false);
@@ -40,8 +35,10 @@ const MyNavbar = ({ toggleTheme, isDarkMode, isChecked }) => {
           />
           <NavbarBrand>
             <Link
-              to="#"
-              className="hover:cursor-pointer"
+              to="#home"
+              className={
+                location.hash === "#home" ? "active-scroll-spy-del" : undefined
+              }
               data-to-scrollspy-id={"home"}
             >
               <img src="/logo.png" className="rounded-full size-12" alt="" />
@@ -56,7 +53,7 @@ const MyNavbar = ({ toggleTheme, isDarkMode, isChecked }) => {
                 key={index}
                 to={item.href}
                 data-to-scrollspy-id={item.name}
-                className={`font-itim text-xl hover:text-activeColor tracking-wide text-white`}
+                className="font-itim text-xl hover:text-activeColor tracking-wide text-white"
               >
                 {item.name}
               </Link>
@@ -111,10 +108,10 @@ const MyNavbar = ({ toggleTheme, isDarkMode, isChecked }) => {
                 data-to-scrollspy-id={item.name}
                 size="lg"
                 onClick={closeMenu}
-                className={`w-full font-itim text-xl ${
+                className={`${
                   location.hash === item.href
-                    ? "text-activeColor"
-                    : "text-white"
+                    ? "text-activeColor w-full font-itim text-xl"
+                    : "text-white w-full font-itim text-xl"
                 }`}
               >
                 {item.name}

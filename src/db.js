@@ -4,7 +4,14 @@ import phone from "/phone.svg";
 import meUser from "/me-user.svg";
 import userTime from "/userTime.svg";
 import yellowEmail from "/yellow-email.svg";
-
+// navbar items
+export const Items = [
+  { name: "About", href: "#About" },
+  { name: "Skills", href: "#Skills" },
+  { name: "Project", href: "#Project" },
+  { name: "Contact", href: "#Contact" },
+  { name: "FAQs", href: "#FAQs" },
+];
 // skill section progressBar information
 export const progressInfo = [
   {
