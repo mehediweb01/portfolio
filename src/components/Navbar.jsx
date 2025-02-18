@@ -39,7 +39,11 @@ const MyNavbar = ({ toggleTheme, isDarkMode, isChecked }) => {
             className="sm:hidden"
           />
           <NavbarBrand>
-            <Link to="#" className="hover:cursor-pointer">
+            <Link
+              to="#"
+              className="hover:cursor-pointer"
+              data-to-scrollspy-id={"home"}
+            >
               <img src="/logo.png" className="rounded-full size-12" alt="" />
             </Link>
           </NavbarBrand>

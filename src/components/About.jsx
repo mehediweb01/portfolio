@@ -12,16 +12,8 @@ const About = () => {
   }, []);
 
   return (
-    <motion.div
-      initial={{ backgroundColor: "black", opacity: 0 }}
-      animate={{
-        backgroundColor: "black",
-        opacity: 1,
-      }}
-      id="About"
-      className="pt-16 bg-[url('/bg-image.png')] bg-cover bg-center bg-no-repeat"
-    >
-      <div className=" flex items-center justify-center flex-col-reverse sm:flex-row gap-16 pb-8">
+    <motion.div id="About" className="pt-16">
+      <div className="flex items-center justify-center flex-col-reverse sm:flex-row gap-16 pb-8">
         <div className="space-y-6">
           <h1 className="font-inter font-semibold sm:font-bold tracking-[2%] text-header sm:text-start text-center sm:mx-4">
             <span className="text-5xl md:text-7xl sm:text-6xl leading-4 sm:leading-6">
@@ -33,9 +25,9 @@ const About = () => {
             </span>
           </h1>
 
-          <p className="first-letter:text-5xl first-letter:sm:text-7xl first-letter:text-activeColor first-letter:leading-10 text-white font-inter font-semibold leading-8 tracking-[2%] max-w-lg sm:text-start text-2xl sm:text-3xl  sm:leading-10 text-center sm:mx-4 md:text-4xl">
+          <p className="first-letter:text-5xl first-letter:sm:text-7xl first-letter:text-activeColor first-letter:leading-10 font-inter font-semibold leading-8 tracking-[2%] max-w-lg sm:text-start text-2xl sm:text-3xl  sm:leading-10 text-center sm:mx-4 md:text-4xl text-darkBlack dark:text-white">
             I&apos;m a
-            <span className="ms-3">
+            <span className="ms-3 ">
               <Typewriter
                 words={[
                   "Professional Front-end web developer and Digital Content Management Specialist & Content Creator",
@@ -48,14 +40,14 @@ const About = () => {
           <div className="flex justify-center items-center sm:justify-start space-x-4 sm:mx-4">
             <a
               href="#Contact"
-              className="text-center bg-activeColor !text-darkBlack font-inter font-semibold text-xl sm:text-2xl leading-5 sm:leading-8 tracking-[1%] rounded-2xl px-4 py-3 hover:shadow-btn transition-all duration-300 shadow-activeColor relative z-20 group after:content-[''] after:h-px after:hover:h-[1%] after:w-1/2 after:transition-all after:duration-700 after:bg-slate-600 after:-z-50 after:absolute after:bottom-0 after:left-0 after:hover:rounded-lg after:animate-indeterminate-bar"
+              className="text-center bg-activeColor !text-darkBlack font-inter font-semibold text-xl sm:text-2xl leading-5 sm:leading-8 tracking-[1%] rounded-2xl px-4 py-3 hover:shadow-btnWhite dark:hover:shadow-btn transition-all duration-300 shadow-activeColor relative z-20 group after:content-[''] after:h-px after:hover:h-[1%] after:w-1/2 after:transition-all after:duration-700 after:bg-slate-600 after:-z-50 after:absolute after:bottom-0 after:left-0 after:hover:rounded-lg after:animate-indeterminate-bar"
             >
               Contact me
             </a>
 
             <a
-              href="#faqs"
-              className="text-center bg-transparent !text-white font-inter font-semibold text-xl sm:text-2xl leading-5 sm:leading-8 tracking-[1%] rounded-2xl px-6 py-3 border border-slate-300 relative group after:content-[''] z-20 after:absolute after:bg-activeColor after:h-px after:w-1/2 after:hover:h-[2px] transition-all after:transition-all after:duration-400 after:left-0 after:bottom-0 after:right-0 after:-z-20 duration-300 hover:shadow-btn shadow-activeColor  after:animate-indeterminate-bar"
+              href="#FAQs"
+              className="text-center bg-transparent !text-darkBlack dark:!text-white font-inter font-semibold text-xl sm:text-2xl leading-5 sm:leading-8 tracking-[1%] rounded-2xl px-6 py-3 border border-slate-300 relative group after:content-[''] z-20 after:absolute after:bg-activeColor after:h-px after:w-1/2 after:hover:h-[2px] transition-all after:transition-all after:duration-400 after:left-0 after:bottom-0 after:right-0 after:-z-20 duration-300 hover:shadow-btnWhite dark:hover:shadow-btn shadow-activeColor after:animate-indeterminate-bar"
             >
               FAQs
             </a>

@@ -3,6 +3,7 @@ import { BrowserRouter } from "react-router-dom";
 import ScrollSpy from "react-ui-scrollspy";
 import {
   MyNavbar,
+  HomePage,
   About,
   Contact,
   FAQs,
@@ -37,6 +38,7 @@ function App() {
             isChecked={theme}
           />
           <ScrollSpy offsetTop={-50} scrollThrottle={10}>
+            <HomePage />
             <About />
             <WhatIDo />
             <Skills />

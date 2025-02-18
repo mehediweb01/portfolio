@@ -28,6 +28,7 @@ export default {
       },
       boxShadow: {
         btn: "0 0 25px #17DFF5, 0 0 850px #17DFF5",
+        btnWhite: "0 0 15px #432E54, 0 0 450px #B1F0F7",
       },
       fontSize: {
         100: "100px",
