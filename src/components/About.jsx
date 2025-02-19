@@ -12,10 +12,21 @@ const About = () => {
   }, []);
 
   return (
-    <motion.div id="About" className="pt-16">
+    <motion.div
+      initial={{ opacity: 0, marginTop: "-120px" }}
+      whileInView={{ opacity: 1, marginTop: 0 }}
+      transition={{ duration: 1.3, ease: [0.43, 0.13, 0.28, 0.96] }}
+      id="About"
+      className="pt-16"
+    >
       <div className="flex items-center justify-center flex-col-reverse sm:flex-row gap-16 pb-8">
         <div className="space-y-6">
-          <h1 className="font-inter font-semibold sm:font-bold tracking-[2%] text-header sm:text-start text-center sm:mx-4">
+          <motion.h1
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 3, ease: [0.43, 0.13, 0.28, 0.96] }}
+            className="font-inter font-semibold sm:font-bold tracking-[2%] text-header sm:text-start text-center sm:mx-4"
+          >
             <span className="text-5xl md:text-7xl sm:text-6xl leading-4 sm:leading-6">
               Hi, I&apos;m
             </span>
@@ -23,7 +34,7 @@ const About = () => {
             <span className="text-4xl md:text-[56px] sm:text-5xl leading-10 sm:leading-[60px] md:leading-[85px]  before:content-[''] lg:before:content-['🪼'] lg:before:absolute lg:relative lg:before:w-full lg:before:h-full lg:before:text-red-500 lg:before:-bottom-5 lg:before:left-0 lg:before:text-2xl animate-text">
               Md. Mehedi Hasan
             </span>
-          </h1>
+          </motion.h1>
 
           <p className="first-letter:text-5xl first-letter:sm:text-7xl first-letter:text-activeColor first-letter:leading-10 font-inter font-semibold leading-8 tracking-[2%] max-w-lg sm:text-start text-2xl sm:text-3xl  sm:leading-10 text-center sm:mx-4 md:text-4xl text-darkBlack dark:text-white">
             I&apos;m a
