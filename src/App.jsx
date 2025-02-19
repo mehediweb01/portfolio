@@ -14,9 +14,10 @@ import {
 } from "./components";
 
 function App() {
-  const [theme, setTheme] = useState(
-    typeof window !== "undefined" && localStorage.getItem("theme") === "dark"
-  );
+  const [theme, setTheme] = useState(() => {
+    const savedTheme = localStorage.getItem("theme");
+    return savedTheme ? savedTheme === "dark" : true;
+  });
 
   useEffect(() => {
     if (theme) {
