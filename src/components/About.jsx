@@ -13,8 +13,8 @@ const About = () => {
 
   return (
     <motion.div
-      initial={{ opacity: 0, marginTop: "-120px" }}
-      whileInView={{ opacity: 1, marginTop: 0 }}
+      initial={{ opacity: 0, x: -120 }}
+      whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 1.3, ease: [0.43, 0.13, 0.28, 0.96] }}
       id="About"
       className="pt-16"

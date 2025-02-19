@@ -33,6 +33,9 @@ export default {
       fontSize: {
         100: "100px",
       },
+      animation: {
+        "spin-slow": "spin 5s linear infinite",
+      },
     },
   },
   darkMode: "class",
