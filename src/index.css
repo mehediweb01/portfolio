@@ -52,7 +52,7 @@ html {
 }
 /* faqs */
 span.text-foreground.text-medium {
-  @apply font-itim font-bold tracking-widest text-darkBlack text-base sm:text-xl;
+  @apply font-inter font-bold tracking-widest text-darkBlack dark:text-slate-300 text-base sm:text-xl;
 }
 /* scroll-bar design */
 ::-webkit-scrollbar {

@@ -30,7 +30,7 @@ function App() {
 
   return (
     <>
-      <div className="bg-white dark:bg-[#2B2C2F]">
+      <div className="bg-white dark:bg-[#050816]">
         <BrowserRouter>
           <MyNavbar
             toggleTheme={setTheme}

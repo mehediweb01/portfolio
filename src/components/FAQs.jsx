@@ -12,16 +12,15 @@ const FAQs = () => {
         initial={{ opacity: 0, translateY: 35 }}
         whileInView={{ opacity: 1, translateY: 0 }}
         transition={{ duration: 1, ease: [0.43, 0.13, 0.28, 0.96] }}
-        className="space-y-3 mt-16"
+        className="space-y-3 dark:space-y-5 mt-16"
       >
         {FAQsInfo.map((item, index) => (
-          <div key={index} className="w-[90%] mx-auto">
-            <FaqsCard
-              Question={item.question}
-              Answer={item.answer}
-              NumberOfKey={item.id}
-            />
-          </div>
+          <FaqsCard
+            key={index}
+            Question={item.question}
+            Answer={item.answer}
+            NumberOfKey={item.id}
+          />
         ))}
       </motion.div>
     </div>

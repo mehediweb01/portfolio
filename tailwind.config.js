@@ -15,12 +15,8 @@ export default {
         activeColor: "#17DFF5",
         darkBlack: "#1E1E1E",
         blueMagenta: "#151030",
-      },
-      backgroundColor: {
-        cardBg: "#17DFF55C",
-        faqBg: "#E9E149B8",
         blueTints: "#100D25",
-        blueMagenta: "#151030",
+        cardBg: "#17DFF55C",
       },
       fontFamily: {
         inter: '"Inter", serif',
@@ -28,6 +24,7 @@ export default {
       },
       boxShadow: {
         btn: "0 0 25px #17DFF5, 0 0 850px #17DFF5",
+        faq: "0 0 0.2px #17DFF5, 0 0 8px #17DFF5",
         btnWhite: "0 0 15px #432E54, 0 0 450px #B1F0F7",
       },
       fontSize: {

@@ -73,7 +73,7 @@ const About = () => {
             <img
               src="./mehedi.png"
               alt="mehedi image"
-              className="sm:rounded-md rounded-full sm:h-full sm:w-full h-80 w-80 shadow-inner shadow-red-400 hover:shadow-md hover:shadow-sky-400 hover:-translate-y-3 jump-animate p-2 hover:backdrop-blur-sm"
+              className="sm:rounded-md rounded-full sm:h-full sm:w-full h-80 w-80 shadow-inner shadow-activeColor hover:shadow-md hover:shadow-activeColor hover:-translate-y-3 jump-animate p-2 hover:backdrop-blur-sm"
             />
           )}
         </div>

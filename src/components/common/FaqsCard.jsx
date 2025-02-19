@@ -4,6 +4,7 @@ import { motion } from "motion/react";
 const FaqsCard = ({ Question, Answer, NumberOfKey }) => {
   return (
     <Accordion
+      className="w-[90%] mx-auto shadow-faq rounded-lg"
       motionProps={{
         variants: {
           enter: {
@@ -50,13 +51,13 @@ const FaqsCard = ({ Question, Answer, NumberOfKey }) => {
         key={NumberOfKey}
         aria-label={Question}
         title={Question}
-        className="bg-faqBg rounded-md shadow-inner shadow-black"
+        className="bg-white dark:bg-black rounded-md"
       >
         <motion.p
           initial={{ opacity: 0, translateY: "-50px" }}
           whileInView={{ opacity: 1, translateY: 0 }}
           transition={{ duration: 0.5, ease: "easeInOut" }}
-          className="font-itim text-sm sm:text-base text-black ms-4"
+          className="font-inter text-sm sm:text-base text-black dark:text-slate-200 ms-4"
         >
           {Answer}
         </motion.p>

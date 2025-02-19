@@ -67,7 +67,7 @@ const Contact = () => {
         initial={{ opacity: 0, scale: 0.8 }}
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1, ease: [0.43, 0.13, 0.28, 0.96] }}
-        className="w-[95%] mx-auto flex md:flex-row flex-col justify-center items-start gap-8"
+        className="w-[90%] mx-auto flex md:flex-row flex-col justify-center items-start gap-8"
       >
         {/* left section */}
         <div className="flex-1 w-full sm:mx-2 mx-0 md:w-1/2 my-12 p-2 shadow-inner shadow-sky-300 rounded-md">
@@ -169,10 +169,10 @@ const Contact = () => {
               </div>
             ))}
           </div>
-          <div className="sm:block hidden mt-4 px-4 py-2 rounded-md shadow-inner shadow-black ">
+          <div className="sm:block hidden mt-4 px-4 py-2 rounded-md shadow-inner shadow-black dark:shadow-activeColor ">
             <motion.img
               initial={{ opacity: 1, scale: 1 }}
-              whileHover={{ opacity: 1, scale: 0.9 }}
+              whileHover={{ opacity: 1, scale: 0.98 }}
               transition={{ duration: 0.2, ease: "backInOut" }}
               src="/contact.jpg"
               alt="contact image"
@@ -182,7 +182,7 @@ const Contact = () => {
         </div>
       </motion.div>
       {/* my details */}
-      <div className="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-items-center mx-4 lg:mx-0">
+      <div className="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-items-center w-[90%] mx-auto">
         {myInfo.map((item, index) => (
           <motion.div
             initial={{ opacity: 0, translateY: "150px" }}

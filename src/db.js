@@ -4,6 +4,8 @@ import phone from "/phone.svg";
 import meUser from "/me-user.svg";
 import userTime from "/userTime.svg";
 import yellowEmail from "/yellow-email.svg";
+import { FaCode, FaLaptopCode } from "react-icons/fa";
+
 // navbar items
 export const Items = [
   { name: "About", href: "#About" },
@@ -11,6 +13,21 @@ export const Items = [
   { name: "Project", href: "#Project" },
   { name: "Contact", href: "#Contact" },
   { name: "FAQs", href: "#FAQs" },
+];
+// what i do
+export const whatIDo = [
+  {
+    icon: FaLaptopCode,
+    title: "Front-end web developer",
+    description:
+      "I create responsive, user-friendly, and modern web interfaces with clean, efficient front-end code",
+  },
+  {
+    icon: FaCode,
+    title: " Clean Code",
+    description:
+      "I strive to write clean, efficient, and scalable React code by following key principles: Component Reusability, Optimized Performance, Code Simplicity",
+  },
 ];
 // skill section progressBar information
 export const progressInfo = [
