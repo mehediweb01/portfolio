@@ -34,8 +34,16 @@ const MyNavbar = ({ toggleTheme, isDarkMode, isChecked }) => {
             className="sm:hidden"
           />
           <NavbarBrand className="brand">
-            <Link to="#" data-to-scrollspy-id={"home"}>
-              <img src="/logo.png" className="rounded-full size-12" alt="" />
+            <Link
+              to="#"
+              data-to-scrollspy-id={"home"}
+              className="dark:p-[1px] dark:bg-activeColor dark:rounded-full"
+            >
+              <img
+                src="/logo.png"
+                className="rounded-full size-8 sm:size-12"
+                alt=""
+              />
             </Link>
           </NavbarBrand>
         </NavbarContent>
