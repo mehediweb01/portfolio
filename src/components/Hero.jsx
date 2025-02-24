@@ -1,6 +1,5 @@
 import { Typewriter } from "react-simple-typewriter";
 import { motion } from "motion/react";
-import { Buttons } from "./common/Button";
 
 const Hero = () => {
   return (
@@ -45,13 +44,11 @@ const Hero = () => {
               </span>
             </h1>
           </div>
-          <a href="#About">
-            <Buttons
-              variant="bordered"
-              className="bg-transparent rounded-full !text-[#B3E5FC] border-white relative after:absolute after:h-full after:w-[30%] after:hover:h-full after:hover:w-full after:bg-darkBlack after:left-0 after:transition-all after:duration-400 transition-all duration-700 after:z-[-99999] z-20 after:hover:rounded-full  shadow-md shadow-sky-300 hover:!text-[#00BFFF] font-semibold hover:font-bold border-[1px]"
-            >
-              View Portfolio
-            </Buttons>
+          <a
+            href="#About"
+            className="bg-transparent rounded-full text-[#B3E5FC] border-white relative after:absolute after:h-full after:w-[30%] after:hover:h-full after:hover:w-full after:bg-darkBlack after:left-0 after:top-0 after:rounded-full after:transition-all after:duration-400 transition-all duration-700 after:z-[-99999] z-20 after:hover:rounded-full  shadow-md shadow-sky-300 hover:!text-[#00BFFF] font-semibold hover:font-bold border-[1px] px-4 py-2 font-inter text-xl sm:text-2xl leading-5 sm:leading-8 tracking-[1%]"
+          >
+            View Portfolio
           </a>
         </div>
       </div>
