@@ -36,12 +36,12 @@ const About = () => {
             </span>
           </motion.h1>
 
-          <p className="first-letter:text-5xl first-letter:sm:text-7xl first-letter:text-activeColor first-letter:leading-10 font-inter font-semibold leading-8 tracking-[2%] max-w-lg sm:text-start text-2xl sm:text-3xl  sm:leading-10 text-center sm:mx-4 md:text-4xl text-darkBlack dark:text-white">
-            I&apos;m a
+          <p className="first-letter:text-5xl first-letter:sm:text-7xl first-letter:text-activeColor first-letter:leading-10 font-inter font-semibold leading-8 max-w-lg sm:text-start text-base text-center sm:mx-2 md:text-xl text-darkBlack dark:text-[#D0D0D0]">
+            I&apos;m
             <span className="ms-3 ">
               <Typewriter
                 words={[
-                  "Professional Front-end web developer and Digital Content Management Specialist & Content Creator",
+                  "Md. Mehedi Hasan, a skilled Front-End Web Developer with expertise in JavaScript, React.js, Tailwind CSS, Bootstrap, and more. I specialize in creating responsive, user-friendly websites with clean designs and seamless functionality. Whether you need a sleek business site or a dynamic web app, I deliver top-notch solutions tailored to your needs. Client satisfaction and quality are my priorities—let's bring your ideas to life!",
                 ]}
                 loop={1}
                 cursor={false}

@@ -1,5 +1,5 @@
 export { default as MyNavbar } from "./Navbar";
-export { default as HomePage } from "./HomePage";
+export { default as Hero } from "./Hero";
 export { default as About } from "./About";
 export { default as WhatIDo } from "./WhatIDo";
 export { default as Skills } from "./Skills";
