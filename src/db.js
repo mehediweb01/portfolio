@@ -74,6 +74,14 @@ export const projectsInfo = [
   },
   {
     id: 2,
+    img: "/dashboard.png",
+    name: "Sales Dashboard",
+    previewLink: "https://sales-dashboard-silk.vercel.app/",
+    codeLink: "https://github.com/mehediweb01/sales-dashboard.git",
+    useCase: ["#React", "#TailwindCss", "#MUI", "#Recharts"],
+  },
+  {
+    id: 3,
     img: "/image-gallery.png",
     name: "Image Gallery",
     previewLink: "https://image-gallery-alpha-nine.vercel.app/",
@@ -81,7 +89,7 @@ export const projectsInfo = [
     useCase: ["#Next.js", "#TypeScript", "#TailwindCss"],
   },
   {
-    id: 3,
+    id: 4,
     img: "/wizia.png",
     name: "Wizia",
     previewLink: "https://wizia-theta.vercel.app/",
@@ -89,7 +97,7 @@ export const projectsInfo = [
     useCase: ["#React", "#TypeScript", "#TailwindCss", "#framer-motion"],
   },
   {
-    id: 4,
+    id: 5,
     img: "/finance-website.png",
     name: "Finance-website",
     previewLink: "https://finance-website-five.vercel.app/",
@@ -97,7 +105,7 @@ export const projectsInfo = [
     useCase: ["#React", "#TailwindCss", "#NextUi"],
   },
   {
-    id: 5,
+    id: 6,
     img: "/Governing Docs.png",
     name: "Governing-Docs",
     previewLink: "https://goverining-docs.vercel.app/",
@@ -106,7 +114,7 @@ export const projectsInfo = [
   },
 
   {
-    id: 6,
+    id: 7,
     img: "/disasters.png",
     name: "Disasters-I/O",
     previewLink: "https://disasters-i-o.vercel.app/",
