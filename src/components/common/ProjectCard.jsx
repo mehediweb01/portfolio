@@ -14,6 +14,7 @@ const ProjectCard = ({
   isOpen,
   onOpen,
   selectedItem,
+  teamMember,
 }) => {
   return (
     <>
@@ -21,7 +22,11 @@ const ProjectCard = ({
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5, ease: [0.43, 0.13, 0.28, 0.96] }}
-        className="bg-gradient-to-t from-activeColor/70 to-yellow-400/60 px-4 py-6 rounded-lg hover:scale-105 transition-all duration-300 ease-in-out shadow-md shadow-sky-300 hover:shadow-inner hover:shadow-black dark:hover:shadow-white dark:shadow-black group"
+        className={`bg-gradient-to-t px-4 py-6 rounded-lg hover:scale-105 transition-all duration-300 ease-in-out shadow-md hover:shadow-inner hover:shadow-black dark:hover:shadow-white dark:shadow-black group ${
+          teamMember
+            ? "from-activeColor/70 to-green-400 shadow-white dark:shadow-yellow-600"
+            : "from-activeColor/70 to-yellow-400/60 shadow-sky-300"
+        }`}
       >
         <Tooltip
           content="click here"
@@ -40,13 +45,25 @@ const ProjectCard = ({
         </Tooltip>
 
         <div className="mt-3">
-          <h3 className="font-inter font-semibold text-2xl sm:text-3xl text-center text-slate-700 dark:text-darkBlack jump-animate">
+          <h3 className="font-inter font-semibold text-xl sm:text-2xl text-center text-slate-700 dark:text-darkBlack jump-animate">
             {name}
           </h3>
           <div className="mt-4 space-y-3">
             <p className="font-itim text-xl sm:text-2xl text-black dark:text-white">
-              Front-end project
+              Front-end {teamMember && "team"} project
             </p>
+            <div>
+              {teamMember && (
+                <div>
+                  <p className="font-itim text-xl text-black dark:text-white tracking-[2px]">
+                    collaboration with {teamMember} teammate
+                  </p>
+                  <p className="font-inter font-semibold text-xl text-black dark:text-white tracking-[2px]">
+                    Team of 2
+                  </p>
+                </div>
+              )}
+            </div>
             {/* preview & code link start*/}
             <motion.div
               initial={{ opacity: 0, scale: 0.5 }}

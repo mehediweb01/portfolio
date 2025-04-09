@@ -37,11 +37,12 @@ const MyNavbar = ({ toggleTheme, isDarkMode, isChecked }) => {
             <Link
               to="#"
               data-to-scrollspy-id={"home"}
-              className="dark:p-[1px] dark:bg-activeColor dark:rounded-full"
+              className="relative p-[5px] flex justify-center items-center "
             >
+              <div className=" absolute w-full h-full rounded-full border-t-1 border-activeColor animate-spin-slow" />
               <img
                 src="/logo.png"
-                className="rounded-full size-8 sm:size-12"
+                className="rounded-full size-8 sm:size-12 border-1 border-yellow-300/50"
                 alt=""
               />
             </Link>

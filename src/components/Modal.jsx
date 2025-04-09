@@ -22,7 +22,7 @@ function ProjectCardShow({ isOpen, onOpenChange, selectedItem }) {
           {(onClose) => (
             <>
               <ModalHeader className="w-full flex justify-center items-center">
-                <h1 className="text-2xl sm:text-4xl text-darkBlack dark:text-white font-inter font-semibold uppercase border-b border-header rounded-full pb-1 px-4">
+                <h1 className="text-xl sm:text-2xl text-darkBlack dark:text-white font-inter font-semibold uppercase border-b border-header rounded-full pb-1 px-4">
                   {selectedItem.name}
                 </h1>
               </ModalHeader>

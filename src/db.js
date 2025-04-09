@@ -66,11 +66,12 @@ export const progressInfo = [
 export const projectsInfo = [
   {
     id: 1,
-    img: "/my-feedback.png",
-    name: "My Feedback",
-    previewLink: "https://myfeedback-omega.vercel.app/",
-    codeLink: "https://github.com/mehediweb01/MyFeedback",
-    useCase: ["#React", "#TailwindCss", "#Radix-ui", "#React-slick"],
+    img: "/admin-vision-dashboard.png",
+    name: "Admin-Vision-Dashboard",
+    previewLink: "https://admin-vision-dashboard.vercel.app/",
+    codeLink: "https://github.com/mehediweb01/Admin-Vision-Dashboard.git",
+    useCase: ["#React", "#TailwindCss", "#MUI", "#Recharts"],
+    teamMember: 1,
   },
   {
     id: 2,
@@ -90,6 +91,15 @@ export const projectsInfo = [
   },
   {
     id: 4,
+    img: "/my-feedback.png",
+    name: "My Feedback",
+    previewLink: "https://myfeedback-omega.vercel.app/",
+    codeLink: "https://github.com/mehediweb01/MyFeedback",
+    useCase: ["#React", "#TailwindCss", "#Radix-ui", "#React-slick"],
+  },
+
+  {
+    id: 5,
     img: "/wizia.png",
     name: "Wizia",
     previewLink: "https://wizia-theta.vercel.app/",
@@ -97,7 +107,7 @@ export const projectsInfo = [
     useCase: ["#React", "#TypeScript", "#TailwindCss", "#framer-motion"],
   },
   {
-    id: 5,
+    id: 6,
     img: "/finance-website.png",
     name: "Finance-website",
     previewLink: "https://finance-website-five.vercel.app/",
@@ -105,16 +115,15 @@ export const projectsInfo = [
     useCase: ["#React", "#TailwindCss", "#NextUi"],
   },
   {
-    id: 6,
+    id: 7,
     img: "/Governing Docs.png",
     name: "Governing-Docs",
     previewLink: "https://goverining-docs.vercel.app/",
     codeLink: "https://github.com/mehediweb01/GoveriningDocs",
     useCase: ["#React", "#TailwindCss"],
   },
-
   {
-    id: 7,
+    id: 8,
     img: "/disasters.png",
     name: "Disasters-I/O",
     previewLink: "https://disasters-i-o.vercel.app/",
