@@ -1,9 +1,9 @@
-import { IoSettingsOutline } from "react-icons/io5";
-import { FaShapes } from "react-icons/fa6";
-import { Header } from "./common/Header";
 import { motion } from "motion/react";
+import { FaShapes } from "react-icons/fa6";
+import { IoSettingsOutline } from "react-icons/io5";
 import { whatIDo } from "../db";
 import Card from "./common/Card";
+import { Header } from "./common/Header";
 const WhatIDo = () => {
   return (
     <div className="relative py-8">

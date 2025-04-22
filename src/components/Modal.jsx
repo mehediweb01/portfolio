@@ -1,22 +1,26 @@
 import {
-  Modal,
-  ModalContent,
-  ModalHeader,
-  ModalBody,
-  ModalFooter,
   Button,
+  Modal,
+  ModalBody,
+  ModalContent,
+  ModalFooter,
+  ModalHeader,
   Tooltip,
 } from "@heroui/react";
-import { FaGithub } from "react-icons/fa";
 import { BiSolidShow } from "react-icons/bi";
+import { FaGithub } from "react-icons/fa";
 
-function ProjectCardShow({ isOpen, onOpenChange, selectedItem }) {
+function ProjectCardShow({ isOpen, onOpenChange, selectedItem, teamMember }) {
   return (
     <>
       <Modal
         isOpen={isOpen}
         onOpenChange={onOpenChange}
-        className="dark:bg-gradient-to-t dark:from-activeColor/40 dark:to-yellow-400/30"
+        className={`border-[1px] border-white ${
+          teamMember
+            ? "shadow-blue-600 dark:shadow-sky-300"
+            : " shadow-sky-300 dark:shadow-white/20"
+        }`}
       >
         <ModalContent>
           {(onClose) => (
@@ -27,20 +31,22 @@ function ProjectCardShow({ isOpen, onOpenChange, selectedItem }) {
                 </h1>
               </ModalHeader>
               <ModalBody>
-                <div className="p-4 rounded-lg shadow-md shadow-darkBlack dark:shadow-sky-600">
-                  <img
-                    src={selectedItem.img}
-                    alt={selectedItem.name}
-                    className="shadow-inner shadow-black p-2 rounded-md jump-animate"
-                  />
+                <div className="p-4 rounded-lg shadow-md shadow-darkBlack dark:shadow-sky-600 border-[1px] border-slate-50">
+                  <div className="rounded-lg border border-sky-400 dark:border-whites  jump-animate">
+                    <img
+                      src={selectedItem.img}
+                      alt={selectedItem.name}
+                      className="shadow-inner shadow-black rounded-lg"
+                    />
+                  </div>
                   <div className="flex gap-3 items-center justify-center mt-5">
                     <Tooltip content="Code" showArrow={true}>
                       <a
                         href={selectedItem.codeLink}
                         target="_blank"
-                        className="shadow-inner shadow-black dark:text-white p-2 rounded-md hover:scale-95 transition-all duration-300 hover:animate-pulse"
+                        className="shadow-inner shadow-black dark:shadow-white/50 p-2 rounded-md hover:scale-95 transition-all duration-300 hover:animate-pulse"
                       >
-                        <FaGithub className="text-black dark:text-white size-8" />
+                        <FaGithub className="text-black dark:text-whites size-8" />
                       </a>
                     </Tooltip>
 
@@ -48,7 +54,7 @@ function ProjectCardShow({ isOpen, onOpenChange, selectedItem }) {
                       <a
                         href={selectedItem.previewLink}
                         target="_blank"
-                        className="shadow-inner shadow-black dark:text-whites p-2 rounded-md hover:scale-95 transition-all duration-300 hover:animate-pulse"
+                        className="shadow-inner shadow-black dark:shadow-white/50 p-2 rounded-md hover:scale-95 transition-all duration-300 hover:animate-pulse"
                       >
                         <BiSolidShow className="text-black dark:text-whites  size-8" />
                       </a>

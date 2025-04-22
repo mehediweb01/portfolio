@@ -1,10 +1,10 @@
 import Map from "/map.svg";
 import phone from "/phone.svg";
 // my info icons
+import { FaCode, FaLaptopCode } from "react-icons/fa";
 import meUser from "/me-user.svg";
 import userTime from "/userTime.svg";
 import yellowEmail from "/yellow-email.svg";
-import { FaCode, FaLaptopCode } from "react-icons/fa";
 
 // navbar items
 export const Items = [
@@ -70,7 +70,7 @@ export const projectsInfo = [
     name: "Admin-Vision-Dashboard",
     previewLink: "https://admin-vision-dashboard.vercel.app/",
     codeLink: "https://github.com/mehediweb01/Admin-Vision-Dashboard.git",
-    useCase: ["#React", "#TailwindCss", "#MUI", "#Recharts"],
+    useCase: ["React", "TailwindCss", "MUI", "Recharts"],
     teamMember: 1,
   },
   {
@@ -79,7 +79,7 @@ export const projectsInfo = [
     name: "Sales Dashboard",
     previewLink: "https://sales-dashboard-silk.vercel.app/",
     codeLink: "https://github.com/mehediweb01/sales-dashboard.git",
-    useCase: ["#React", "#TailwindCss", "#MUI", "#Recharts"],
+    useCase: ["React", "TailwindCss", "MUI", "Recharts"],
   },
   {
     id: 3,
@@ -87,7 +87,7 @@ export const projectsInfo = [
     name: "Image Gallery",
     previewLink: "https://image-gallery-alpha-nine.vercel.app/",
     codeLink: "https://github.com/mehediweb01/image-gallery",
-    useCase: ["#Next.js", "#TypeScript", "#TailwindCss"],
+    useCase: ["Next.js", "TypeScript", "TailwindCss"],
   },
   {
     id: 4,
@@ -95,7 +95,7 @@ export const projectsInfo = [
     name: "My Feedback",
     previewLink: "https://myfeedback-omega.vercel.app/",
     codeLink: "https://github.com/mehediweb01/MyFeedback",
-    useCase: ["#React", "#TailwindCss", "#Radix-ui", "#React-slick"],
+    useCase: ["React", "TailwindCss", "Radix-ui", "React-slick"],
   },
 
   {
@@ -104,7 +104,7 @@ export const projectsInfo = [
     name: "Wizia",
     previewLink: "https://wizia-theta.vercel.app/",
     codeLink: "https://github.com/mehediweb01/wizia",
-    useCase: ["#React", "#TypeScript", "#TailwindCss", "#framer-motion"],
+    useCase: ["React", "TailwindCss", "framer-motion"],
   },
   {
     id: 6,
@@ -112,7 +112,7 @@ export const projectsInfo = [
     name: "Finance-website",
     previewLink: "https://finance-website-five.vercel.app/",
     codeLink: "https://github.com/mehediweb01/Finance-Website",
-    useCase: ["#React", "#TailwindCss", "#NextUi"],
+    useCase: ["React", "TailwindCss", "NextUi"],
   },
   {
     id: 7,
@@ -120,7 +120,7 @@ export const projectsInfo = [
     name: "Governing-Docs",
     previewLink: "https://goverining-docs.vercel.app/",
     codeLink: "https://github.com/mehediweb01/GoveriningDocs",
-    useCase: ["#React", "#TailwindCss"],
+    useCase: ["React", "TailwindCss"],
   },
   {
     id: 8,
@@ -128,7 +128,7 @@ export const projectsInfo = [
     name: "Disasters-I/O",
     previewLink: "https://disasters-i-o.vercel.app/",
     codeLink: "https://github.com/mehediweb01/disasters-I-O",
-    useCase: ["#React", "#TailwindCss"],
+    useCase: ["React", "TailwindCss"],
   },
 ];
 

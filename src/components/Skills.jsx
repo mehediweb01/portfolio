@@ -1,7 +1,7 @@
-import ProgressBar from "./common/Progress";
+import { motion } from "motion/react";
 import { progressInfo } from "../db";
 import { Header } from "./common/Header";
-import { motion } from "motion/react";
+import ProgressBar from "./common/Progress";
 const Skills = () => {
   return (
     <div id="Skills" className="pt-16">

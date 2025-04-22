@@ -1,8 +1,8 @@
+import { Tooltip } from "@heroui/react";
+import { motion } from "motion/react";
 import { FaGithub } from "react-icons/fa";
 import { VscOpenPreview } from "react-icons/vsc";
-import { motion } from "motion/react";
 import ProjectCardShow from "../Modal";
-import { Tooltip } from "@heroui/react";
 
 const ProjectCard = ({
   img,
@@ -22,10 +22,10 @@ const ProjectCard = ({
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5, ease: [0.43, 0.13, 0.28, 0.96] }}
-        className={`bg-gradient-to-t px-4 py-6 rounded-lg hover:scale-105 transition-all duration-300 ease-in-out shadow-md hover:shadow-inner hover:shadow-black dark:hover:shadow-white dark:shadow-black group ${
+        className={`px-4 py-6 rounded-lg hover:scale-105 transition-all duration-300 ease-in-out shadow-lg hover:shadow-inner hover:shadow-black dark:hover:shadow-white dark:shadow-black group border border-slate-300 dark:border-slate-100 ${
           teamMember
-            ? "from-activeColor/70 to-green-400 shadow-white dark:shadow-yellow-600"
-            : "from-activeColor/70 to-yellow-400/60 shadow-sky-300"
+            ? "shadow-blue-600 dark:shadow-white/30 bg-gradient-to-tl from-white/20 to-white/10"
+            : " shadow-sky-300 dark:shadow-white/20 bg-gradient-to-tr from-white/30 to-white/10"
         }`}
       >
         <Tooltip
@@ -40,12 +40,12 @@ const ProjectCard = ({
             src={img}
             alt={name}
             onClick={onOpen}
-            className="rounded-md shadow-md shadow-sky-400 h-[180px] w-[320px] transition-all mx-auto hover:cursor-pointer"
+            className="rounded-md shadow-md shadow-sky-400 h-[180px] w-[320px] transition-all mx-auto hover:cursor-pointer border border-slate-300 dark:border-0"
           />
         </Tooltip>
 
         <div className="mt-3">
-          <h3 className="font-inter font-semibold text-xl sm:text-2xl text-center text-slate-700 dark:text-darkBlack jump-animate">
+          <h3 className="font-inter font-semibold text-xl sm:text-2xl text-center text-slate-700 dark:text-activeColor jump-animate">
             {name}
           </h3>
           <div className="mt-4 space-y-3">
@@ -69,14 +69,14 @@ const ProjectCard = ({
               initial={{ opacity: 0, scale: 0.5 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, ease: "easeInOut" }}
-              className="sm:hidden flex group-hover:flex gap-4"
+              className="md:hidden flex group-hover:flex gap-4"
             >
               <a
                 href={previewLink}
                 target="_blank"
-                className="flex items-center gap-1 font-inter font-semibold text-sm text-black/95 sm:text-base shadow-sm shadow-black px-2 py-0 rounded-md group-hover:bg-sky-300 group-hover:transition-all group-hover:duration-300 group-hover:text-darkBlack hover:shadow-inner hover:shadow-black/50"
+                className="flex items-center gap-1 font-inter font-semibold text-sm text-black/95 sm:text-base shadow-sm shadow-black px-2 py-1 rounded-md group-hover:bg-sky-300 group-hover:transition-all group-hover:duration-300 group-hover:text-darkBlack hover:shadow-inner hover:shadow-black/50 dark:text-white text-black"
               >
-                <span>Preview</span>
+                <span className="tracking-[1px]">Preview</span>
                 <span>
                   <VscOpenPreview />
                 </span>
@@ -84,19 +84,25 @@ const ProjectCard = ({
               <a
                 href={codeLink}
                 target="_blank"
-                className="flex items-center gap-1 font-inter font-semibold text-sm text-black/95 sm:text-base shadow-sm shadow-black px-2 py-0 rounded-md group-hover:bg-sky-300 group-hover:transition-all group-hover:duration-300 group-hover:text-darkBlack hover:shadow-inner hover:shadow-black/50 "
+                className="flex items-center gap-1 font-inter font-semibold text-sm text-black/95 sm:text-base shadow-sm shadow-black px-2 py-1 rounded-md group-hover:bg-sky-300 group-hover:transition-all group-hover:duration-300 group-hover:text-darkBlack hover:shadow-inner hover:shadow-black/50 dark:text-white text-black "
               >
-                <span>Code</span>
+                <span className="tracking-[1px]">Code</span>
                 <span>
                   <FaGithub />
                 </span>
               </a>
             </motion.div>
             {/* preview & code link end */}
-            <div className="text-slate-900 dark:text-whites">
-              <p className="flex gap-3 flex-wrap">
+            <div className="text-slate-900 dark:text-whites ">
+              <div className="border-t-[1px] dark:border-slate-500 border-slate-300 rounded-md mt-8 mb-2" />
+              <p className="flex gap-2 items-center flex-wrap">
                 {useCase.map((item, i) => (
-                  <span key={i}>{item}</span>
+                  <span
+                    key={i}
+                    className="shadow-sm shadow-black dark:border-[1px] dark:border-black/30 px-2 py-1 rounded-md"
+                  >
+                    {item}
+                  </span>
                 ))}
               </p>
             </div>
@@ -108,6 +114,7 @@ const ProjectCard = ({
         isOpen={isOpen}
         selectedItem={selectedItem}
         onOpenChange={onOpenChange}
+        teamMember={teamMember}
       />
     </>
   );

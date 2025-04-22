@@ -1,6 +1,6 @@
 import { Skeleton } from "@heroui/react";
-import { useEffect, useState } from "react";
 import { motion } from "motion/react";
+import { useEffect, useState } from "react";
 import { Typewriter } from "react-simple-typewriter";
 const About = () => {
   const [isLoading, setIsLoading] = useState(false);

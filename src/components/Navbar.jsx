@@ -1,19 +1,19 @@
-import { useState } from "react";
 import {
   Navbar,
   NavbarBrand,
   NavbarContent,
   NavbarItem,
-  NavbarMenuToggle,
   NavbarMenu,
   NavbarMenuItem,
+  NavbarMenuToggle,
   Switch,
 } from "@heroui/react";
+import { useState } from "react";
 import { BsGithub, BsLinkedin, BsTwitter } from "react-icons/bs";
-import { HashLink as Link } from "react-router-hash-link";
-import { MoonIcon, SunIcon } from "./icons/icons";
 import { useLocation } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
 import { Items } from "../db";
+import { MoonIcon, SunIcon } from "./icons/icons";
 
 const MyNavbar = ({ toggleTheme, isDarkMode, isChecked }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,7 +22,7 @@ const MyNavbar = ({ toggleTheme, isDarkMode, isChecked }) => {
   return (
     <div className="nav sticky top-0 left-0 overflow-hidden z-50">
       <Navbar
-        className={`bg-black/80 mainNav ${
+        className={`dark:bg-white/5 bg-black/70 border-b border-slate-50 mainNav ${
           isDarkMode === "dark" && "border-b border-b-slate-500"
         }`}
         onMenuOpenChange={setIsMenuOpen}
@@ -67,7 +67,7 @@ const MyNavbar = ({ toggleTheme, isDarkMode, isChecked }) => {
         <NavbarContent justify="end">
           {/* switch to dark/light mode */}
           <Switch
-            color="secondary"
+            color="primary"
             isSelected={isChecked}
             onValueChange={toggleTheme}
             thumbIcon={({ isSelected, className }) =>
@@ -89,14 +89,14 @@ const MyNavbar = ({ toggleTheme, isDarkMode, isChecked }) => {
           </a>
           <a
             className="text-white text-2xl hover:text-activeColor"
-            href="https://www.linkedin.com/in/md-mehedi-hasan-90634424b/"
+            href="https://www.linkedin.com/in/mehediweb01/"
             target="_blank"
           >
             <BsLinkedin />
           </a>
           <a
             className="text-white text-2xl hover:text-activeColor"
-            href="https://x.com/mehedihasan0937"
+            href="https://x.com/mehediweb01"
             target="_blank"
           >
             <BsTwitter />

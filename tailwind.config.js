@@ -9,7 +9,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        header: "#10E85BE5",
+        header: "#38BDF8",
         innerShadow: "#00000040",
         whites: "#FFFDFD",
         activeColor: "#17DFF5",

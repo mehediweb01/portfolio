@@ -1,8 +1,8 @@
+import { motion } from "motion/react";
 import { useState } from "react";
 import { projectsInfo } from "../db";
 import { Header } from "./common/Header";
 import ProjectCard from "./common/ProjectCard";
-import { motion } from "motion/react";
 
 const Projects = () => {
   const [selectedData, setSelectedData] = useState(null);

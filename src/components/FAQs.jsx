@@ -1,7 +1,7 @@
+import { motion } from "motion/react";
 import { FAQsInfo } from "../db";
 import FaqsCard from "./common/FaqsCard";
 import { Header } from "./common/Header";
-import { motion } from "motion/react";
 const FAQs = () => {
   return (
     <div id="FAQs" className="py-16">

@@ -2,12 +2,12 @@ import { useEffect, useState } from "react";
 import { BrowserRouter } from "react-router-dom";
 import ScrollSpy from "react-ui-scrollspy";
 import {
-  MyNavbar,
-  Hero,
   About,
   Contact,
   FAQs,
   Footer,
+  Hero,
+  MyNavbar,
   Projects,
   Skills,
   WhatIDo,

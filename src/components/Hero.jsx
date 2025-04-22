@@ -1,5 +1,5 @@
-import { Typewriter } from "react-simple-typewriter";
 import { motion } from "motion/react";
+import { Typewriter } from "react-simple-typewriter";
 
 const Hero = () => {
   return (

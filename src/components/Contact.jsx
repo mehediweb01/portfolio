@@ -1,11 +1,11 @@
-import { Buttons } from "./common/Button";
-import { Header } from "./common/Header";
-import { contactInfo, myInfo } from "../db";
-import BoxComponent from "./common/Box";
-import { motion } from "motion/react";
 import emailjs from "@emailjs/browser";
+import { motion } from "motion/react";
 import { useState } from "react";
 import { toast } from "react-toastify";
+import { contactInfo, myInfo } from "../db";
+import BoxComponent from "./common/Box";
+import { Buttons } from "./common/Button";
+import { Header } from "./common/Header";
 const Contact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
