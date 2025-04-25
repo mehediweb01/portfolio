@@ -5,6 +5,17 @@ import { FaCode, FaLaptopCode } from "react-icons/fa";
 import meUser from "/me-user.svg";
 import userTime from "/userTime.svg";
 import yellowEmail from "/yellow-email.svg";
+// skill icons
+import { AiOutlineHtml5 } from "react-icons/ai";
+import { FaCss3, FaGitAlt, FaGithub } from "react-icons/fa";
+import {
+  RiBootstrapFill,
+  RiJavascriptLine,
+  RiNextjsLine,
+  RiReactjsFill,
+  RiTailwindCssLine,
+} from "react-icons/ri";
+import { TbBrandRedux, TbBrandTypescript } from "react-icons/tb";
 
 // navbar items
 export const Items = [
@@ -30,35 +41,50 @@ export const whatIDo = [
   },
 ];
 // skill section progressBar information
-export const progressInfo = [
+export const skillsInfo = [
   {
-    value: 85,
-    label: "HTML & CSS",
-  },
-
-  {
-    value: 90,
-    label: "BOOTSTRAP & TAILWIND CSS ",
+    icon: AiOutlineHtml5,
+    label: "HTML",
   },
   {
-    value: 80,
+    icon: FaCss3,
+    label: "CSS",
+  },
+  {
+    icon: RiBootstrapFill,
+    label: "BOOTSTRAP ",
+  },
+  {
+    icon: RiTailwindCssLine,
+    label: "TAILWIND CSS",
+  },
+  {
+    icon: RiJavascriptLine,
     label: "JAVASCRIPT",
   },
   {
-    value: 85,
+    icon: RiReactjsFill,
     label: "REACT.JS",
   },
   {
-    value: 45,
+    icon: RiNextjsLine,
     label: "NEXT.JS",
   },
   {
-    value: 60,
+    icon: TbBrandTypescript,
     label: "TYPESCRIPT",
   },
   {
-    value: 80,
+    icon: TbBrandRedux,
     label: "REACT-REDUX",
+  },
+  {
+    icon: FaGitAlt,
+    label: "Git",
+  },
+  {
+    icon: FaGithub,
+    label: "GitHub",
   },
 ];
 

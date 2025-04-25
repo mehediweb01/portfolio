@@ -1,36 +1,37 @@
 import { motion } from "motion/react";
-import { progressInfo } from "../db";
+import { skillsInfo } from "../db";
 import { Header } from "./common/Header";
-import ProgressBar from "./common/Progress";
+
 const Skills = () => {
   return (
-    <div id="Skills" className="pt-16">
-      <div>
+    <div id="Skills" className="pt-16 w-full sm:w-[70%] md:w-[60%] mx-auto">
+      <div className="relative">
         {/* Title */}
         <Header>Skills</Header>
-        {/* details */}
+
+        {/* shadow */}
+        <div className="sm:inline-block hidden absolute top-[50%] left-[25%] -translate-x-1/2 -translate-y-1/2 w-0 h-0 bg-transparent shadow-[20px_50px_300px_130px_#17DFF5] backdrop-blur-3xl opacity-50" />
+
+        <div className="sm:inline-block hidden absolute top-[50%] left-[80%] -translate-x-1/2 -translate-y-1/2 w-0 h-0 bg-transparent shadow-[20px_50px_200px_110px_#17DFF5] backdrop-blur-3xl opacity-50" />
+
+        {/* skill details */}
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, ease: [0.43, 0.13, 0.28, 0.96] }}
-          className="flex flex-col sm:flex-row justify-around items-center sm:items-start sm:gap-2 gap-5 mx-4 py-12"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mx-4 my-2 sm:my-16 drop-shadow-lg"
         >
-          {/* left section */}
-          <div>
-            <div className="px-2 py-3 rounded-md shadow-inner shadow-sky-400">
-              <img
-                src="./skills.png"
-                alt="skills image"
-                className="w-full h-72 sm:h-80 md:h-96 shadow-inner shadow-sky-400 jump-animate p-2 rounded-md hover:shadow-md hover:shadow-sky-400 "
-              />
+          {skillsInfo.map((item, i) => (
+            <div
+              key={i}
+              className="dark:text-activeColor text-darkBlack px-6 py-4 rounded-md sm:border-white/20 sm:shadow-md sm:shadow-black shadow-white tracking-[3px] flex items-center gap-2 uppercase font-semibold dark:hover:border-activeColor border-white/20 border-[1px] hover:shadow-md hover:scale-105 transition-all duration-300 hover:border-darkBlack"
+            >
+              {item.icon && (
+                <item.icon className="dark:text-activeColor text-darkBlack size-6" />
+              )}
+              <span>{item.label}</span>
             </div>
-          </div>
-          {/* right section */}
-          <div className="space-y-4">
-            {progressInfo.map(({ value, label }, index) => (
-              <ProgressBar key={index} value={value} label={label} />
-            ))}
-          </div>
+          ))}
         </motion.div>
       </div>
     </div>
