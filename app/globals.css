@@ -1,2 +1,75 @@
 @import "tailwindcss";
 
+@theme {
+  --font-poppins: var(--font-poppins), sans-serif;
+  --font-inter: var(--font-inter), sans-serif;
+  --color-header: #38bdf8;
+  --color-inner-shadow: #00000040;
+  --color-whites: #fffdfd;
+  --color-active-color: #17dff5;
+  --color-dark-black: #1e1e1e;
+  --color-blue-magenta: #151030;
+  --color-blue-tints: #100d25;
+  --color-card-bg: #17dff55c;
+  --shadow-btn: 0 0 25px #17dff5, 0 0 850px #17dff5;
+  --shadow-faq: 0 0 0.2px #17dff5, 0 0 8px #17dff5;
+  --shadow-btn-white: 0 0 15px #432e54, 0 0 450px #b1f0f7;
+  --font-size-100: 100px;
+  --animation-spin-slow: spin 5s linear infinite;
+}
+
+/* mobile menu icons */
+.group {
+  @apply text-white;
+}
+.textShadow {
+  @apply [text-shadow:_4px_3px_1px_rgb(0_0_0_/_90%)];
+}
+/* animation */
+.jump-animate {
+  animation: animate 1s infinite alternate-reverse;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-text::before {
+  animation: animateText 6s infinite alternate-reverse;
+}
+
+@keyframes animateText {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(50%);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 0;
+  }
+}
+
+/* scroll-bar design */
+::-webkit-scrollbar {
+  width: 9px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #00c6ff, #0072ff);
+  border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #0072ff, #00c6ff);
+}
