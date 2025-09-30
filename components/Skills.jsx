@@ -1,8 +1,6 @@
-"use client";
-
-import { motion } from "motion/react";
 import { skillsInfo } from "../db";
 import { Header } from "./common/Header";
+import SkillAnimate from "./skills/SkillAnimate";
 
 const Skills = () => {
   return (
@@ -17,12 +15,7 @@ const Skills = () => {
         <div className="sm:inline-block hidden absolute top-[50%] left-[80%] -translate-x-1/2 -translate-y-1/2 w-0 h-0 bg-transparent shadow-[20px_50px_200px_110px_#17DFF5] backdrop-blur-3xl opacity-50" />
 
         {/* skill details */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.5 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, ease: [0.43, 0.13, 0.28, 0.96] }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mx-4 my-2 sm:my-16 drop-shadow-lg"
-        >
+        <SkillAnimate>
           {skillsInfo.map((item, i) => (
             <div
               key={i}
@@ -34,7 +27,7 @@ const Skills = () => {
               <span>{item.label}</span>
             </div>
           ))}
-        </motion.div>
+        </SkillAnimate>
       </div>
     </div>
   );

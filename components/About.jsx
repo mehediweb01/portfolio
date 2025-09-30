@@ -1,18 +1,12 @@
 "use client";
 
-import { Skeleton } from "@heroui/react";
-import { motion } from "motion/react";
-import { useEffect, useState } from "react";
+import mehedi from "@/public/mehedi.png";
+import { motion } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
 import { Typewriter } from "react-simple-typewriter";
-const About = () => {
-  const [isLoading, setIsLoading] = useState(false);
-  useEffect(() => {
-    setIsLoading(true);
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 1000);
-  }, []);
 
+const About = () => {
   return (
     <motion.div
       initial={{ opacity: 0, x: -120 }}
@@ -51,33 +45,27 @@ const About = () => {
             </span>
           </p>
           <div className="flex justify-center items-center sm:justify-start space-x-4 sm:mx-4">
-            <a
+            <Link
               href="#Contact"
-              className="text-center bg-activeColor !text-darkBlack font-inter font-semibold text-xl sm:text-2xl leading-5 sm:leading-8 tracking-[1%] rounded-2xl px-4 py-3 hover:shadow-btnWhite dark:hover:shadow-btn transition-all duration-300 shadow-activeColor relative z-20 group after:content-[''] after:h-px after:hover:h-[1%] after:w-1/2 after:transition-all after:duration-700 after:bg-slate-600 after:-z-50 after:absolute after:bottom-0 after:left-0 after:hover:rounded-lg after:animate-indeterminate-bar"
+              className="text-center bg-activeColor !text-darkBlack font-inter font-semibold text-xl sm:text-2xl leading-5 sm:leading-8 tracking-[1%] rounded-2xl px-4 py-3 hover:shadow-btnWhite dark:hover:shadow-btn transition-all duration-300 shadow-activeColor relative z-20 group after:content-[''] after:h-px hover:after:h-[1%] after:w-1/2 after:transition-all after:duration-700 after:bg-slate-600 after:-z-50 after:absolute after:bottom-0 after:left-0 hover:after:rounded-lg after:animate-indeterminate-bar"
             >
               Contact me
-            </a>
+            </Link>
 
-            <a
+            <Link
               href="#FAQs"
-              className="text-center bg-transparent !text-darkBlack dark:!text-white font-inter font-semibold text-xl sm:text-2xl leading-5 sm:leading-8 tracking-[1%] rounded-2xl px-6 py-3 border border-slate-300 relative group after:content-[''] z-20 after:absolute after:bg-activeColor after:h-px after:w-1/2 after:hover:h-[2px] transition-all after:transition-all after:duration-400 after:left-0 after:bottom-0 after:right-0 after:-z-20 duration-300 hover:shadow-btnWhite dark:hover:shadow-btn shadow-activeColor after:animate-indeterminate-bar"
+              className="text-center bg-transparent !text-darkBlack dark:!text-white font-inter font-semibold text-xl sm:text-2xl leading-5 sm:leading-8 tracking-[1%] rounded-2xl px-6 py-3 border border-slate-300 relative group after:content-[''] z-20 after:absolute after:bg-activeColor after:h-px after:w-1/2 hover:after:h-[2px] transition-all after:transition-all after:duration-300 after:left-0 after:bottom-0  after:z-[-1] duration-300 hover:shadow-btnWhite dark:hover:shadow-btn shadow-activeColor after:animate-indeterminate-bar "
             >
               FAQs
-            </a>
+            </Link>
           </div>
         </div>
         <div className="mx-4">
-          {isLoading ? (
-            <div className="w-full">
-              <Skeleton className="sm:rounded-lg rounded-full h-80 w-80 sm:h-[473px] sm:w-[378px] bg-black" />
-            </div>
-          ) : (
-            <img
-              src="./mehedi.png"
-              alt="mehedi image"
-              className="sm:rounded-md rounded-full sm:h-full sm:w-full h-80 w-80 shadow-inner shadow-activeColor hover:shadow-md hover:shadow-activeColor hover:-translate-y-3 jump-animate p-2 hover:backdrop-blur-sm"
-            />
-          )}
+          <Image
+            src={mehedi}
+            alt="mehedi image"
+            className="sm:rounded-md rounded-full sm:h-full sm:w-full h-80 w-80 shadow-inner shadow-activeColor hover:shadow-md hover:shadow-activeColor hover:-translate-y-3 jump-animate p-2 hover:backdrop-blur-sm object-fill"
+          />
         </div>
       </div>
     </motion.div>

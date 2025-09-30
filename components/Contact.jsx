@@ -2,6 +2,7 @@
 
 import emailjs from "@emailjs/browser";
 import { motion } from "motion/react";
+import Image from "next/image";
 import { useState } from "react";
 import { toast } from "react-toastify";
 import { contactInfo, myInfo } from "../db";
@@ -17,6 +18,7 @@ const Contact = () => {
   const nameCheck = !name.trim();
   const emailCheck = !email.trim();
   const messageCheck = !message.trim();
+
   const sendEmail = (e) => {
     e.preventDefault();
     // form validation && send email
@@ -133,7 +135,7 @@ const Contact = () => {
               <Buttons
                 type={"submit"}
                 className="bg-transparent !text-sky-300 font-serif font-thin tracking-[5px] w-3/4 mx-auto jump-animate hover:shadow-btn transition-all duration-300 relative z-20 group after:content-[''] after:h-[3px] after:hover:h-[5%] after:w-full after:transition-all after:duration-400 sm:after:hover:animate-spin after:bg-sky-300 after:-z-50 after:absolute after:bottom-0 after:left-0 sm:after:hover:rounded-lg after:animate-indeterminate-bar"
-                variant="bordered"
+                variant="outline"
               >
                 Send
               </Buttons>
@@ -157,10 +159,10 @@ const Contact = () => {
                 key={index}
                 className="flex justify-center items-center gap-2 flex-col"
               >
-                <img
+                <Image
                   src={item.icon}
                   alt={`${"icons" + index}`}
-                  className="size-16"
+                  className="size-16 object-contain"
                 />
 
                 <h2 className="font-inter font-bold text-3xl lg:text-4xl text-blueMagenta dark:text-whites">
@@ -173,14 +175,19 @@ const Contact = () => {
             ))}
           </div>
           <div className="sm:block hidden mt-4 px-4 py-2 rounded-md shadow-inner shadow-black dark:shadow-activeColor ">
-            <motion.img
+            <motion.div
               initial={{ opacity: 1, scale: 1 }}
               whileHover={{ opacity: 1, scale: 0.98 }}
               transition={{ duration: 0.2, ease: "backInOut" }}
-              src="/contact.jpg"
-              alt="contact image"
-              className="h-[300px] w-full rounded-lg shadow-md shadow-sky-200 dark:shadow-none animate-pulse duration-500 transition-all"
-            />
+            >
+              <Image
+                src="/contact.jpg"
+                alt="contact image"
+                className="h-[300px] w-full rounded-lg shadow-md shadow-sky-200 dark:shadow-none animate-pulse duration-500 transition-all"
+                height={500}
+                width={500}
+              />
+            </motion.div>
           </div>
         </div>
       </motion.div>

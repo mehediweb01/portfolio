@@ -1,11 +1,10 @@
-"use client";
-
-import { motion } from "motion/react";
 import { FaShapes } from "react-icons/fa6";
 import { IoSettingsOutline } from "react-icons/io5";
 import { whatIDo } from "../db";
 import Card from "./common/Card";
 import { Header } from "./common/Header";
+import DoCardAnimate from "./whatIdo/DoCardAnimate";
+
 const WhatIDo = () => {
   return (
     <div className="relative py-8">
@@ -23,22 +22,17 @@ const WhatIDo = () => {
         </p>
       </div>
       {/* card */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.5 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.8, ease: [0.43, 0.13, 0.28, 0.96] }}
-        className="grid grid-cols-1 sm:grid-cols-2 justify-items-center gap-5 my-6 w-[90%] mx-auto"
-      >
+      <DoCardAnimate>
         {whatIDo.map((details, i) => (
           <Card key={i} {...details} />
         ))}
-      </motion.div>
+      </DoCardAnimate>
       {/* setting animation */}
       <div className="absolute right-4 md:right-[10%] top-[20%] shadow-inner shadow-sky-600 py-2 px-6 rounded-md">
-        <IoSettingsOutline className="size-5 animate-spin" />
+        <IoSettingsOutline className="size-5 animate-spin dark:text-sky-400" />
       </div>
       <div className="absolute left-4 md:left-[10%] top-[20%] shadow-inner shadow-sky-600 py-2 px-6 rounded-md">
-        <FaShapes className="size-5 animate-spin" />
+        <FaShapes className="size-5 animate-spin dark:text-sky-400" />
       </div>
     </div>
   );
