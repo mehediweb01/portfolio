@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { FaGithub } from "react-icons/fa";
 import { VscOpenPreview } from "react-icons/vsc";
-import Modal from "../Modal";
+import Modal from "./Modal";
 
 const ProjectCard = ({
   img,
@@ -23,7 +23,6 @@ const ProjectCard = ({
 
   return (
     <>
-      {/* 🔥 Project Card */}
       <motion.div
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -35,7 +34,6 @@ const ProjectCard = ({
         }`}
         onClick={handleOpen}
       >
-        {/* 📸 Image Tooltip */}
         <motion.div
           initial={{ opacity: 0, scale: 0.6 }}
           whileInView={{ opacity: 1, scale: 1 }}
@@ -45,28 +43,27 @@ const ProjectCard = ({
           <Image
             src={img}
             alt={name}
-            width={320}
-            height={180}
-            className="rounded-md shadow-md shadow-sky-400 h-[180px] w-[320px] mx-auto border border-slate-300 dark:border-0"
+            priority
+            className="rounded-md shadow-md shadow-sky-400 h-[180px] w-[320px] mx-auto border border-slate-300 dark:border-0 object-cover"
+            height={500}
+            width={500}
           />
         </motion.div>
 
-        {/* 📝 Title */}
         <div className="mt-3 text-center">
           <h3 className="font-inter font-semibold text-xl sm:text-2xl text-slate-700 dark:text-activeColor jump-animate">
             {name}
           </h3>
         </div>
 
-        {/* 📊 Info */}
         <div className="mt-4 space-y-3 text-center">
-          <p className="font-itim text-xl sm:text-2xl text-black dark:text-white">
+          <p className="font-poppins text-xl sm:text-2xl text-black dark:text-white">
             Front-end {teamMember && "team"} project
           </p>
 
           {teamMember && (
             <div>
-              <p className="font-itim text-xl text-black dark:text-white tracking-[2px]">
+              <p className="font-poppins text-xl text-black dark:text-white tracking-[2px]">
                 Collaboration with {teamMember} teammate
               </p>
               <p className="font-inter font-semibold text-xl text-black dark:text-white tracking-[2px]">
@@ -75,7 +72,6 @@ const ProjectCard = ({
             </div>
           )}
 
-          {/* 🔗 Preview & Code buttons */}
           <div className="flex justify-center gap-4 mt-4">
             <Link
               href={previewLink}
@@ -97,7 +93,6 @@ const ProjectCard = ({
             </Link>
           </div>
 
-          {/* 🏷️ Tech stack */}
           <div className="text-slate-900 dark:text-whites mt-6">
             <div className="border-t dark:border-slate-500 border-slate-300 rounded-md my-4" />
             <p className="flex gap-2 justify-center flex-wrap">
@@ -114,7 +109,7 @@ const ProjectCard = ({
         </div>
       </motion.div>
 
-      {/* 💬 Dialog Modal */}
+      {/* Dialog Modal */}
       <Modal
         isOpen={isOpen}
         onOpenChange={(open) => !open && handleClose()}

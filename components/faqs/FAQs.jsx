@@ -1,7 +1,7 @@
-import { FAQsInfo } from "../db";
-import { Header } from "./common/Header";
-import FaqAnimate from "./faqs/FaqAnimate";
-import FaqsCard from "./faqs/FaqsCard";
+import { Header } from "@/components/common/Header";
+import { FAQsInfo } from "@/db";
+import FaqAnimate from "./FaqAnimate";
+import FaqsCard from "./FaqsCard";
 
 const FAQs = () => {
   return (

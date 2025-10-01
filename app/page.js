@@ -1,16 +1,16 @@
-import About from "@/components/About";
-import Contact from "@/components/Contact";
-import FAQs from "@/components/FAQs";
-import Footer from "@/components/Footer";
-import Hero from "@/components/Hero";
-import MyNavbar from "@/components/Navbar";
-import Projects from "@/components/Projects";
-import Skills from "@/components/Skills";
-import WhatIDo from "@/components/WhatIDo";
+import About from "@/components/about/About";
+import Contact from "@/components/contact/Contact";
+import FAQs from "@/components/faqs/FAQs";
+import Footer from "@/components/footer/Footer";
+import Hero from "@/components/hero/Hero";
+import MyNavbar from "@/components/navbar/Navbar";
+import Projects from "@/components/projects/Projects";
+import Skills from "@/components/skills/Skills";
+import WhatIDo from "@/components/whatIdo/WhatIDo";
 
 const Home = () => {
   return (
-    <div className="bg-white dark:bg-[#050816]">
+    <div className="bg-slate-100 dark:bg-[#050816]">
       <MyNavbar />
       <Hero />
       <About />

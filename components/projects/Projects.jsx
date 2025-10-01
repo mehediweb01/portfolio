@@ -1,7 +1,7 @@
-import { projectsInfo } from "../db";
-import { Header } from "./common/Header";
-import ProjectCard from "./projects/ProjectCard";
-import ProjectsAnimate from "./projects/ProjectsAnimate";
+import { projectsInfo } from "@/db";
+import { Header } from "../common/Header";
+import ProjectCard from "./ProjectCard";
+import ProjectsAnimate from "./ProjectsAnimate";
 
 const Projects = () => {
   return (

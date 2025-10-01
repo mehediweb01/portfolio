@@ -22,7 +22,11 @@ const MobileMenu = () => {
           <FaBarsStaggered />
         </Button>
       </SheetTrigger>
-      <SheetContent side="right" className="bg-black text-white w-64">
+      <SheetContent
+        side="right"
+        className="bg-black text-white w-64"
+        aria-describedby={undefined}
+      >
         <SheetHeader>
           <SheetTitle>Menu</SheetTitle>
         </SheetHeader>
@@ -31,7 +35,7 @@ const MobileMenu = () => {
             <Link
               key={index}
               href={item.href}
-              className="text-white font-itim text-lg hover:text-yellow-400"
+              className="text-white font-poppins text-lg hover:text-yellow-400"
               onClick={() => setOpen(false)}
             >
               {item.name}

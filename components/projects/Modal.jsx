@@ -23,7 +23,10 @@ const Modal = ({
 }) => {
   return (
     <Dialog open={isOpen} onOpenChange={onOpenChange}>
-      <DialogContent className="sm:max-w-lg shadow-sm dark:shadow-white shadow-black">
+      <DialogContent
+        className="sm:max-w-lg shadow-sm dark:shadow-white shadow-black"
+        aria-describedby={undefined}
+      >
         <DialogHeader>
           <DialogTitle className="text-2xl font-semibold text-center">
             {name} - Project Details
@@ -36,6 +39,7 @@ const Modal = ({
             alt={name}
             width={600}
             height={300}
+            priority
             className="rounded-md border dark:border-slate-700"
           />
           <p className="font-inter text-base text-slate-700 dark:text-slate-200">

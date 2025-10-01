@@ -7,7 +7,9 @@ import userTime from "./public/userTime.svg";
 import yellowEmail from "./public/yellow-email.svg";
 // skill icons
 import { AiOutlineHtml5 } from "react-icons/ai";
+import { CiLinkedin } from "react-icons/ci";
 import { FaCss3, FaGitAlt, FaGithub } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa6";
 import {
   RiBootstrapFill,
   RiJavascriptLine,
@@ -25,6 +27,7 @@ export const Items = [
   { name: "Contact", href: "#Contact" },
   { name: "FAQs", href: "#FAQs" },
 ];
+
 // what i do
 export const whatIDo = [
   {
@@ -40,6 +43,7 @@ export const whatIDo = [
       "I strive to write clean, efficient, and scalable React code by following key principles: Component Reusability, Optimized Performance, Code Simplicity",
   },
 ];
+
 // skill section progressBar information
 export const skillsInfo = [
   {
@@ -149,16 +153,19 @@ export const contactInfo = [
 
 export const myInfo = [
   {
+    id: 1,
     icon: meUser,
     title: "Md.Mehedi Hasan",
     content: "front-end web developer",
   },
   {
+    id: 2,
     icon: userTime,
     title: "Freelance",
     content: "Available right now",
   },
   {
+    id: 3,
     icon: yellowEmail,
     title: "Email",
     content: "mehedihasan87456@gmail.com",
@@ -201,5 +208,34 @@ export const FAQsInfo = [
     question: "What kind of roles or projects am I suitable for?",
     answer:
       "Junior front-end developer positions, Small to medium-sized projects and Responsive website development ",
+  },
+];
+
+// footer section
+export const socialIcons = [
+  {
+    id: 1,
+    icon: FaFacebook,
+    link: "https://www.facebook.com/mehediweb01",
+  },
+  {
+    id: 2,
+    icon: FaInstagram,
+    link: "https://www.instagram.com/mehediweb01/",
+  },
+  {
+    id: 3,
+    icon: CiLinkedin,
+    link: "https://www.linkedin.com/in/mehediweb01/",
+  },
+  {
+    id: 4,
+    icon: FaTwitter,
+    link: "https://x.com/mehedi_web01",
+  },
+  {
+    id: 5,
+    icon: FaGithub,
+    link: "https://github.com/mehediweb01",
   },
 ];

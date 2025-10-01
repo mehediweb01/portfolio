@@ -1,9 +1,9 @@
 import { Items } from "@/db";
 import Link from "next/link";
-import Logo from "./navbar/Logo";
-import MobileMenu from "./navbar/MobileMenu";
-import SocialIcons from "./navbar/SocialIcons";
-import ToggleButton from "./navbar/ToggleButton";
+import Logo from "./Logo";
+import MobileMenu from "./MobileMenu";
+import SocialIcons from "./SocialIcons";
+import ToggleButton from "./ToggleButton";
 
 const MyNavbar = () => {
   return (
