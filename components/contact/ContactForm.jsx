@@ -1,6 +1,5 @@
 "use client";
 
-import emailjs from "@emailjs/browser";
 import { useState } from "react";
 import { toast } from "react-toastify";
 import { Buttons } from "../common/Button";
@@ -9,55 +8,47 @@ const ContactForm = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
-  const nameCheck = !name.trim();
-  const emailCheck = !email.trim();
-  const messageCheck = !message.trim();
 
-  const sendEmail = (e) => {
+  const pattern = /^[^ ]+@[^ ]+\.[a-z]{2,}$/;
+
+  const sendEmail = async (e) => {
     e.preventDefault();
-    // form validation && send email
+
     const errors = [];
 
-    if (nameCheck) errors.push("Please enter a valid name");
-    if (emailCheck || !email.match(pattern))
-      errors.push("Please enter a valid email");
-    if (messageCheck) errors.push("Please enter a valid message");
+    if (!name.trim()) errors.push("⚠️ Please enter a valid name.");
+    if (!email.trim() || !pattern.test(email))
+      errors.push("⚠️ Please enter a valid email address.");
+    if (!message.trim()) errors.push("⚠️ Please enter a valid message.");
 
     if (errors.length > 0) {
       toast.error(errors.join("\n"), {
         autoClose: 3000,
-        hideProgressBar: false,
-        closeOnClick: false,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
         style: { whiteSpace: "pre-line" },
       });
-    } else {
-      emailjs
-        .send(
-          "service_y24b0y5",
-          "template_7e7jyog",
-          {
-            user_name: name,
-            user_email: email,
-            reply_to: email,
-            message: message,
-          },
-          "Uxt8EF3_4CCtYmOUA"
-        )
-        .then(
-          () => {
-            setName("");
-            setEmail("");
-            setMessage("");
-            toast.success("SUCCESS!");
-          },
-          (error) => {
-            toast.error("FAILED...", error.text);
-          }
-        );
+      return;
+    }
+
+    try {
+      const res = await fetch("/api/send-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, message }),
+      });
+
+      const data = await res.json();
+
+      if (data.success) {
+        toast.success("Message sent successfully!");
+        setName("");
+        setEmail("");
+        setMessage("");
+      } else {
+        toast.error(`Failed to send message: ${data.error || ""}`);
+      }
+    } catch (error) {
+      console.error(error);
+      toast.error("Something went wrong. Try again later.");
     }
   };
 
@@ -115,7 +106,7 @@ const ContactForm = () => {
         />
       </div>
       <Buttons
-        type={"submit"}
+        type="submit"
         className="bg-transparent !text-sky-300 font-serif font-thin tracking-[5px] w-3/4 mx-auto jump-animate hover:shadow-btn transition-all duration-300 relative z-20 group after:content-[''] after:h-[3px] after:hover:h-[5%] after:w-full after:transition-all after:duration-400 sm:after:hover:animate-spin after:bg-sky-300 after:-z-50 after:absolute after:bottom-0 after:left-0 sm:after:hover:rounded-lg after:animate-indeterminate-bar"
         variant="outline"
       >
