@@ -19,7 +19,7 @@ const SocialIcons = () => {
         <BsLinkedin />
       </Link>
       <Link
-        href="https://x.com/mehediweb01"
+        href="https://x.com/mehedi_web01"
         target="_blank"
         className="text-white text-2xl hover:text-yellow-400"
       >
