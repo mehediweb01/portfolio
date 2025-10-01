@@ -15,7 +15,7 @@
   --color-blueTints: #100d25;
   --color-cardBg: #17dff55c;
   --shadow-btn: 0 0 25px #17dff5, 0 0 850px #17dff5;
-  --shadow-faq: 0 0 0.2px #17dff5, 0 0 8px #17dff5;
+  --shadow-faq: 0 0 0.2px #17dff5, 0 0 3px #17dff5;
   --shadow-btnWhite: 0 0 15px #432e54, 0 0 450px #b1f0f7;
   --animate-spin-slow: spin 5s linear infinite;
   --animate-indeterminate-bar: indeterminate 2s linear infinite;

@@ -1,6 +1,8 @@
 "use client";
 
 import Link from "next/link";
+import { CiViewColumn } from "react-icons/ci";
+import { FaCloudDownloadAlt } from "react-icons/fa";
 import {
   Tooltip,
   TooltipContent,
@@ -23,8 +25,9 @@ const DownloadViewCV = () => {
     <div className="flex flex-wrap justify-center items-center gap-3">
       <button
         onClick={handleDownload}
-        className="bg-activeColor/50 font-inter font-semibold text-base sm:text-xl tracking-[1%] rounded-xl px-2 py-2 cursor-pointer hover:shadow-md hover:shadow-sky-400/80 text-white transition-all duration-300"
+        className="bg-activeColor/50 font-inter font-semibold text-base sm:text-xl tracking-[1%] rounded-xl px-2 py-2 cursor-pointer hover:shadow-md hover:shadow-sky-400/80 text-white transition-all duration-300 flex justify-center items-center gap-2"
       >
+        <FaCloudDownloadAlt />
         Download cv
       </button>
       <TooltipProvider>
@@ -33,8 +36,9 @@ const DownloadViewCV = () => {
             <Link
               href={"/cv/mehedi-resume.pdf"}
               target="_blank"
-              className="bg-activeColor/50 font-inter font-semibold text-base sm:text-xl tracking-[1%] rounded-sm px-2 py-2 cursor-pointer hover:shadow-md hover:shadow-sky-400/80 text-white transition-all duration-300 md:inline-block hidden"
+              className="bg-activeColor/50 font-inter font-semibold text-base sm:text-xl tracking-[1%] rounded-sm px-2 py-2 cursor-pointer hover:shadow-md hover:shadow-sky-400/80 text-white transition-all duration-300 md:flex justify-center items-center gap-2 hidden "
             >
+              <CiViewColumn />
               View CV
             </Link>
           </TooltipTrigger>

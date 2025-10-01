@@ -36,7 +36,7 @@ const RightSection = () => {
           </div>
         ))}
       </div>
-      <div className="sm:block hidden mt-4 px-4 py-2 rounded-md shadow-inner shadow-black dark:shadow-activeColor ">
+      <div className="sm:block hidden mt-4 px-4 py-2 rounded-md shadow-inner shadow-black dark:shadow-activeColor/80 ">
         <ImageAnimate>
           <Image
             src={contact}

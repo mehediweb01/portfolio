@@ -13,7 +13,7 @@ const Footer = () => {
       </div>
       <div>
         <span className="font-poppins text-sm sm:text-xl text-center dark:text-white text-black">
-          {new Date().getFullYear()} By _Md. Mehedi Hasan . All Right Reserved
+          &copy; {new Date().getFullYear()} Md. Mehedi Hasan . All Right Reserved
         </span>
       </div>
     </footer>

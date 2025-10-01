@@ -29,8 +29,8 @@ const ProjectCard = ({
         transition={{ duration: 0.5, ease: [0.43, 0.13, 0.28, 0.96] }}
         className={`px-4 py-6 rounded-lg hover:scale-105 transition-all duration-300 ease-in-out shadow-lg hover:shadow-inner hover:shadow-black dark:hover:shadow-white dark:shadow-black group border border-slate-300 dark:border-slate-100 ${
           teamMember
-            ? "shadow-blue-600 dark:shadow-white/30 bg-gradient-to-tl from-white/20 to-white/10"
-            : "shadow-sky-300 dark:shadow-white/20 bg-gradient-to-tr from-white/30 to-white/10"
+            ? "shadow-blue-100 dark:shadow-white/30 bg-gradient-to-tl from-white/20 to-white/10"
+            : "shadow-sky-100 dark:shadow-white/20 bg-gradient-to-tr from-white/30 to-white/10"
         }`}
         onClick={handleOpen}
       >
@@ -44,7 +44,7 @@ const ProjectCard = ({
             src={img}
             alt={name}
             priority
-            className="rounded-md shadow-md shadow-sky-400 h-[180px] w-[320px] mx-auto border border-slate-300 dark:border-0 object-cover"
+            className="rounded-md shadow-sm shadow-sky-200 h-[180px] w-[320px] mx-auto border border-slate-300 dark:border-0 object-cover"
             height={500}
             width={500}
           />

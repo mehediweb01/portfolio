@@ -8,7 +8,9 @@ const Skills = () => {
     <div id="Skills" className="pt-16 w-full sm:w-[70%] md:w-[60%] mx-auto">
       <div className="relative">
         <Header>Skills</Header>
-        <Shadow />
+        <div className="dark:inline-block hidden">
+          <Shadow />
+        </div>
 
         <SkillAnimate>
           {skillsInfo.map((item, i) => (
