@@ -1,18 +1,18 @@
-import me from "@/public/mehedi-profile.png";
+import me from "@/public/mehedi.png";
 import Image from "next/image";
 import TypeAnimate from "./TypeAnimate";
 
 const Details = () => {
   return (
-    <div className="flex sm:flex-row flex-col gap-4 sm:gap-8 items-start sm:items-center sm:ms-0 ms-4">
+    <div className="flex md:flex-row flex-col gap-4 md:gap-8 items-start md:items-center md:ms-0 ms-4">
       <div className="relative p-2 flex justify-center items-center">
-        <div className=" absolute w-full h-full rounded-full border-t-3 border-activeColor animate-spin-slow" />
+        <div className="absolute w-full h-full rounded-lg border-1 border-activeColor/50 shadow-sm shadow-activeColor/50" />
         <Image
           src={me}
           alt="mehedi-profile"
-          width={300}
-          height={300}
-          className="w-44 sm:w-52 md:w-60 rounded-full shadow-btn object-cover"
+          height={500}
+          width={500}
+          className="rounded-md w-44 sm:w-52 hover:-translate-y-3 hover:backdrop-blur-sm object-fill"
         />
       </div>
 
@@ -20,7 +20,7 @@ const Details = () => {
         <span className="uppercase text-2xl sm:text-4xl tracking-[3px] font-poppins text-[#B3E5FC]">
           <TypeAnimate />
         </span>
-        <span className="flex flex-col gap-2 font-serif jump-animate mt-4">
+        <span className="flex flex-col gap-2 font-serif mt-4">
           <span className="sm:text-5xl text-2xl font-medium text-activeColor tracking-[2px] ms-5 drop-shadow">
             Md. Mehedi Hasan ,
           </span>
