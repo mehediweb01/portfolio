@@ -1,4 +1,4 @@
-import mehedi from "@/public/mehedi.png";
+import mehedi from "@/public/mehedi.jpeg";
 import Image from "next/image";
 import Link from "next/link";
 import { FaQuestion } from "react-icons/fa6";
@@ -50,7 +50,7 @@ const About = () => {
           <Image
             src={mehedi}
             alt="mehedi image"
-            className="sm:rounded-md rounded-full sm:h-full sm:w-full h-80 w-80 shadow-inner shadow-activeColor hover:shadow-md hover:shadow-activeColor hover:-translate-y-3 jump-animate p-2 hover:backdrop-blur-sm object-fill"
+            className="sm:rounded-md rounded-full sm:h-96 sm:w-[280px] h-80 w-80 object-fill p-1 border-[2px] border-slate-200 dark:border-slate-600"
           />
         </div>
       </div>
