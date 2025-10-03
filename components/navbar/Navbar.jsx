@@ -1,10 +1,6 @@
-"use client";
-
-import { Items } from "@/db";
-import Link from "next/link";
-import ButtonAnimation from "../common/ButtonAnimation";
 import Logo from "./Logo";
 import MobileMenu from "./MobileMenu";
+import NavLink from "./NavLink";
 import SocialIcons from "./SocialIcons";
 import ToggleButton from "./ToggleButton";
 
@@ -14,16 +10,7 @@ const MyNavbar = () => {
       <div className="max-w-7xl mx-auto flex items-center justify-between p-2">
         <Logo />
         <nav className="hidden sm:flex gap-6">
-          {Items.map((item, index) => (
-            <ButtonAnimation key={index}>
-              <Link
-                href={item.href}
-                className={`font-inter text-lg hover:text-yellow-400 transition tracking-[1px] text-white`}
-              >
-                {item.name}
-              </Link>
-            </ButtonAnimation>
-          ))}
+          <NavLink />
         </nav>
 
         <div className="flex items-center gap-3">

@@ -23,7 +23,7 @@ import { TbBrandRedux, TbBrandTypescript } from "react-icons/tb";
 export const Items = [
   { name: "About", href: "#About" },
   { name: "Skills", href: "#Skills" },
-  { name: "Project", href: "#Project" },
+  { name: "Projects", href: "#Projects" },
   { name: "Contact", href: "#Contact" },
   { name: "FAQs", href: "#FAQs" },
 ];

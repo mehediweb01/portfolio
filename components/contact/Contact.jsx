@@ -16,7 +16,6 @@ const Contact = () => {
         </div>
         <RightSection />
       </ContactAnimate>
-
       <MyDetails />
     </div>
   );

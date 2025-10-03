@@ -3,10 +3,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaQuestion } from "react-icons/fa6";
 import { MdOutlineContactSupport } from "react-icons/md";
+import ButtonAnimation from "../common/ButtonAnimation";
 import AboutAnimate from "./AboutAnimate";
 import AboutTypeAnimate from "./AboutTypeAnimate";
 import HeaderAnimate from "./HeaderAnimate";
-import ButtonAnimation from "../common/ButtonAnimation";
 
 const About = () => {
   return (

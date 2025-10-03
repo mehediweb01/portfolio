@@ -5,7 +5,7 @@ import ProjectsAnimate from "./ProjectsAnimate";
 
 const Projects = () => {
   return (
-    <div id="Project" className="py-16 w-[90%] mx-auto">
+    <div id="Projects" className="py-16 w-[90%] mx-auto">
       <Header>Projects</Header>
       <ProjectsAnimate>
         {projectsInfo.map((item) => (
