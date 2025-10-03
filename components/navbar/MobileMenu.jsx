@@ -9,7 +9,6 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { Items } from "@/db";
-import Link from "next/link";
 import { useEffect, useState } from "react";
 import { FaBarsStaggered } from "react-icons/fa6";
 
@@ -111,9 +110,8 @@ const MobileMenu = () => {
           {Items.map((item, index) => {
             const itemHash = normalizeHash(item.href);
             const isActive = activeSection === itemHash;
-            const isHashLink = item.href.startsWith("#");
 
-            return isHashLink ? (
+            return (
               <a
                 key={index}
                 href={item.href}
@@ -124,17 +122,6 @@ const MobileMenu = () => {
               >
                 {item.name}
               </a>
-            ) : (
-              <Link
-                key={index}
-                href={item.href}
-                onClick={() => setOpen(false)}
-                className={`font-poppins text-lg transition tracking-[1px] hover:text-yellow-400 ${
-                  isActive ? "text-yellow-400 font-semibold" : "text-white"
-                }`}
-              >
-                {item.name}
-              </Link>
             );
           })}
         </nav>
