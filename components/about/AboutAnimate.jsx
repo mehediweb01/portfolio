@@ -7,6 +7,7 @@ const AboutAnimate = ({ children }) => {
     <motion.div
       initial={{ opacity: 0, x: -120 }}
       whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
       transition={{ duration: 1.3, ease: [0.43, 0.13, 0.28, 0.96] }}
       id="About"
       className="pt-16"

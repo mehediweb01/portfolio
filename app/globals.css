@@ -13,7 +13,6 @@
   --color-darkBlack: #1e1e1e;
   --color-blueMagenta: #151030;
   --color-blueTints: #100d25;
-  --color-cardBg: #17dff55c;
   --shadow-btn: 0 0 25px #17dff5, 0 0 850px #17dff5;
   --shadow-faq: 0 0 0.2px #17dff5, 0 0 3px #17dff5;
   --shadow-btnWhite: 0 0 15px #432e54, 0 0 450px #b1f0f7;
@@ -24,7 +23,7 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    scroll-padding: 20px;
+    scroll-padding: 25px;
   }
 
   /* mobile menu icons */
@@ -41,6 +40,11 @@
   }
 
   /* animation */
+
+  .animate-text::before {
+    animation: animateText 6s infinite alternate-reverse;
+  }
+
   .jump-animate {
     animation: animate 1s infinite alternate-reverse;
   }
@@ -52,10 +56,6 @@
     100% {
       transform: translateY(-6px);
     }
-  }
-
-  .animate-text::before {
-    animation: animateText 6s infinite alternate-reverse;
   }
 
   @keyframes animateText {

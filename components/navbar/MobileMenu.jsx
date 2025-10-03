@@ -12,16 +12,19 @@ import { Items } from "@/db";
 import Link from "next/link";
 import { useState } from "react";
 import { FaBarsStaggered } from "react-icons/fa6";
+import ButtonAnimation from "../common/ButtonAnimation";
 
 const MobileMenu = () => {
   const [open, setOpen] = useState(false);
   return (
     <Sheet open={open} onOpenChange={setOpen}>
-      <SheetTrigger asChild>
-        <Button className="sm:hidden">
-          <FaBarsStaggered />
-        </Button>
-      </SheetTrigger>
+      <ButtonAnimation>
+        <SheetTrigger asChild>
+          <Button className="sm:hidden">
+            <FaBarsStaggered />
+          </Button>
+        </SheetTrigger>
+      </ButtonAnimation>
       <SheetContent
         side="right"
         className="bg-black text-white w-64"

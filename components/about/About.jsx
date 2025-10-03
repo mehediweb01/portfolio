@@ -6,6 +6,7 @@ import { MdOutlineContactSupport } from "react-icons/md";
 import AboutAnimate from "./AboutAnimate";
 import AboutTypeAnimate from "./AboutTypeAnimate";
 import HeaderAnimate from "./HeaderAnimate";
+import ButtonAnimation from "../common/ButtonAnimation";
 
 const About = () => {
   return (
@@ -29,21 +30,24 @@ const About = () => {
             </span>
           </p>
           <div className="flex justify-center items-center flex-wrap sm:justify-start space-x-4 sm:mx-4">
-            <Link
-              href="#Contact"
-              className="text-center bg-activeColor !text-darkBlack font-inter font-semibold text-xl sm:text-2xl leading-5 sm:leading-8 tracking-[1%] rounded-2xl px-4 py-3 hover:shadow-btnWhite dark:hover:shadow-btn transition-all duration-300 shadow-activeColor relative z-20 group after:content-[''] after:h-px hover:after:h-[1%] after:w-1/2 after:transition-all after:duration-700 after:bg-slate-600 after:-z-50 after:absolute after:bottom-0 after:left-0 hover:after:rounded-lg after:animate-indeterminate-bar flex justify-center items-center gap-2"
-            >
-              <MdOutlineContactSupport />
-              Contact me
-            </Link>
-
-            <Link
-              href="#FAQs"
-              className="text-center bg-transparent !text-darkBlack dark:!text-white font-inter font-semibold text-xl sm:text-2xl leading-5 sm:leading-8 tracking-[1%] rounded-2xl px-6 py-3 border border-slate-300 relative group after:content-[''] z-20 after:absolute after:bg-activeColor after:h-px after:w-1/2 hover:after:h-[2px] transition-all after:transition-all after:duration-300 after:left-0 after:bottom-0  after:z-[-1] duration-300 hover:shadow-btnWhite dark:hover:shadow-btn shadow-activeColor after:animate-indeterminate-bar flex justify-center items-center gap-2"
-            >
-              <FaQuestion />
-              FAQs
-            </Link>
+            <ButtonAnimation>
+              <Link
+                href="#Contact"
+                className="text-center bg-activeColor !text-darkBlack font-inter font-semibold text-xl sm:text-2xl leading-5 sm:leading-8 tracking-[1%] rounded-2xl px-4 py-3 hover:shadow-btnWhite dark:hover:shadow-btn transition-all duration-300 shadow-activeColor relative z-20 group after:content-[''] after:h-px hover:after:h-[1%] after:w-1/2 after:transition-all after:duration-700 after:bg-slate-600 after:-z-50 after:absolute after:bottom-0 after:left-0 hover:after:rounded-lg after:animate-indeterminate-bar flex justify-center items-center gap-2"
+              >
+                <MdOutlineContactSupport />
+                Contact me
+              </Link>
+            </ButtonAnimation>
+            <ButtonAnimation>
+              <Link
+                href="#FAQs"
+                className="text-center bg-transparent !text-darkBlack dark:!text-white font-inter font-semibold text-xl sm:text-2xl leading-5 sm:leading-8 tracking-[1%] rounded-2xl px-6 py-3 border border-slate-300 relative group after:content-[''] z-20 after:absolute after:bg-activeColor after:h-px after:w-1/2 hover:after:h-[2px] transition-all after:transition-all after:duration-300 after:left-0 after:bottom-0  after:z-[-1] duration-300 hover:shadow-btnWhite dark:hover:shadow-btn shadow-activeColor after:animate-indeterminate-bar flex justify-center items-center gap-2"
+              >
+                <FaQuestion />
+                FAQs
+              </Link>
+            </ButtonAnimation>
           </div>
         </div>
         <div className="mx-4">

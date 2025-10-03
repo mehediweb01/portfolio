@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { FaGithub } from "react-icons/fa";
 import { VscOpenPreview } from "react-icons/vsc";
+import ButtonAnimation from "../common/ButtonAnimation";
 import Modal from "./Modal";
 
 const ProjectCard = ({
@@ -17,6 +18,7 @@ const ProjectCard = ({
   teamMember,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [hovered, setHovered] = useState(false);
 
   const handleOpen = () => setIsOpen(true);
   const handleClose = () => setIsOpen(false);
@@ -27,7 +29,9 @@ const ProjectCard = ({
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5, ease: [0.43, 0.13, 0.28, 0.96] }}
-        className={`px-4 py-6 rounded-lg hover:scale-105 transition-all duration-300 ease-in-out shadow-lg hover:shadow-inner hover:shadow-black dark:hover:shadow-white dark:shadow-black group border border-slate-300 dark:border-slate-100 ${
+        onMouseEnter={() => setHovered(true)}
+        onMouseLeave={() => setHovered(false)}
+        className={`group px-4 py-6 rounded-lg hover:scale-105 transition-all duration-300 ease-in-out shadow-lg hover:shadow-inner hover:shadow-black dark:hover:shadow-white dark:shadow-black group border border-slate-300 dark:border-slate-100 ${
           teamMember
             ? "shadow-blue-100 dark:shadow-white/30 bg-gradient-to-tl from-white/20 to-white/10"
             : "shadow-sky-100 dark:shadow-white/20 bg-gradient-to-tr from-white/30 to-white/10"
@@ -35,10 +39,10 @@ const ProjectCard = ({
         onClick={handleOpen}
       >
         <motion.div
-          initial={{ opacity: 0, scale: 0.6 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5, ease: "easeInOut" }}
-          className="cursor-pointer"
+          initial={{ opacity: 1 }}
+          animate={{ opacity: hovered ? 0.6 : 1 }}
+          transition={{ duration: 0.3 }}
+          className="cursor-pointer group-hover:opacity-100 transition-all duration-300 ease-in-out"
         >
           <Image
             src={img}
@@ -73,24 +77,28 @@ const ProjectCard = ({
           )}
 
           <div className="flex justify-center gap-4 mt-4">
-            <Link
-              href={previewLink}
-              target="_blank"
-              onClick={(e) => e.stopPropagation()}
-              className="flex items-center gap-1 font-inter font-semibold text-sm text-black/95 sm:text-base shadow-sm shadow-black px-2 py-1 rounded-md group-hover:bg-sky-300 group-hover:transition-all group-hover:duration-300 group-hover:text-darkBlack hover:shadow-inner hover:shadow-black/50 dark:text-white"
-            >
-              <span className="tracking-[1px]">Preview</span>
-              <VscOpenPreview />
-            </Link>
-            <Link
-              href={codeLink}
-              target="_blank"
-              onClick={(e) => e.stopPropagation()}
-              className="flex items-center gap-1 font-inter font-semibold text-sm text-black/95 sm:text-base shadow-sm shadow-black px-2 py-1 rounded-md group-hover:bg-sky-300 group-hover:transition-all group-hover:duration-300 group-hover:text-darkBlack hover:shadow-inner hover:shadow-black/50 dark:text-white"
-            >
-              <span className="tracking-[1px]">Code</span>
-              <FaGithub />
-            </Link>
+            <ButtonAnimation>
+              <Link
+                href={previewLink}
+                target="_blank"
+                onClick={(e) => e.stopPropagation()}
+                className="flex items-center gap-1 font-inter font-semibold text-sm text-black/95 sm:text-base shadow-sm shadow-black px-2 py-1 rounded-md group-hover:bg-sky-300 group-hover:transition-all group-hover:duration-300 group-hover:text-darkBlack hover:shadow-inner hover:shadow-black/50 dark:text-white"
+              >
+                <span className="tracking-[1px]">Preview</span>
+                <VscOpenPreview />
+              </Link>
+            </ButtonAnimation>
+            <ButtonAnimation>
+              <Link
+                href={codeLink}
+                target="_blank"
+                onClick={(e) => e.stopPropagation()}
+                className="flex items-center gap-1 font-inter font-semibold text-sm text-black/95 sm:text-base shadow-sm shadow-black px-2 py-1 rounded-md group-hover:bg-sky-300 group-hover:transition-all group-hover:duration-300 group-hover:text-darkBlack hover:shadow-inner hover:shadow-black/50 dark:text-white"
+              >
+                <span className="tracking-[1px]">Code</span>
+                <FaGithub />
+              </Link>
+            </ButtonAnimation>
           </div>
 
           <div className="text-slate-900 dark:text-whites mt-6">

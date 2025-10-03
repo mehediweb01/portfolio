@@ -1,5 +1,8 @@
+"use client";
+
 import { Items } from "@/db";
 import Link from "next/link";
+import ButtonAnimation from "../common/ButtonAnimation";
 import Logo from "./Logo";
 import MobileMenu from "./MobileMenu";
 import SocialIcons from "./SocialIcons";
@@ -12,13 +15,14 @@ const MyNavbar = () => {
         <Logo />
         <nav className="hidden sm:flex gap-6">
           {Items.map((item, index) => (
-            <Link
-              key={index}
-              href={item.href}
-              className="text-white font-inter text-lg hover:text-yellow-400 transition tracking-[1px]"
-            >
-              {item.name}
-            </Link>
+            <ButtonAnimation key={index}>
+              <Link
+                href={item.href}
+                className={`font-inter text-lg hover:text-yellow-400 transition tracking-[1px] text-white`}
+              >
+                {item.name}
+              </Link>
+            </ButtonAnimation>
           ))}
         </nav>
 
