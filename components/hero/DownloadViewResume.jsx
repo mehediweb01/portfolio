@@ -11,7 +11,7 @@ import {
   TooltipTrigger,
 } from "../ui/tooltip";
 
-const DownloadViewCV = () => {
+const DownloadViewResume = () => {
   const handleDownload = () => {
     const fileUrl = "/cv/mehedi-resume.pdf";
     const link = document.createElement("a");
@@ -30,7 +30,7 @@ const DownloadViewCV = () => {
           className="bg-activeColor/50 font-inter font-semibold text-base sm:text-xl tracking-[1%] rounded-xl px-2 py-2 cursor-pointer hover:shadow-md hover:shadow-sky-400/80 text-white transition-all duration-300 flex justify-center items-center gap-2 jump-animate"
         >
           <FaCloudDownloadAlt />
-          Download cv
+          Download Resume
         </button>
       </ButtonAnimation>
       <TooltipProvider>
@@ -38,12 +38,12 @@ const DownloadViewCV = () => {
           <TooltipTrigger asChild>
             <ButtonAnimation>
               <Link
-                href={"/cv/mehedi-resume.pdf"}
+                href={"/resume/mehedi-resume.pdf"}
                 target="_blank"
                 className="bg-activeColor/50 font-inter font-semibold text-base sm:text-xl tracking-[1%] rounded-sm px-2 py-2 cursor-pointer hover:shadow-md hover:shadow-sky-400/80 text-white transition-all duration-300 md:flex justify-center items-center gap-2 hidden "
               >
                 <CiViewColumn />
-                View CV
+                View Resume
               </Link>
             </ButtonAnimation>
           </TooltipTrigger>
@@ -56,4 +56,4 @@ const DownloadViewCV = () => {
   );
 };
 
-export default DownloadViewCV;
+export default DownloadViewResume;

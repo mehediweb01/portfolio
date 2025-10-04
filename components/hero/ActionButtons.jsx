@@ -1,12 +1,12 @@
 import Link from "next/link";
 import { CiViewColumn } from "react-icons/ci";
 import ButtonAnimation from "../common/ButtonAnimation";
-import DownloadViewCV from "./DownloadViewCV";
+import DownloadViewResume from "./DownloadViewResume";
 
 const ActionButtons = () => {
   return (
     <div className="flex flex-wrap justify-center items-center gap-4 ms-0 sm:ms-24 md:mt-4 mt-14">
-      <DownloadViewCV />
+      <DownloadViewResume />
 
       <ButtonAnimation>
         <Link
