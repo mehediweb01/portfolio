@@ -113,6 +113,19 @@ export const projectsInfo = [
   },
   {
     id: 3,
+    img: "/dev-shelf.png",
+    name: "DevShelf",
+    previewLink: "https://devshelf-ten.vercel.app/",
+    codeLink: "https://github.com/mehediweb01/devshelf.git",
+    useCase: [
+      "NextJS",
+      "TailwindCSS",
+      "react-icons",
+      "react-syntax-highlighter",
+    ],
+  },
+  {
+    id: 4,
     img: "/image-gallery.png",
     name: "Image Gallery",
     previewLink: "https://image-gallery-alpha-nine.vercel.app/",
@@ -120,7 +133,7 @@ export const projectsInfo = [
     useCase: ["NextJS", "TypeScript", "TailwindCss"],
   },
   {
-    id: 4,
+    id: 5,
     img: "/quick-mart.png",
     name: "Quick Mart UI",
     previewLink: "https://quickmart-ui.vercel.app/",
@@ -128,7 +141,7 @@ export const projectsInfo = [
     useCase: ["NextJS", "TailwindCss", "react-icons"],
   },
   {
-    id: 5,
+    id: 6,
     img: "/quote-generator.png",
     name: "Quote Generator",
     previewLink: "https://quote-generator-wheat-one.vercel.app/",

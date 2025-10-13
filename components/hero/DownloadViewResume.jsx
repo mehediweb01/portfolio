@@ -4,12 +4,7 @@ import Link from "next/link";
 import { CiViewColumn } from "react-icons/ci";
 import { FaCloudDownloadAlt } from "react-icons/fa";
 import ButtonAnimation from "../common/ButtonAnimation";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "../ui/tooltip";
+import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
 
 const DownloadViewResume = () => {
   const handleDownload = () => {
@@ -33,25 +28,24 @@ const DownloadViewResume = () => {
           Download Resume
         </button>
       </ButtonAnimation>
-      <TooltipProvider>
-        <Tooltip>
-          <TooltipTrigger asChild>
-            <ButtonAnimation>
-              <Link
-                href={"/resume/mehedi-resume.pdf"}
-                target="_blank"
-                className="bg-activeColor/50 font-inter font-semibold text-base sm:text-xl tracking-[1%] rounded-sm px-2 py-2 cursor-pointer hover:shadow-md hover:shadow-sky-400/80 text-white transition-all duration-300 md:flex justify-center items-center gap-2 hidden "
-              >
-                <CiViewColumn />
-                View Resume
-              </Link>
-            </ButtonAnimation>
-          </TooltipTrigger>
-          <TooltipContent view className={"text-black bg-white"}>
-            Desktop only
-          </TooltipContent>
-        </Tooltip>
-      </TooltipProvider>
+      <Tooltip>
+        <TooltipTrigger>
+          {" "}
+          <ButtonAnimation>
+            <Link
+              href={"/resume/mehedi-resume.pdf"}
+              target="_blank"
+              className="bg-activeColor/50 font-inter font-semibold text-base sm:text-xl tracking-[1%] rounded-sm px-2 py-2 cursor-pointer hover:shadow-md hover:shadow-sky-400/80 text-white transition-all duration-300 md:flex justify-center items-center gap-2 hidden "
+            >
+              <CiViewColumn />
+              View Resume
+            </Link>
+          </ButtonAnimation>
+        </TooltipTrigger>
+        <TooltipContent>
+          <p>Desktop only</p>
+        </TooltipContent>
+      </Tooltip>
     </div>
   );
 };

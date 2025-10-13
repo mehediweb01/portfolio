@@ -40,17 +40,19 @@ const ProjectCard = ({
       >
         <motion.div
           initial={{ opacity: 1 }}
-          animate={{ opacity: hovered ? 0.6 : 1 }}
+          animate={{ opacity: hovered ? 0.8 : 1 }}
           transition={{ duration: 0.3 }}
           className="cursor-pointer group-hover:opacity-100 transition-all duration-300 ease-in-out"
         >
           <Image
             src={img}
             alt={name}
-            priority
-            className="rounded-md shadow-sm shadow-sky-200 h-[180px] w-[320px] mx-auto border border-slate-300 dark:border-0 object-cover"
-            height={500}
-            width={500}
+            placeholder="blur"
+            blurDataURL={img}
+            loading="lazy"
+            width={320}
+            height={180}
+            className="rounded-md shadow-sm shadow-sky-200 w-full h-auto  border border-slate-300 dark:border-0 object-cover"
           />
         </motion.div>
 
