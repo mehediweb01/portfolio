@@ -47,11 +47,9 @@ const ProjectCard = ({
           <Image
             src={img}
             alt={name}
-            placeholder="blur"
-            blurDataURL={img}
-            loading="lazy"
             width={320}
             height={180}
+            priority
             className="rounded-md shadow-sm shadow-sky-200 w-full h-auto  border border-slate-300 dark:border-0 object-cover"
           />
         </motion.div>
