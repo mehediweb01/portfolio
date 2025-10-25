@@ -8,7 +8,7 @@ import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
 
 const DownloadViewResume = () => {
   const handleDownload = () => {
-    const fileUrl = "/cv/mehedi-resume.pdf";
+    const fileUrl = "/resume/mehedi-resume.pdf";
     const link = document.createElement("a");
     link.href = fileUrl;
     link.download = "mehedi-resume.pdf";
