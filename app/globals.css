@@ -21,11 +21,6 @@
 }
 
 @layer base {
-  html {
-    scroll-behavior: smooth;
-    scroll-padding: 25px;
-  }
-
   /* mobile menu icons */
   .group {
     @apply text-white;

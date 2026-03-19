@@ -1,7 +1,9 @@
+import CertificateShowcase from "@/components/certificate/Certificates";
+
 const CertificatePage = () => {
   return (
     <section>
-      <h1>Showing the certificate...</h1>
+      <CertificateShowcase />
     </section>
   );
 };

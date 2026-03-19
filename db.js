@@ -225,6 +225,25 @@ export const FAQsInfo = [
   },
 ];
 
+// certificates
+export const certificates = [
+  {
+    id: 1,
+    src: "/certificate/LWS-Excellence-Certificate.jpg",
+    alt: "Certificate 2",
+  },
+  {
+    id: 2,
+    src: "/certificate/LWS-Certificate.jpg",
+    alt: "Certificate 3",
+  },
+  {
+    id: 3,
+    src: "/certificate/hablu-programmer-certificate.png",
+    alt: "Certificate 1",
+  },
+];
+
 // footer section
 export const socialIcons = [
   {
