@@ -21,11 +21,12 @@ import { TbBrandRedux, TbBrandTypescript } from "react-icons/tb";
 
 // navbar items
 export const Items = [
-  { name: "About", href: "#About" },
-  { name: "Skills", href: "#Skills" },
-  { name: "Projects", href: "#Projects" },
-  { name: "Contact", href: "#Contact" },
-  { name: "FAQs", href: "#FAQs" },
+  { name: "About", href: "/about" },
+  { name: "Skills", href: "/skills" },
+  { name: "Projects", href: "/projects" },
+  { name: "Contact", href: "/contact" },
+  { name: "Certificate", href: "/certificate" },
+  { name: "FAQs", href: "/faqs" },
 ];
 
 // what i do

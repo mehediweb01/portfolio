@@ -1,3 +1,5 @@
+import Footer from "@/components/footer/Footer";
+import MyNavbar from "@/components/navbar/Navbar";
 import { Inter, Poppins } from "next/font/google";
 import { ToastContainer } from "react-toastify";
 import "./globals.css";
@@ -25,8 +27,11 @@ export default function RootLayout({ children }) {
         className={`${poppins.variable} ${inter.variable} antialiased`}
         cz-shortcut-listen="true"
       >
-        <main>
+        <main className="bg-slate-100 dark:bg-[#050816]">
+          <MyNavbar />
           {children}
+          <Footer />
+
           <ToastContainer
             position="top-center"
             autoClose={2000}

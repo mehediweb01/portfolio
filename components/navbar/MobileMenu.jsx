@@ -9,85 +9,18 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { Items } from "@/db";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { FaBarsStaggered } from "react-icons/fa6";
 
-const normalizeHash = (href) => {
-  if (!href) return "";
-  const idx = href.indexOf("#");
-  if (idx === -1) return href;
-  return `#${href.slice(idx + 1)}`;
-};
-
 const MobileMenu = () => {
   const [open, setOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState(
-    typeof window !== "undefined" ? window.location.hash || "#Home" : ""
-  );
+  const pathname = usePathname();
 
   useEffect(() => {
-    if (typeof window === "undefined") return;
-
-    const onHashChange = () =>
-      setActiveSection(window.location.hash || "#Home");
-
-    window.addEventListener("hashchange", onHashChange);
-
-    const sections = Array.from(document.querySelectorAll("div[id]"));
-    if (!sections.length) return;
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const mostVisible = entries.reduce(
-          (max, e) =>
-            e.intersectionRatio > (max?.intersectionRatio ?? 0) ? e : max,
-          entries[0]
-        );
-
-        if (mostVisible && mostVisible.isIntersecting) {
-          const hash = `#${mostVisible.target.id}`;
-          setActiveSection(hash);
-          if (history && history.replaceState) {
-            history.replaceState(
-              null,
-              "",
-              `${window.location.pathname}${hash}`
-            );
-          }
-        }
-      },
-      { threshold: [0.4, 0.6] }
-    );
-
-    sections.forEach((sec) => observer.observe(sec));
-
-    return () => {
-      observer.disconnect();
-      window.removeEventListener("hashchange", onHashChange);
-    };
-  }, []);
-
-  const handleNavClick = (e, href) => {
-    e.preventDefault();
-    const hash = normalizeHash(href);
-    if (!hash) return;
-
-    const id = hash.slice(1);
-    const el = document.getElementById(id);
-
-    if (el) {
-      requestAnimationFrame(() => {
-        el.scrollIntoView({ behavior: "smooth", block: "start" });
-        setActiveSection(hash);
-
-        if (history && history.pushState) {
-          history.pushState(null, "", `${window.location.pathname}${hash}`);
-        }
-      });
-    } else {
-      window.location.href = href;
-    }
-  };
+    setOpen(false);
+  }, [pathname]);
 
   return (
     <Sheet open={open} onOpenChange={setOpen}>
@@ -108,20 +41,18 @@ const MobileMenu = () => {
 
         <nav className="flex flex-col gap-4 ms-5">
           {Items.map((item, index) => {
-            const itemHash = normalizeHash(item.href);
-            const isActive = activeSection === itemHash;
+            const isActive = pathname === item.href;
 
             return (
-              <a
+              <Link
                 key={index}
                 href={item.href}
-                onClick={(e) => handleNavClick(e, item.href)}
                 className={`font-poppins text-lg transition tracking-[1px] hover:text-yellow-400 ${
                   isActive ? "text-yellow-400 font-semibold" : "text-white"
                 }`}
               >
                 {item.name}
-              </a>
+              </Link>
             );
           })}
         </nav>

@@ -5,7 +5,6 @@ import { FaQuestion } from "react-icons/fa6";
 import { MdOutlineContactSupport } from "react-icons/md";
 import ButtonAnimation from "../common/ButtonAnimation";
 import AboutAnimate from "./AboutAnimate";
-import AboutTypeAnimate from "./AboutTypeAnimate";
 import HeaderAnimate from "./HeaderAnimate";
 
 const About = () => {
@@ -24,15 +23,19 @@ const About = () => {
           </HeaderAnimate>
 
           <p className="first-letter:text-5xl first-letter:sm:text-7xl first-letter:text-activeColor first-letter:leading-10 font-inter font-semibold leading-8 max-w-lg sm:text-start text-base text-center sm:mx-2 md:text-xl text-darkBlack dark:text-[#D0D0D0]">
-            I&apos;m
-            <span className="ms-3 ">
-              <AboutTypeAnimate />
-            </span>
+            I&apos;m Md. Mehedi Hasan, a skilled Front-End Web Developer with
+            expertise in JavaScript, React.js, Next.js, Tailwind CSS, Bootstrap,
+            and more. I specialize in creating responsive, user-friendly
+            websites with clean designs and seamless functionality. Whether you
+            need a sleek business site or a dynamic web app, I deliver top-notch
+            solutions tailored to your needs. Client satisfaction and quality
+            are my priorities—let's bring your ideas to life!
           </p>
+
           <div className="flex justify-center items-center flex-wrap sm:justify-start space-x-4 sm:mx-4">
             <ButtonAnimation>
               <Link
-                href="#Contact"
+                href="/contact"
                 className="text-center bg-activeColor !text-darkBlack font-inter font-semibold text-xl sm:text-2xl leading-5 sm:leading-8 tracking-[1%] rounded-2xl px-4 py-3 hover:shadow-btnWhite dark:hover:shadow-btn transition-all duration-300 shadow-activeColor relative z-20 group after:content-[''] after:h-px hover:after:h-[1%] after:w-1/2 after:transition-all after:duration-700 after:bg-slate-600 after:-z-50 after:absolute after:bottom-0 after:left-0 hover:after:rounded-lg after:animate-indeterminate-bar flex justify-center items-center gap-2"
               >
                 <MdOutlineContactSupport />
@@ -41,7 +44,7 @@ const About = () => {
             </ButtonAnimation>
             <ButtonAnimation>
               <Link
-                href="#FAQs"
+                href="/faqs"
                 className="text-center bg-transparent !text-darkBlack dark:!text-white font-inter font-semibold text-xl sm:text-2xl leading-5 sm:leading-8 tracking-[1%] rounded-2xl px-6 py-3 border border-slate-300 relative group after:content-[''] z-20 after:absolute after:bg-activeColor after:h-px after:w-1/2 hover:after:h-[2px] transition-all after:transition-all after:duration-300 after:left-0 after:bottom-0  after:z-[-1] duration-300 hover:shadow-btnWhite dark:hover:shadow-btn shadow-activeColor after:animate-indeterminate-bar flex justify-center items-center gap-2"
               >
                 <FaQuestion />
@@ -50,6 +53,8 @@ const About = () => {
             </ButtonAnimation>
           </div>
         </div>
+
+        {/* image me */}
         <div className="mx-4">
           <Image
             src={mehedi}
