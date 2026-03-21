@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Details from "./Details";
 import HeroAnimate from "./HeroAnimate";
 
@@ -9,6 +10,14 @@ const Hero = () => {
 
         <div>
           <Details />
+          <div className="flex justify-center items-center gap-2">
+            <Link
+              href={"/about"}
+              className="border border-slate-400 px-6 py-1 rounded-md text-xl font-poppins hover:text-sky-400 hover:transition-all hover:duration-300 hover:ease-in-out hover:scale-105 active:scale-150"
+            >
+              About
+            </Link>
+          </div>
         </div>
       </div>
     </HeroAnimate>
