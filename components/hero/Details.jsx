@@ -4,7 +4,7 @@ import TypeAnimate from "./TypeAnimate";
 
 const Details = () => {
   return (
-    <div className="flex md:flex-row flex-col gap-4 md:gap-8 items-start md:items-center md:ms-0 ms-4">
+    <div className="flex md:flex-row flex-col gap-4 md:gap-8 items-start md:items-center md:ms-0 ms-4 ">
       <div className="relative p-2 flex justify-center items-center">
         <div className="absolute w-full h-full rounded-lg border-1 border-activeColor/50 shadow-sm shadow-activeColor/50" />
         <Image
@@ -24,7 +24,7 @@ const Details = () => {
           <span className="sm:text-5xl text-2xl font-medium text-activeColor tracking-[2px] ms-5 drop-shadow">
             Md. Mehedi Hasan ,
           </span>
-          <span className="sm:text-3xl text-base ms-5 text-gray-100 tracking-wider drop-shadow-2xl">
+          <span className="text-base sm:text-xl md:text-2xl ms-5 text-gray-100 tracking-wider drop-shadow-2xl">
             Front-End Web Developer. Explore my portfolio to see my work.
           </span>
         </span>
