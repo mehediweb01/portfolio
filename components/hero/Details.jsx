@@ -1,36 +1,46 @@
-import me from "@/public/mehedi-home.png";
-import Image from "next/image";
+import Link from "next/link";
 import TypeAnimate from "./TypeAnimate";
 
 const Details = () => {
   return (
-    <div className="flex md:flex-row flex-col gap-4 md:gap-8 items-start md:items-center md:ms-0 ms-4 ">
-      <div className="relative flex justify-center items-center">
-        <div className="absolute w-full h-full rounded-lg border-1 border-activeColor/50 shadow-sm shadow-activeColor/50" />
-        <div className="">
-          <Image
-            src={me}
-            alt="mehedi-profile"
-            height={500}
-            width={500}
-            className="rounded-md w-44 sm:w-52 object-fill"
-          />
-        </div>
+    <div className="sm:space-y-3 space-y-1 mx-4">
+      {/* header */}
+      <div>
+        <h1 className="font-bold font-poppins text-2xl sm:text-4xl lg:text-5xl text-header">
+          <TypeAnimate />
+        </h1>
+
+        <h2 className="font-bold font-poppins text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white uppercase sm:mt-4 mt-2 tracking-[2px]">
+          Front End Developer
+        </h2>
       </div>
 
-      <h1 className="flex flex-col max-w-lg drop-shadow">
-        <span className="uppercase text-2xl sm:text-4xl tracking-[3px] font-poppins text-[#B3E5FC]">
-          <TypeAnimate />
-        </span>
-        <span className="flex flex-col gap-2 font-serif mt-4">
-          <span className="sm:text-5xl text-2xl font-medium text-activeColor tracking-[2px] ms-5 drop-shadow">
-            Md. Mehedi Hasan ,
-          </span>
-          <span className="text-base sm:text-xl md:text-2xl ms-5 text-gray-100 tracking-wider drop-shadow-2xl">
-            Front-End Web Developer. Explore my portfolio to see my work.
-          </span>
-        </span>
-      </h1>
+      {/* description */}
+      <p className="font-poppins text-white text-base sm:text-xl tracking-wider my-4 sm:my-6">
+        I build modern, responsive web application using React & Next.js
+        --focused on clean design and performance.
+      </p>
+
+      {/* action button */}
+      <div className="flex justify-start items-center gap-2 flex-wrap">
+        <Link href="/projects">
+          <button
+            type="button"
+            className="cursor-pointer font-medium text-xl sm:text-2xl bg-black rounded-md text-white px-4 py-2 hover:bg-black/70 hover:text-sky-400 transition-all duration-300 ease-in-out active:scale-110"
+          >
+            View Projects
+          </button>
+        </Link>
+
+        <Link href="/contact">
+          <button
+            type="button"
+            className="cursor-pointer font-medium text-xl sm:text-2xl bg-black rounded-md text-white px-4 py-2 hover:bg-black/70 hover:text-sky-400 transition-all duration-300 ease-in-out active:scale-110"
+          >
+            Hire Me
+          </button>
+        </Link>
+      </div>
     </div>
   );
 };

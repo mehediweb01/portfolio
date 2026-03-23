@@ -1,23 +1,16 @@
-import Link from "next/link";
 import Details from "./Details";
 import HeroAnimate from "./HeroAnimate";
+import HeroImage from "./HeroImage";
 
 const Hero = () => {
   return (
     <HeroAnimate>
-      <div className="bg-black/65 h-fit sm:min-h-screen bg-opacity-50 text-white flex sm:items-center items-start justify-center gap-16 px-2 sm:py-0 py-8 relative">
-        <div className="absolute top-[10%] left-[75%] -translate-x-1/2 -translate-y-1/2 w-0 h-0 bg-transparent shadow-[20px_50px_150px_50px_#17DFF5]" />
-
-        <div>
+      <div className="flex justify-center items-center sm:flex-row flex-col-reverse gap-4">
+        <div className="sm:w-[60%] w-full">
           <Details />
-          <div className="flex justify-center items-center gap-2">
-            <Link
-              href={"/about"}
-              className="border border-slate-400 px-6 py-1 rounded-md text-xl font-poppins hover:text-sky-400 hover:transition-all hover:duration-300 hover:ease-in-out hover:scale-105 active:scale-150"
-            >
-              About
-            </Link>
-          </div>
+        </div>
+        <div>
+          <HeroImage />
         </div>
       </div>
     </HeroAnimate>
