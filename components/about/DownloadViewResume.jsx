@@ -22,7 +22,7 @@ const DownloadViewResume = () => {
       <ButtonAnimation>
         <button
           onClick={handleDownload}
-          className="bg-activeColor/50 font-inter font-semibold text-base sm:text-xl tracking-[1%] rounded-xl px-2 py-2 cursor-pointer hover:shadow-md hover:shadow-sky-400/80 text-white transition-all duration-300 flex justify-center items-center gap-2 jump-animate"
+          className="bg-activeColor/50 font-inter font-semibold text-base sm:text-xl tracking-[1%] rounded-xl px-2 py-2 cursor-pointer hover:shadow-md hover:shadow-sky-400/80 text-black dark:text-white transition-all duration-300 flex justify-center items-center gap-2 jump-animate"
         >
           <FaCloudDownloadAlt />
           Download Resume
@@ -35,7 +35,7 @@ const DownloadViewResume = () => {
             <Link
               href={"/resume/mehedi-resume.pdf"}
               target="_blank"
-              className="bg-activeColor/50 font-inter font-semibold text-base sm:text-xl tracking-[1%] rounded-sm px-2 py-2 cursor-pointer hover:shadow-md hover:shadow-sky-400/80 text-white transition-all duration-300 md:flex justify-center items-center gap-2 hidden "
+              className="bg-activeColor/50 font-inter font-semibold text-base sm:text-xl tracking-[1%] rounded-sm px-2 py-2 cursor-pointer hover:shadow-md hover:shadow-sky-400/80 text-black dark:text-white transition-all duration-300 md:flex justify-center items-center gap-2 hidden "
             >
               <CiViewColumn />
               View Resume
