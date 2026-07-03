@@ -1,20 +1,31 @@
 import Map from "./public/map.svg";
 import phone from "./public/phone.svg";
 // my info icons
-import { FaCode, FaLaptopCode, FaMobileAlt, FaRocket } from "react-icons/fa";
+import {
+  FaCode,
+  FaCss3,
+  FaGitAlt,
+  FaGithub,
+  FaJs,
+  FaLaptopCode,
+  FaMobileAlt,
+  FaReact,
+  FaRocket,
+} from "react-icons/fa";
 import meUser from "./public/me-user.svg";
 import userTime from "./public/userTime.svg";
 import yellowEmail from "./public/yellow-email.svg";
 // skill icons
 import { AiOutlineHtml5 } from "react-icons/ai";
 import { CiLinkedin } from "react-icons/ci";
-import { FaCss3, FaGitAlt, FaGithub } from "react-icons/fa";
 import { FaFacebook, FaInstagram } from "react-icons/fa6";
 import {
   RiBootstrapFill,
   RiJavascriptLine,
+  RiNextjsFill,
   RiNextjsLine,
   RiReactjsFill,
+  RiTailwindCssFill,
   RiTailwindCssLine,
 } from "react-icons/ri";
 import { TbBrandRedux, TbBrandTypescript } from "react-icons/tb";
@@ -29,6 +40,41 @@ export const Items = [
   { name: "FAQs", href: "/faqs" },
 ];
 
+// hero core skills
+export const coreSkills = [
+  {
+    name: "React",
+    icon: FaReact,
+    color: "text-sky-500",
+  },
+  {
+    name: "Next.js",
+    icon: RiNextjsFill,
+    color: "text-slate-900 dark:text-white",
+  },
+  {
+    name: "Tailwind CSS",
+    icon: RiTailwindCssFill,
+    color: "text-cyan-500",
+  },
+  {
+    name: "JavaScript",
+    icon: FaJs,
+    color: "text-yellow-400",
+  },
+  {
+    name: "Git",
+    icon: FaGitAlt,
+    color: "text-orange-500",
+  },
+  {
+    name: "GitHub",
+    icon: FaGithub,
+    color: "text-slate-900 dark:text-white",
+  },
+];
+
+// about nav items
 export const AboutNavItems = [
   {
     id: 1,
@@ -77,7 +123,8 @@ export const educationData = [
     status: "Completed",
   },
 ];
-// what i do
+
+// expertise
 export const expertiseData = [
   {
     icon: FaLaptopCode,

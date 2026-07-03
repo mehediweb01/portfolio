@@ -11,8 +11,12 @@ const HeroAnimate = ({ children }) => {
       initial={{ opacity: 0, y: -300 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1.4, ease: [0.43, 0.13, 0.28, 0.96] }}
-      className="relative overflow-hidden bg-gradient-to-br from-[#0f172a] via-[#1e3a8a]/80 to-[#6d28d9]/40 dark:from-[#0f172a] dark:via-[#1e3a8a]/80 dark:to-[#6d28d9]/40 rounded-b-3xl mb-4 sm:mb-8 py-16"
+      className="relative overflow-hidden"
     >
+      <div className="absolute left-0 top-20 h-72 w-72 rounded-full bg-sky-500/10 blur-[120px]" />
+
+      <div className="absolute right-0 bottom-0 h-80 w-80 rounded-full bg-cyan-500/10 blur-[150px]" />
+
       <div className="md:block hidden">
         <div className="absolute bottom-48 right-12 opacity-50">
           <FaReact className="w-16 h-16 text-sky-400" />

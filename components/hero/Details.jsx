@@ -1,44 +1,64 @@
+import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import TypeAnimate from "./TypeAnimate";
 
+const skills = [
+  { name: "React" },
+  { name: "Next.js" },
+  { name: "Tailwind CSS" },
+  { name: "JavaScript" },
+];
+
 const Details = () => {
   return (
-    <div className="sm:space-y-3 space-y-1 mx-4">
-      {/* header */}
-      <div>
-        <h1 className="font-bold font-poppins text-2xl sm:text-4xl lg:text-5xl text-header">
-          <TypeAnimate />
-        </h1>
-
-        <h2 className="font-bold font-poppins text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white uppercase sm:mt-4 mt-2 tracking-[2px]">
-          Front End Developer
-        </h2>
-      </div>
-
-      {/* description */}
-      <p className="font-poppins text-white text-base sm:text-xl tracking-wider my-4 sm:my-6">
-        I build modern, responsive web application using React & Next.js
-        --focused on clean design and performance.
+    <div className="mx-4 max-w-2xl">
+      <p className="mb-4 text-base font-medium text-sky-500">
+        👋 Hello, I'm Md. Mehedi Hasan
       </p>
 
-      {/* action button */}
-      <div className="flex justify-start items-center gap-2 flex-wrap">
-        <Link href="/projects">
-          <button
-            type="button"
-            className="cursor-pointer font-medium text-xl sm:text-2xl bg-black rounded-md text-white px-4 py-2 hover:bg-black/70 hover:text-sky-400 transition-all duration-300 ease-in-out active:scale-110"
+      <h1 className="text-4xl font-bold tracking-tight text-foreground md:text-6xl">
+        <TypeAnimate />
+      </h1>
+
+      <h2 className="mt-3 text-xl font-semibold uppercase tracking-[4px] text-muted-foreground md:text-2xl">
+        Front-End Developer
+      </h2>
+
+      <p className="mt-6 max-w-xl text-base leading-8 text-muted-foreground md:text-lg">
+        I build modern, responsive web applications with React and Next.js,
+        focusing on clean UI, reusable components, and high performance.
+      </p>
+
+      {/* Skills */}
+      <div className="mt-8 flex flex-wrap gap-3">
+        {skills.map((skill) => (
+          <span
+            key={skill.name}
+            className="rounded-full border border-slate-200 bg-slate-100 px-4 py-2 text-sm font-medium transition hover:border-sky-400 hover:text-sky-500 dark:border-slate-700 dark:bg-slate-900"
           >
-            View Projects
-          </button>
+            {skill.name}
+          </span>
+        ))}
+      </div>
+
+      {/* Buttons */}
+      <div className="mt-10 flex flex-wrap gap-4">
+        <Link
+          href="/projects"
+          className="group inline-flex items-center gap-2 rounded-xl bg-sky-500 px-6 py-3 font-semibold text-white transition hover:bg-sky-600"
+        >
+          View Projects
+          <ArrowRight
+            size={18}
+            className="transition group-hover:translate-x-1"
+          />
         </Link>
 
-        <Link href="/contact">
-          <button
-            type="button"
-            className="cursor-pointer font-medium text-xl sm:text-2xl bg-black rounded-md text-white px-4 py-2 hover:bg-black/70 hover:text-sky-400 transition-all duration-300 ease-in-out active:scale-110"
-          >
-            Hire Me
-          </button>
+        <Link
+          href="/contact"
+          className="inline-flex items-center rounded-xl border border-slate-300 px-6 py-3 font-semibold transition hover:border-sky-500 hover:text-sky-500 dark:border-slate-700"
+        >
+          Hire Me
         </Link>
       </div>
     </div>
