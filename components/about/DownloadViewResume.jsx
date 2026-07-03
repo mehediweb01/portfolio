@@ -1,10 +1,7 @@
 "use client";
 
+import { Download, Eye, Sparkles } from "lucide-react";
 import Link from "next/link";
-import { CiViewColumn } from "react-icons/ci";
-import { FaCloudDownloadAlt } from "react-icons/fa";
-import ButtonAnimation from "../common/ButtonAnimation";
-import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
 
 const DownloadViewResume = () => {
   const handleDownload = () => {
@@ -18,34 +15,41 @@ const DownloadViewResume = () => {
   };
 
   return (
-    <div className="flex flex-wrap justify-center items-center gap-3">
-      <ButtonAnimation>
+    <div className="w-64 rounded-2xl border border-slate-200/70 bg-white/80 p-4 shadow-2xl backdrop-blur-xl dark:border-slate-700 dark:bg-slate-900/80">
+      <div className="mb-4 flex items-center gap-2">
+        <div className="rounded-full bg-sky-500/10 p-2">
+          <Sparkles className="h-5 w-5 text-sky-500" />
+        </div>
+
+        <div>
+          <h3 className="font-semibold text-slate-900 dark:text-white">
+            Resume
+          </h3>
+
+          <p className="text-xs text-slate-500 dark:text-slate-400">
+            View or download my CV
+          </p>
+        </div>
+      </div>
+
+      <div className="flex gap-1.5 w-fit flex-row-reverse">
+        <Link
+          href="/resume/mehedi-resume.pdf"
+          target="_blank"
+          className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-sky-500 px-4 py-2.5 text-sm font-medium text-white transition hover:bg-sky-600 w-fit"
+        >
+          <Eye size={16} />
+          View
+        </Link>
+
         <button
           onClick={handleDownload}
-          className="bg-activeColor/50 font-inter font-semibold text-base sm:text-xl tracking-[1%] rounded-xl px-2 py-2 cursor-pointer hover:shadow-md hover:shadow-sky-400/80 text-black dark:text-white transition-all duration-300 flex justify-center items-center gap-2 jump-animate"
+          className="flex flex-1 cursor-pointer items-center justify-center gap-2 rounded-xl border border-slate-300 bg-transparent px-4 py-2.5 text-sm font-medium transition hover:bg-slate-100 dark:border-slate-600 dark:hover:bg-slate-800 w-fit"
         >
-          <FaCloudDownloadAlt />
-          Download Resume
+          <Download size={16} />
+          Download
         </button>
-      </ButtonAnimation>
-      <Tooltip>
-        <TooltipTrigger>
-          {" "}
-          <ButtonAnimation>
-            <Link
-              href={"/resume/mehedi-resume.pdf"}
-              target="_blank"
-              className="bg-activeColor/50 font-inter font-semibold text-base sm:text-xl tracking-[1%] rounded-sm px-2 py-2 cursor-pointer hover:shadow-md hover:shadow-sky-400/80 text-black dark:text-white transition-all duration-300 md:flex justify-center items-center gap-2 hidden "
-            >
-              <CiViewColumn />
-              View Resume
-            </Link>
-          </ButtonAnimation>
-        </TooltipTrigger>
-        <TooltipContent>
-          <p>Desktop only</p>
-        </TooltipContent>
-      </Tooltip>
+      </div>
     </div>
   );
 };

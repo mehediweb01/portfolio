@@ -1,7 +1,7 @@
 import Map from "./public/map.svg";
 import phone from "./public/phone.svg";
 // my info icons
-import { FaCode, FaLaptopCode } from "react-icons/fa";
+import { FaCode, FaLaptopCode, FaMobileAlt, FaRocket } from "react-icons/fa";
 import meUser from "./public/me-user.svg";
 import userTime from "./public/userTime.svg";
 import yellowEmail from "./public/yellow-email.svg";
@@ -9,7 +9,7 @@ import yellowEmail from "./public/yellow-email.svg";
 import { AiOutlineHtml5 } from "react-icons/ai";
 import { CiLinkedin } from "react-icons/ci";
 import { FaCss3, FaGitAlt, FaGithub } from "react-icons/fa";
-import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa6";
+import { FaFacebook, FaInstagram } from "react-icons/fa6";
 import {
   RiBootstrapFill,
   RiJavascriptLine,
@@ -29,19 +29,79 @@ export const Items = [
   { name: "FAQs", href: "/faqs" },
 ];
 
+export const AboutNavItems = [
+  {
+    id: 1,
+    name: "About Me",
+    slug: "about-me",
+  },
+  {
+    id: 2,
+    name: "Education",
+    slug: "education",
+  },
+  {
+    id: 3,
+    name: "Expertise",
+    slug: "expertise",
+  },
+];
+
+// education
+export const educationData = [
+  {
+    id: 1,
+    degree: "Bachelor of Business Administration (BBA)",
+    field: "Management",
+    Institution: "Govt. Saadat College",
+    Affiliation: "National University, Bangladesh",
+    session: "2024 - 2025",
+    status: "Running (1st Year)",
+  },
+  {
+    id: 2,
+    degree: "Higher Secondary Certificate (HSC)",
+    field: "Humanities",
+    Institution: "Shaheed Shahed Hazari College",
+    session: "2022 - 2023",
+    gpa: "4.00 / 5.00",
+    status: "Completed",
+  },
+  {
+    id: 3,
+    degree: "Secondary School Certificate (SSC)",
+    field: "Science",
+    Institution: "Gopaldighi K. P. U. High School",
+    session: "2019 - 2020",
+    gpa: "4.17 / 5.00",
+    status: "Completed",
+  },
+];
 // what i do
-export const whatIDo = [
+export const expertiseData = [
   {
     icon: FaLaptopCode,
-    title: "Front-end web developer",
+    title: "Front-end Web Development",
     description:
-      "I create responsive, user-friendly, and modern web interfaces with clean, efficient front-end code",
+      "I create responsive, user-friendly, and modern web interfaces with clean, efficient front-end code.",
   },
   {
     icon: FaCode,
-    title: " Clean Code",
+    title: "Clean & Scalable Code",
     description:
-      "I strive to write clean, efficient, and scalable React code by following key principles: Component Reusability, Optimized Performance, Code Simplicity",
+      "I write maintainable and reusable React code by following best practices, component reusability, performance optimization, and clean architecture.",
+  },
+  {
+    icon: FaMobileAlt,
+    title: "Responsive UI Design",
+    description:
+      "I build fully responsive web applications that provide a seamless experience across desktop, tablet, and mobile devices.",
+  },
+  {
+    icon: FaRocket,
+    title: "Performance Optimization",
+    description:
+      "I focus on fast-loading, optimized web applications by improving rendering performance, code organization, and user experience.",
   },
 ];
 
@@ -263,11 +323,6 @@ export const socialIcons = [
   },
   {
     id: 4,
-    icon: FaTwitter,
-    link: "https://x.com/mehedi_web01",
-  },
-  {
-    id: 5,
     icon: FaGithub,
     link: "https://github.com/mehediweb01",
   },

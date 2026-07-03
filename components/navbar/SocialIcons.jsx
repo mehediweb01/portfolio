@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { BsGithub, BsLinkedin, BsTwitter } from "react-icons/bs";
+import { BsGithub, BsLinkedin } from "react-icons/bs";
 import ButtonAnimation from "../common/ButtonAnimation";
 
 const SocialIcons = () => {
@@ -21,15 +21,6 @@ const SocialIcons = () => {
           className="text-white text-2xl hover:text-yellow-400"
         >
           <BsLinkedin />
-        </Link>
-      </ButtonAnimation>
-      <ButtonAnimation>
-        <Link
-          href="https://x.com/mehedi_web01"
-          target="_blank"
-          className="text-white text-2xl hover:text-yellow-400"
-        >
-          <BsTwitter />
         </Link>
       </ButtonAnimation>
     </div>
