@@ -43,7 +43,11 @@ const Modal = ({
             className="rounded-md border dark:border-slate-700"
           />
           <p className="font-inter text-base text-slate-700 dark:text-slate-200">
-            🚀 This is a front-end project built with: {useCase?.join(", ")}.
+            🚀 This is a front-end project built with:{" "}
+            <span className="text-activeColor font-poppins!">
+              {useCase?.join(", ")}
+            </span>
+            .
             {teamMember &&
               ` This was a team project with ${teamMember} teammate.`}
           </p>

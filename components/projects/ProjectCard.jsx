@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { EyeIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -76,7 +77,7 @@ const ProjectCard = ({
             </div>
           )}
 
-          <div className="flex justify-center gap-4 mt-4">
+          <div className="flex justify-center flex-wrap gap-4 mt-4">
             <ButtonAnimation>
               <Link
                 href={previewLink}
@@ -88,6 +89,7 @@ const ProjectCard = ({
                 <VscOpenPreview />
               </Link>
             </ButtonAnimation>
+
             <ButtonAnimation>
               <Link
                 href={codeLink}
@@ -98,6 +100,19 @@ const ProjectCard = ({
                 <span className="tracking-[1px]">Code</span>
                 <FaGithub />
               </Link>
+            </ButtonAnimation>
+
+            <ButtonAnimation>
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  handleOpen();
+                }}
+                className="flex items-center gap-1 font-inter font-semibold text-sm text-black/95 sm:text-base shadow-sm shadow-black px-2 py-1 rounded-md group-hover:bg-sky-300 group-hover:transition-all group-hover:duration-300 group-hover:text-darkBlack hover:shadow-inner hover:shadow-black/50 dark:text-white cursor-pointer"
+              >
+                <span className="tracking-[1px]">view Details</span>
+                <EyeIcon />
+              </button>
             </ButtonAnimation>
           </div>
 
